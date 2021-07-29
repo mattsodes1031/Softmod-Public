@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="skidnpump.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="pump_looks_into_your_soul.png" x="0" y="0" width="469" height="620"/>
+	<SubTexture name="pump_nightmare.png" x="469" y="0" width="477" height="633"/>
+	<SubTexture name="pump_normal.png" x="946" y="0" width="517" height="642"/>
+	<SubTexture name="skid_looks_into_your_soul.png" x="1463" y="0" width="425" height="559"/>
+	<SubTexture name="skid_nightmare.png" x="0" y="642" width="416" height="632"/>
+	<SubTexture name="skid_normal.png" x="416" y="642" width="461" height="594"/>
+</TextureAtlas>

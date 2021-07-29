@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="picoxmas.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="P10xmas.png" x="0" y="0" width="738" height="770"/>
+	<SubTexture name="P11xmas.png" x="738" y="0" width="738" height="770"/>
+	<SubTexture name="P4xmas.png" x="1476" y="0" width="738" height="770"/>
+	<SubTexture name="P6xmas.png" x="2214" y="0" width="738" height="770"/>
+	<SubTexture name="yougotitbabe.png" x="2952" y="0" width="1001" height="777"/>
+</TextureAtlas>

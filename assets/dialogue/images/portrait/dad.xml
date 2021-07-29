@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="dad.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="D1.png" x="0" y="0" width="733" height="861"/>
+	<SubTexture name="D10.png" x="733" y="0" width="895" height="847"/>
+	<SubTexture name="D2.png" x="1628" y="0" width="733" height="861"/>
+	<SubTexture name="D3.png" x="2361" y="0" width="733" height="858"/>
+	<SubTexture name="D4.png" x="3094" y="0" width="733" height="861"/>
+	<SubTexture name="D5.png" x="0" y="861" width="733" height="861"/>
+	<SubTexture name="D6.png" x="733" y="861" width="733" height="861"/>
+	<SubTexture name="D7.png" x="1466" y="861" width="706" height="877"/>
+	<SubTexture name="D8.png" x="2172" y="861" width="706" height="855"/>
+	<SubTexture name="D9.png" x="2878" y="861" width="1090" height="856"/>
+</TextureAtlas>

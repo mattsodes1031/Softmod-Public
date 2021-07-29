@@ -1,0 +1,43 @@
+:narrator:default: The moon had risen over the cityscape after the sun went to rest it’s head for the night.
+:narrator:default: Clouds joined in to keep it company, creating a stormy ruckus to keep it awake.
+:narrator:default: Our protagonists found themselves taking cover in a building which was long overdue for a visit… 
+:narrator:default: Or at least that’s what they thought.
+:narrator:default: It was near impossible to see three feet in front of them when there wasn’t a strike of lightning to brighten up the room,
+:narrator:default: leaving the two on edge.
+:bf:b6: I don’t know about this place, Pico…
+:pico:p7: Well, you got a better place to hide?
+:bf:b6: ...no.
+:bf:b6: But an abandoned mansion? It’s scary, it’s unsettling…
+:bf:b19: It’s….it’s…
+:shadows:skidshadow: IT’S-A SPOOKY!
+:bf:b24: Yeah, exactly, you took the words right from my mouth, Pico!
+:pico:p9: ...that wasn’t me.
+:bf:b4: H-Huh?! Then who…?
+:skidnpump:snm: Hi, misters!
+:skidnpump:pnm: Hi, misters!
+:bf:b10: Beep!
+:pico:p7: Relax, it’s just a couple of kids.
+:skidnpump:sl: :3
+:skidnpump:default: :3
+:pico:p4: What the hell are you two doing here?
+:skidnpump:sn: I am Skid and this is Pump!
+:skidnpump:pn: We are doing the spooky things during the spooky month!
+:pico:p4: Spooky month-
+:pico:p7: It’s November. Isn’t it a bit late-
+:bf:b8: Hush. Let them be.
+:skidnpump:pn: Hey, wait, you look familiar!
+:bf:b2: O-oh?
+:skidnpump:sn: Yeah yeah! Your dad is super famous!
+:skidnpump:pn: Also we’ve seen your face on posters all over town.
+:bf:b5: ...
+:skidnpump:sn: My mom has tapes of Mr.Fairest singing!
+:skidnpump:pn: We watch them all the time. :)
+:skidnpump:sn: Hey hey hey! Can you sing too?
+:bf:b6: Uh, well…
+:bf:b4: Y-yes?
+:skidnpump:pn: Then let’s do a rap battle!
+:pico:p4: Probably not the best idea…
+:skidnpump:sn: Pleaaaase?
+:skidnpump:pn: Pleaaaase?
+:bf:8b: Aw...alright little dudes. 
+:pico:p4: … skurwiel...

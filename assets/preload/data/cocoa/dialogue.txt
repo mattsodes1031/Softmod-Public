@@ -1,0 +1,27 @@
+:narrator:default: Despite being battered and bruised, Pico and BF find solace in one another’s company. 
+:narrator:default: While healing, a treacherous month flies by, which they spend tending to wounds.
+:narrator:default: Soon, the boys feel well enough and brave enough to face the streets once again.
+:narrator:default: Signs of the holiday season litter the scene, with snowflakes dancing in the air, golden bells ringing, and children laughing…
+:narrator:default: A crowd of strangers whisper to one another in excitement, waiting beside a sign that reads “Annual Holiday Fairest Meet and Greet!”
+:narrator:default: The two boys enjoy the winter season with smiles, distracted by one another’s company.
+:picoxmas:px11: I can't believe you're actually making me wear this...
+:bfxmas:bx7: What? You look adorable!
+:picoxmas:px11: I know… 
+:bfxmas:bx7: Come on Toughie… this is our first time out and about in a month… at least try to enjoy it-
+:narrator:default: THERE THEY ARE!
+:picoxmas:px6: ?!
+:bfxmas:bx5: ?!
+:picoxmas:px6: A crowd…?
+:bfxmas:bx5: … Oh no…
+:bfxmas:bx5: What… day is it?
+:picoxmas:px6: The 17th… why?
+:momxmas:mx1: OUR SON!
+:bfxmas:bx6: … that’s why…
+
+:dadxmas:default: Just in time for the holidays!
+:momxmas:mx2: We were beginning to fear the worst…
+:bfxmas:bx6: …
+:dadxmas:dx4: How about we celebrate, s p o r t?
+:momxmas:mx11: Aaaaaaand finally get you home!
+
+

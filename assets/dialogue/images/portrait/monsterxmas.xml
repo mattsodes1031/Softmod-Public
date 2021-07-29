@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="monsterxmas.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="MoXmas1.png" x="0" y="0" width="1138" height="1196"/>
+	<SubTexture name="MoXmas2.png" x="1138" y="0" width="1951" height="1252"/>
+</TextureAtlas>

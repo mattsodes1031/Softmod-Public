@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ogbf.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BF.png" x="0" y="0" width="693" height="651"/>
+	<SubTexture name="BF2.png" x="693" y="0" width="693" height="651"/>
+</TextureAtlas>

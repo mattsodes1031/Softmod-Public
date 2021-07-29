@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="dadxmas.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="D1xmas.png" x="0" y="0" width="774" height="950"/>
+	<SubTexture name="D3xmas.png" x="774" y="0" width="774" height="950"/>
+	<SubTexture name="D4xmas.png" x="1548" y="0" width="774" height="950"/>
+	<SubTexture name="D6xmas.png" x="2322" y="0" width="774" height="950"/>
+	<SubTexture name="D8xmas.png" x="3096" y="0" width="774" height="950"/>
+</TextureAtlas>

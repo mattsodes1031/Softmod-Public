@@ -1,0 +1,10 @@
+:dad:default: You sound just as good as your old man!
+:dad:d5: It’s a real shame that you’re putting all that talent to waste…
+:bf:b16: …
+:pico:p8: Hey, don’t listen to him, Softie.
+:dad:d5: Your mother and I built this perfect life for you so you could become a star...
+:dad:d2: And you want to be what?
+:dad:d3: A painter?
+:dad:d3: Doesn’t that just sound ridiculous? 
+:bf:b20: It’s my life-
+:dad:d6: Oh is it now?

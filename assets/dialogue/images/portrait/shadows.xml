@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="shadows.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BF.png" x="0" y="0" width="693" height="651"/>
+	<SubTexture name="GF..png" x="693" y="0" width="786" height="879"/>
+	<SubTexture name="dad.png" x="1479" y="0" width="733" height="861"/>
+	<SubTexture name="mom.png" x="2212" y="0" width="847" height="1038"/>
+	<SubTexture name="monster.png" x="0" y="1038" width="1087" height="1196"/>
+	<SubTexture name="pump.png" x="1087" y="1038" width="469" height="620"/>
+	<SubTexture name="skid.png" x="1556" y="1038" width="425" height="559"/>
+</TextureAtlas>

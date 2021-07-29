@@ -1,0 +1,18 @@
+:ogbf:default: Beep bop!
+:bf:b21: Hey! You’re pretty good at this!
+:bf:b16: Really good at this.
+:bf:b16: …
+:bf:b3: Is… is this what you do for a living?
+:ogbf:default: bf noises
+:bf:b3: I see...
+:bf:b3: And, let me guess, you two are together?
+oggf:default: ;)
+ogbf:default: Bep!! :D
+:bf:b21: Right!
+:bf:b21: Heh...
+:bf:b21: You look so happy…
+:bf:b6: Good for you.
+
+
+
+

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="monster.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="monster_angry.png" x="0" y="0" width="1951" height="1252"/>
+	<SubTexture name="monster_neutral.png" x="1951" y="0" width="1087" height="1196"/>
+</TextureAtlas>

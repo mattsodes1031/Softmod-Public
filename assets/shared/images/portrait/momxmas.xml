@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="momxmas.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="M10xmas.png" x="0" y="0" width="930" height="983"/>
+	<SubTexture name="M11xmas.png" x="930" y="0" width="754" height="880"/>
+	<SubTexture name="M1xmas.png" x="1684" y="0" width="754" height="880"/>
+	<SubTexture name="M3xmas.png" x="2438" y="0" width="754" height="880"/>
+	<SubTexture name="M5xmas.png" x="3192" y="0" width="852" height="1039"/>
+</TextureAtlas>

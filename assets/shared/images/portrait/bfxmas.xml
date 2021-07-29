@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bfxmas.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="B11xmas.png" x="0" y="0" width="616" height="627"/>
+	<SubTexture name="B12xmas.png" x="616" y="0" width="616" height="627"/>
+	<SubTexture name="B14xmas.png" x="1232" y="0" width="616" height="627"/>
+	<SubTexture name="B15xmas.png" x="1848" y="0" width="616" height="627"/>
+	<SubTexture name="B17xmas.png" x="2464" y="0" width="616" height="627"/>
+	<SubTexture name="B18xmas.png" x="3080" y="0" width="948" height="704"/>
+	<SubTexture name="B19xmas.png" x="0" y="704" width="616" height="627"/>
+	<SubTexture name="B20xmas.png" x="616" y="704" width="616" height="627"/>
+	<SubTexture name="B24xmas.png" x="1232" y="704" width="616" height="627"/>
+	<SubTexture name="B3xmas.png" x="1848" y="704" width="616" height="627"/>
+	<SubTexture name="B5xmas.png" x="2464" y="704" width="603" height="625"/>
+	<SubTexture name="B6xmas.png" x="3067" y="704" width="616" height="627"/>
+	<SubTexture name="B7xmas.png" x="0" y="1331" width="616" height="626"/>
+	<SubTexture name="B9xmas.png" x="616" y="1331" width="634" height="665"/>
+</TextureAtlas>

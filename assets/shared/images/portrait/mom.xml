@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="mom.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="M1.png" x="0" y="0" width="754" height="880"/>
+	<SubTexture name="M10.png" x="754" y="0" width="937" height="1031"/>
+	<SubTexture name="M11.png" x="1691" y="0" width="754" height="880"/>
+	<SubTexture name="M2.png" x="2445" y="0" width="996" height="896"/>
+	<SubTexture name="M3.png" x="0" y="1031" width="754" height="879"/>
+	<SubTexture name="M4.png" x="754" y="1031" width="847" height="1038"/>
+	<SubTexture name="M5.png" x="1601" y="1031" width="847" height="1039"/>
+	<SubTexture name="M6.png" x="2448" y="1031" width="847" height="1038"/>
+	<SubTexture name="M7.png" x="0" y="2070" width="846" height="1038"/>
+	<SubTexture name="M8.png" x="846" y="2070" width="848" height="1038"/>
+	<SubTexture name="M9.png" x="1694" y="2070" width="846" height="1038"/>
+</TextureAtlas>

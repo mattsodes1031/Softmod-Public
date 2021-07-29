@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="soft_pico_assets.png">
+	<!-- Created with Adobe Animate version 21.0.1.37179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="soft_pico cheer0000" x="0" y="0" width="363" height="413"/>
+	<SubTexture name="soft_pico cheer0001" x="393" y="0" width="362" height="413" frameX="0" frameY="0" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0002" x="785" y="0" width="361" height="412" frameX="0" frameY="-1" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0003" x="1176" y="0" width="361" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0004" x="1567" y="0" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0005" x="0" y="443" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0006" x="0" y="443" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0007" x="390" y="443" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0008" x="390" y="443" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0009" x="780" y="443" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0010" x="780" y="443" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0011" x="780" y="443" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0012" x="780" y="443" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0013" x="780" y="443" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0014" x="780" y="443" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0015" x="780" y="443" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0016" x="780" y="443" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0017" x="780" y="443" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0018" x="780" y="443" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0019" x="780" y="443" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0020" x="780" y="443" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0021" x="780" y="443" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0022" x="780" y="443" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0023" x="780" y="443" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0024" x="780" y="443" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico cheer0025" x="780" y="443" width="360" height="411" frameX="0" frameY="-2" frameWidth="363" frameHeight="413"/>
+	<SubTexture name="soft_pico idle0000" x="1170" y="443" width="363" height="389" frameX="0" frameY="-16" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0001" x="1563" y="443" width="363" height="390" frameX="0" frameY="-15" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0002" x="0" y="884" width="362" height="394" frameX="0" frameY="-11" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0003" x="392" y="884" width="361" height="401" frameX="-1" frameY="-4" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0004" x="783" y="884" width="360" height="405" frameX="-1" frameY="0" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0005" x="783" y="884" width="360" height="405" frameX="-1" frameY="0" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0006" x="783" y="884" width="360" height="405" frameX="-1" frameY="0" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0007" x="783" y="884" width="360" height="405" frameX="-1" frameY="0" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0008" x="783" y="884" width="360" height="405" frameX="-1" frameY="0" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0009" x="783" y="884" width="360" height="405" frameX="-1" frameY="0" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0010" x="783" y="884" width="360" height="405" frameX="-1" frameY="0" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0011" x="783" y="884" width="360" height="405" frameX="-1" frameY="0" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0012" x="783" y="884" width="360" height="405" frameX="-1" frameY="0" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0013" x="783" y="884" width="360" height="405" frameX="-1" frameY="0" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0014" x="1173" y="884" width="363" height="400" frameX="0" frameY="-6" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0015" x="1566" y="884" width="362" height="400" frameX="0" frameY="-6" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0016" x="0" y="1319" width="362" height="400" frameX="0" frameY="-5" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0017" x="392" y="1319" width="362" height="401" frameX="0" frameY="-4" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0018" x="784" y="1319" width="360" height="402" frameX="-1" frameY="-3" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0019" x="1174" y="1319" width="360" height="405" frameX="-1" frameY="0" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0020" x="1174" y="1319" width="360" height="405" frameX="-1" frameY="0" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0021" x="1174" y="1319" width="360" height="405" frameX="-1" frameY="0" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0022" x="1174" y="1319" width="360" height="405" frameX="-1" frameY="0" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0023" x="1174" y="1319" width="360" height="405" frameX="-1" frameY="0" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0024" x="1174" y="1319" width="360" height="405" frameX="-1" frameY="0" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0025" x="1174" y="1319" width="360" height="405" frameX="-1" frameY="0" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0026" x="1174" y="1319" width="360" height="405" frameX="-1" frameY="0" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0027" x="1174" y="1319" width="360" height="405" frameX="-1" frameY="0" frameWidth="363" frameHeight="406"/>
+	<SubTexture name="soft_pico idle0028" x="1174" y="1319" width="360" height="405" frameX="-1" frameY="0" frameWidth="363" frameHeight="406"/>
+</TextureAtlas>

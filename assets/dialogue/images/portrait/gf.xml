@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="gf.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="G1.png" x="0" y="0" width="786" height="879"/>
+	<SubTexture name="G10.png" x="786" y="0" width="934" height="879"/>
+	<SubTexture name="G11.png" x="1720" y="0" width="786" height="879"/>
+	<SubTexture name="G12.png" x="2506" y="0" width="961" height="1001"/>
+	<SubTexture name="G13.png" x="3467" y="0" width="786" height="879"/>
+	<SubTexture name="G14.png" x="4253" y="0" width="786" height="879"/>
+	<SubTexture name="G15.png" x="5039" y="0" width="797" height="897"/>
+	<SubTexture name="G16.png" x="5836" y="0" width="961" height="1001"/>
+	<SubTexture name="G17.png" x="6797" y="0" width="962" height="1001"/>
+	<SubTexture name="G18.png" x="0" y="1001" width="972" height="1015"/>
+	<SubTexture name="G19.png" x="972" y="1001" width="984" height="913"/>
+	<SubTexture name="G2.png" x="1956" y="1001" width="786" height="879"/>
+	<SubTexture name="G20.png" x="2742" y="1001" width="839" height="966"/>
+	<SubTexture name="G3.png" x="3581" y="1001" width="893" height="832"/>
+	<SubTexture name="G4.png" x="4474" y="1001" width="893" height="832"/>
+	<SubTexture name="G5.png" x="5367" y="1001" width="971" height="973"/>
+	<SubTexture name="G6.png" x="6338" y="1001" width="997" height="973"/>
+	<SubTexture name="G7.png" x="7335" y="1001" width="786" height="879"/>
+	<SubTexture name="G8.png" x="0" y="2016" width="786" height="879"/>
+	<SubTexture name="G9.png" x="786" y="2016" width="784" height="879"/>
+</TextureAtlas>

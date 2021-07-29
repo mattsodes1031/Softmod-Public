@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bf.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="B1.png" x="0" y="0" width="600" height="601"/>
+	<SubTexture name="B10.png" x="600" y="0" width="640" height="677"/>
+	<SubTexture name="B11.png" x="1240" y="0" width="615" height="627"/>
+	<SubTexture name="B12.png" x="1855" y="0" width="616" height="627"/>
+	<SubTexture name="B13.png" x="2471" y="0" width="598" height="739"/>
+	<SubTexture name="B14.png" x="3069" y="0" width="616" height="627"/>
+	<SubTexture name="B15.png" x="0" y="739" width="615" height="627"/>
+	<SubTexture name="B16.png" x="615" y="739" width="615" height="627"/>
+	<SubTexture name="B17.png" x="1230" y="739" width="614" height="627"/>
+	<SubTexture name="B18.png" x="1844" y="739" width="948" height="704"/>
+	<SubTexture name="B19.png" x="2792" y="739" width="599" height="627"/>
+	<SubTexture name="B2.png" x="3391" y="739" width="609" height="629"/>
+	<SubTexture name="B20.png" x="0" y="1443" width="600" height="627"/>
+	<SubTexture name="B21.png" x="600" y="1443" width="603" height="627"/>
+	<SubTexture name="B22.png" x="1203" y="1443" width="603" height="627"/>
+	<SubTexture name="B23.png" x="1806" y="1443" width="600" height="627"/>
+	<SubTexture name="B24.png" x="2406" y="1443" width="601" height="627"/>
+	<SubTexture name="B25.png" x="3007" y="1443" width="601" height="627"/>
+	<SubTexture name="B26.png" x="0" y="2070" width="603" height="627"/>
+	<SubTexture name="B3.png" x="603" y="2070" width="616" height="627"/>
+	<SubTexture name="B4.png" x="1219" y="2070" width="616" height="627"/>
+	<SubTexture name="B5.png" x="1835" y="2070" width="603" height="625"/>
+	<SubTexture name="B6.png" x="2438" y="2070" width="615" height="627"/>
+	<SubTexture name="B7.png" x="3053" y="2070" width="616" height="626"/>
+	<SubTexture name="B8.png" x="0" y="2697" width="616" height="627"/>
+	<SubTexture name="B9.png" x="616" y="2697" width="634" height="665"/>
+</TextureAtlas>
