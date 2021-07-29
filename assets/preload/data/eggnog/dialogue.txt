@@ -1,32 +1,27 @@
-:momxmas:mx5: YOU LITTLE SHIT!
-:picoxmas:px6: !
-:bfxmas: !
-:dadxmas:dx6: You’ve know…
-:dadxmas:dx6: If you just did as you were told,
-:dadxmas:dx6: You wouldn’t need to wear that damn sweatshirt all the time.
-:dadxmas:dx6: You’d have nothing to hide.
-:dadxmas:dx6: You could actually call yourself a man.
-:bfxmas: …
-:momxmas:default: Now be a good son and listen to your parents this instant!
-:bfxmas:bx14: DON’T CALL ME YOUR SON!
-:momxmas:mx5: !
-:dadxmas:dx6: !
-:bfxmas:bx14: You tried to make me a mindless slave!
-:bfxmas:bx14: Just like GF!
-:momxmas:default: SHUT IT-
-:bfxmas:bx14: NO!
-:bfxmas:bx14: Parents are supposed to protect and care about their children.
-:bfxmas:bx14: You took away my dreams…
-:bfxmas:bx14: My happiness…
-:bfxmas:bx14: My trust in others…
-:bfxmas:bx14: My childhood.
-:bfxmas:bx14: For so long I thought that was what love truly was.
-:bfxmas:bx14: But in reality...
-::bfxmas:bx14: You were never my parents...
-:bfxmas:bx14: And never will be!
-:picoxmas:default: :) *proud bf noises*
-:bfxmas:bx18: Pico! Hit it!
-:picoxmas:default: You got it babe! 
+:narrator:tamashadow: Despite being battered and bruised, Pico and BF find solace in one another’s company. 
+:narrator:tamashadow: While healing, a treacherous month flies by, which they spend tending to wounds.
+:narrator:tamashadow: Soon, the boys feel well enough and brave enough to face the streets once again.
+:narrator:tamashadow: Signs of the holiday season litter the scene, with snowflakes dancing in the air, golden bells ringing, and children laughing…
+:narrator:tamashadow: A crowd of strangers whisper to one another in excitement, waiting beside a sign that reads “Annual Holiday Fairest Meet and Greet!”
+:narrator:tamashadow: The two boys enjoy the winter season with smiles, distracted by one another’s company.
+:picoxmas:px11: I can't believe you're actually making me wear this...
+:bfxmas:bx7: What? You look adorable!
+:picoxmas:px11: I know… 
+:bfxmas:bx7: Come on Toughie… this is our first time out and about in a month… at least try to enjoy it-
+:narrator:default: THERE THEY ARE!
+:picoxmas:px6: ?!
+:bfxmas:bx5: ?!
+:picoxmas:px6: A crowd…?
+:bfxmas:bx5: … Oh no…
+:bfxmas:bx5: What… day is it?
+:picoxmas:px6: The 17th… why?
+:momxmas:mx11: OUR SON!
+:bfxmas:bx6: … that’s why…
 
+:dadxmas:default: Just in time for the holidays!
+:momxmas:mx11: We were beginning to fear the worst…
+:bfxmas:bx6: …
+:dadxmas:dx4: How about we celebrate, s p o r t?
+:momxmas:mx11: Aaaaaaand finally get you home!
 
 

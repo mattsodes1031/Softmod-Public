@@ -187,7 +187,7 @@ class DialogueBox extends FlxSpriteGroup
 			portraitBF = new Portrait (850, 235, "bf");
 			add(portraitBF);
 			
-			portraitBFXMAS = new Portrait (190, 190, "bfxmas");
+			portraitBFXMAS = new Portrait (850, 265, "bfxmas");
 			add(portraitBFXMAS);
 
 			portraitPICO = new Portrait (190, 190, "pico");

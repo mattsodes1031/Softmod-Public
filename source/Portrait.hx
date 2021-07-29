@@ -205,7 +205,7 @@ class Portrait extends FlxSprite
                 animation.play("default");
 			case "momxmas":
                 addAnim("default", "M10xmas.png");
-                addAnim("mx11", "M2xmas.png");
+                addAnim("mx11", "M11xmas.png");
 				addAnim("mx1", "M3xmas.png");
 				addAnim("mx3", "M4xmas.png");
 				addAnim("mx5", "M5xmas.png");
@@ -296,6 +296,24 @@ class Portrait extends FlxSprite
             case "g3":
                 x = refx;
                 y = (refy - height)+10;
+            case "mx5":
+                x = refx+10;
+                y = (refy - height);
+            case "bx18":
+                x = refx;
+                y = (refy - height)+10;
+            case "bx11":
+                x = refx;
+                y = (refy - height)+4;
+            case "bx5":
+                x = refx;
+                y = (refy - height)+3;
+            case "bx7":
+                x = refx;
+                y = (refy - height)+4;
+            case "angy2":
+                x = refx - 50;
+                y = (refy - height);
            
 
         }

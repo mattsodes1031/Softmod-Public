@@ -337,6 +337,8 @@ class PlayState extends MusicBeatState
 					trace(dialogue);
 				}
 				else{
+					trace(dialogue);
+					trace("plese be right");
 					dialogue = CoolUtil.coolTextFile("assets/data/" + SONG.song.toLowerCase() + "/dialogue.txt");
 					usesDialogue = true;
 					trace(dialogue);
@@ -353,6 +355,7 @@ class PlayState extends MusicBeatState
 					usesDialogue = true;
 					trace(dialogueEnd);
 				}
+
 				else{
 					dialogueEnd = CoolUtil.coolTextFile("assets/data/" + SONG.song.toLowerCase() + "/dialogueEnd.txt");
 					usesEndDialogue = true;
@@ -555,9 +558,11 @@ class PlayState extends MusicBeatState
 					fgSnow.antialiasing = true;
 					add(fgSnow);
 
+					//Jonny Utah is hot af
 					santa = new FlxSprite(-840, 150);
 					santa.frames = Paths.getSparrowAtlas('christmas/santa','week5');
 					santa.animation.addByPrefix('idle', 'santa idle in fear', 24, false);
+					//jeff when he buys grownups 2^
 					santa.antialiasing = true;
 					if(FlxG.save.data.distractions){
 						add(santa);
@@ -629,6 +634,7 @@ class PlayState extends MusicBeatState
 			}
 			case 'mallEvil':
 			{
+					defaultCamZoom = 0.80;
 					curStage = 'mallEvil';
 					var bg:FlxSprite = new FlxSprite(-400, -500).loadGraphic(Paths.image('christmas/evilBG','week5'));
 					bg.antialiasing = true;
@@ -2167,7 +2173,7 @@ class PlayState extends MusicBeatState
 										if(!triggeredAlready)
 										{
 											if(pain==false){
-											gf.playAnim('cheer');
+											//gf.playAnim('cheer');
 											}
 											triggeredAlready = true;
 										}
@@ -2185,7 +2191,7 @@ class PlayState extends MusicBeatState
 									if(!triggeredAlready)
 									{
 										if(pain==false){
-										gf.playAnim('cheer');
+										//gf.playAnim('cheer');
 										}
 										triggeredAlready = true;
 									}
@@ -2203,7 +2209,7 @@ class PlayState extends MusicBeatState
 										if(!triggeredAlready)
 										{
 											if(pain==false){
-											gf.playAnim('cheer');
+											//gf.playAnim('cheer');
 											}
 											triggeredAlready = true;
 										}
@@ -2222,7 +2228,7 @@ class PlayState extends MusicBeatState
 										if(!triggeredAlready)
 										{
 											if(pain==false){
-											gf.playAnim('cheer');
+											//gf.playAnim('cheer');
 											}
 											triggeredAlready = true;
 										}
@@ -2239,7 +2245,7 @@ class PlayState extends MusicBeatState
 									if(!triggeredAlready)
 									{
 										if(pain==false){
-										gf.playAnim('cheer');
+										//gf.playAnim('cheer');
 										}
 										triggeredAlready = true;
 									}
@@ -3290,7 +3296,7 @@ class PlayState extends MusicBeatState
 			if (combo > 5 && gf.animOffsets.exists('sad'))
 			{
 				if(pain==false){
-				gf.playAnim('sad');
+				//gf.playAnim('sad');
 				}
 			}
 			combo = 0;

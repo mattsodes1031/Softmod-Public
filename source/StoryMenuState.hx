@@ -29,7 +29,7 @@ class StoryMenuState extends MusicBeatState
 		['Spookeez', 'South', "Monster"],
 		['Pico', 'Philly Nice', "Blammed"],
 		['Satin Panties', 'High', "MILF"],
-		['Cocoa', 'Eggnog', 'Winter Horrorland'],
+		['eggnog','hope','genesis'],
 		['Senpai', 'Roses', 'Thorns']
 	];
 	var curDifficulty:Int = 1;
