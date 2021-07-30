@@ -943,7 +943,10 @@ class PlayState extends MusicBeatState
 
 			case 'mallEvil':
 				boyfriend.x += 320;
-				dad.y -= 80;
+				boyfriend.y -=30;
+				dad.x += 230;
+				dad.y += 10;
+				camPos.x += 800;
 			case 'philly':
 				camPos.x += 430;
 				camPos.y += 200;
