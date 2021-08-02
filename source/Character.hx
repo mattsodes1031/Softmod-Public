@@ -311,6 +311,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'monster down', 24, false);
 				animation.addByPrefix('singLEFT', 'Monster left note', 24, false);
 				animation.addByPrefix('singRIGHT', 'Monster right note', 24, false);
+				setGraphicSize(Std.int(width * 1.15));
 
 				addOffset('idle');
 				addOffset("singUP", 121, 66);
@@ -596,7 +597,6 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'SENPAI LEFT NOTE', 24, false);
 				animation.addByPrefix('singRIGHT', 'SENPAI RIGHT NOTE', 24, false);
 				animation.addByPrefix('singDOWN', 'SENPAI DOWN NOTE', 24, false);
-
 				addOffset('idle');
 				addOffset("singUP", 5, 37);
 				addOffset("singRIGHT");
@@ -892,4 +892,5 @@ class Character extends FlxSprite
 	{
 		animOffsets[name] = [x, y];
 	}
+
 }

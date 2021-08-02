@@ -331,10 +331,28 @@ class PlayState extends MusicBeatState
 		Conductor.changeBPM(SONG.bpm);
 		
 			if(dialogueList.contains(SONG.song.toLowerCase())){
+			//I hate kade engine i hate kade engine
 				if(SONG.song.toLowerCase()== "dad battle"){
-					dialogue = CoolUtil.coolTextFile("assets/data/dadbattle/dialogue.txt");
+					dialogue = CoolUtil.coolTextFile("assets/data/stupiddialogue/dialogued.txt");
 					usesDialogue = true;
 					trace(dialogue);
+				}
+				else if(SONG.song.toLowerCase()== "milf"){
+					trace(dialogue);
+					dialogue = CoolUtil.coolTextFile("assets/data/stupiddialogue/dialoguem.txt");
+					usesDialogue = true;
+					
+				}
+				else if(SONG.song.toLowerCase()== "hope"){
+					trace(dialogue);
+					dialogue = CoolUtil.coolTextFile("assets/data/stupiddialogue/dialogueh.txt");
+					usesDialogue = true;
+				}
+				else if(SONG.song.toLowerCase()== "fresh"){
+					trace(dialogue);
+					dialogue = CoolUtil.coolTextFile("assets/data/stupiddialogue/dialoguef.txt");
+					usesDialogue = true;
+					
 				}
 				else{
 					trace(dialogue);
@@ -351,9 +369,9 @@ class PlayState extends MusicBeatState
 			if(dialogueEndList.contains(SONG.song.toLowerCase())){
 				if(SONG.song.toLowerCase()== "dad battle"){
 					trace("end");
-					dialogueEnd = CoolUtil.coolTextFile("assets/data/dadbattle/dialogueEnd.txt");
-					usesDialogue = true;
-					trace(dialogueEnd);
+				//	dialogueEnd = CoolUtil.coolTextFile("assets/data/dadbattle/dialogueEnd.txt");
+				//	usesDialogue = true;
+				//	trace(dialogueEnd);
 				}
 
 				else{
@@ -372,7 +390,12 @@ class PlayState extends MusicBeatState
 			{
 				curStage = 'spooky';
 				halloweenLevel = true;
-
+				if(SONG.player2 == "monster"){
+					defaultCamZoom = 0.88;
+				}
+				else{
+					defaultCamZoom = 0.95;
+				}
 				var hallowTex = Paths.getSparrowAtlas('halloween_bg','week2');
 
 				halloweenBG = new FlxSprite(-200, -100);
@@ -896,10 +919,14 @@ class PlayState extends MusicBeatState
 				}
 
 			case "spooky":
-				dad.y += 200;
-			case "monster":
 				dad.y += 100;
+				camPos.x += 500;
+				camPos.y += 100;
+			case "monster":
+				dad.y += 80;
 				gf.y += 10000;
+				camPos.x += 600;
+				camPos.y += 100;
 			case 'monster-christmas':
 				dad.y += 130;
 			case 'dad':
@@ -930,9 +957,23 @@ class PlayState extends MusicBeatState
 		// REPOSITIONING PER STAGE
 		switch (curStage)
 		{
+			case 'spooky':
+				if(SONG.player2 == "monster"){
+				boyfriend.y -= 100;
+				dad.y -= 100;
+				camPos.y -= 100;
+				camPos.x -= 20;
+				}
+				boyfriend.x += 100;
+				dad.x+= 100;
+				gf.x += 100;
+
 			case 'limo':
 				boyfriend.y -= 220;
 				boyfriend.x += 260;
+				gf.y += 5;
+				camPos.x += 450;
+				camPos.y -= 200;
 				if(FlxG.save.data.distractions){
 					resetFastCar();
 					add(fastCar);
@@ -946,7 +987,7 @@ class PlayState extends MusicBeatState
 				boyfriend.y -=30;
 				dad.x += 230;
 				dad.y += 10;
-				camPos.x += 800;
+				camPos.x += 600;
 			case 'philly':
 				camPos.x += 430;
 				camPos.y += 200;

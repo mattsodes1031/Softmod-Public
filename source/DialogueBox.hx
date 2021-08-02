@@ -1,3 +1,27 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 package;
 
 import flixel.system.FlxSound;
@@ -454,6 +478,8 @@ class DialogueBox extends FlxSpriteGroup
 					effectToRight();
 				//case "shake":
 					//effectShake(Std.parseFloat(effectParamQue[i]));
+				case "lightningStrike":
+					lightningStrikeShit();
 				default:
 
 			}
@@ -655,6 +681,10 @@ class DialogueBox extends FlxSpriteGroup
 			portraitArray()[i].effectToLeft(time);
 			}
 		
+	}
+	function lightningStrikeShit():Void
+	{
+		FlxG.sound.play(Paths.soundRandom('thunder_', 1, 2));
 	}
 
 

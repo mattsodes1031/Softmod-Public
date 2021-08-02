@@ -1,9 +1,9 @@
-:narrator:default: The moon had risen over the cityscape after the sun went to rest it’s head for the night.
-:narrator:default: Clouds joined in to keep it company, creating a stormy ruckus to keep it awake.
-:narrator:default: Our protagonists found themselves taking cover in a building which was long overdue for a visit… 
-:narrator:default: Or at least that’s what they thought.
-:narrator:default: It was near impossible to see three feet in front of them when there wasn’t a strike of lightning to brighten up the room,
-:narrator:default: leaving the two on edge.
+:narrator:tamashadow: The moon had risen over the cityscape after the sun went to rest it’s head for the night.
+:narrator:tamashadow: Clouds joined in to keep it company, creating a stormy ruckus to keep it awake.
+:narrator:tamashadow: Our protagonists found themselves taking cover in a building which was long overdue for a visit… 
+:narrator:tamashadow: Or at least that’s what they thought.
+:narrator:tamashadow: It was near impossible to see three feet in front of them when there wasn’t a strike of lightning to brighten up the room,
+:narrator:tamashadow: leaving the two on edge.
 :bf:b6: I don’t know about this place, Pico…
 :pico:p7: Well, you got a better place to hide?
 :bf:b6: ...no.
@@ -24,7 +24,7 @@
 :skidnpump:pn: We are doing the spooky things during the spooky month!
 :pico:p4: Spooky month-
 :pico:p7: It’s November. Isn’t it a bit late-
-:bf:b8: Hush. Let them be.
+:bf:default: Hush. Let them be.
 :skidnpump:pn: Hey, wait, you look familiar!
 :bf:b2: O-oh?
 :skidnpump:sn: Yeah yeah! Your dad is super famous!
@@ -39,5 +39,5 @@
 :pico:p4: Probably not the best idea…
 :skidnpump:sn: Pleaaaase?
 :skidnpump:pn: Pleaaaase?
-:bf:8b: Aw...alright little dudes. 
+:bf:default: Aw...alright little dudes. 
 :pico:p4: … skurwiel...
