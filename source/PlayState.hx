@@ -589,10 +589,11 @@ class PlayState extends MusicBeatState
 
 					//Jonny Utah is hot af
 					santa = new FlxSprite(-840, 150);
-					santa.frames = Paths.getSparrowAtlas('christmas/santa','week5');
+					santa.frames = Paths.getSparrowAtlas('christmas/santa1','week5');
 					santa.animation.addByPrefix('idle', 'santa idle in fear', 24, false);
 					//jeff when he buys grownups 2^
 					santa.antialiasing = true;
+					santa.animation.play('idle');
 					if(FlxG.save.data.distractions){
 						add(santa);
 					}

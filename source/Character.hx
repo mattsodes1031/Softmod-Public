@@ -786,6 +786,9 @@ class Character extends FlxSprite
 			case 'gf':
 				if (animation.curAnim.name == 'hairFall' && animation.curAnim.finished)
 					playAnim('danceRight');
+			case 'hot_mom_phase_1'|'hot_mom_phase_2':
+			if(animation.curAnim.name == 'idle' && animation.curAnim.finished)
+				playAnim('idle',false,false,11);
 		}
 
 		super.update(elapsed);
@@ -802,6 +805,11 @@ class Character extends FlxSprite
 		{
 			switch (curCharacter)
 			{
+
+				case 'hot_mom_phase_1'|'hot_mom_phase_2':
+					if(danced)
+						playAnim('idle',true);
+					danced = !danced;
 				case 'gf':
 					if (!animation.curAnim.name.startsWith('hair'))
 					{
