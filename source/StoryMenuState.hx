@@ -27,7 +27,7 @@ class StoryMenuState extends MusicBeatState
 		['Preface'],
 		['Fresh','DadBattle', "No-Cigar"],
 		['Spookeez', 'South',"Repressed"],
-		["it's-Complicated",'Stay','Playdate'],
+		['Playdate','Stay',"its-Complicated"],
 		['High',"MILF",'Spotlight'],
 		['Eggnog','Hope','Genesis'],
 		['Senpai', 'Roses', 'Thorns']
