@@ -41,7 +41,7 @@ class LoadReplayState extends MusicBeatState
 
         addWeek([ 'Fresh', 'Dadbattle','no-cigar'], 1, ['dad','dad2','dad3']);
         addWeek(['Spookeez', 'South', 'Monster'], 2, ['spooky','spooky','monster']);
-        addWeek(['Pico', 'Philly', 'Blammed'], 3, ['pico']);
+        addWeek(['Play-Date', 'Stay', "it's-Complicated"], 3, ['softgf','softgf2','softgf3']);
 
         addWeek(['High', "MILF",'Spotlight'], 4, ["hot_mom_phase_1",'hot_mom_phase_2',"hot_mom_phase_3"]);
         addWeek(['eggnog', 'hope', 'genesis'], 5, ['parents-christmas', 'parents-christmas', 'monster-christmas']);

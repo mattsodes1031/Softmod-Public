@@ -54,11 +54,11 @@ class Song
 		switch (folderLowercase) {
 			case 'dad-battle': folderLowercase = 'dadbattle';
 			case 'philly-nice': folderLowercase = 'philly';
+			//case 'no-cigar': folderLowercase = 'nocigar';
 		}
-		
-		trace('loading ' + folderLowercase + '/' + jsonInput.toLowerCase());
-		trace(Assets.getText(Paths.json(folderLowercase + '/' + jsonInput.toLowerCase())).trim());
-		var rawJson = Assets.getText(Paths.json(folderLowercase + '/' + jsonInput.toLowerCase())).trim();
+		trace(folderLowercase);
+		trace('loading ' + folderLowercase + '/' + folderLowercase.toLowerCase());
+		var rawJson = Assets.getText(Paths.json(folderLowercase + '/' + folderLowercase.toLowerCase())).trim();
 
 		while (!rawJson.endsWith("}"))
 		{

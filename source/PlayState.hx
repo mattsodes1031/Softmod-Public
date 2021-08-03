@@ -352,8 +352,12 @@ class PlayState extends MusicBeatState
 					trace(dialogue);
 					dialogue = CoolUtil.coolTextFile("assets/data/stupiddialogue/dialoguef.txt");
 					usesDialogue = true;
-					
 				}
+				//else if(SONG.song.toLowerCase()== "playdate"){
+				//	trace(dialogue);
+				//	dialogue = CoolUtil.coolTextFile("assets/data/stupiddialogue/dialogueplaydate.txt");
+				//	usesDialogue = true;
+				//}
 				else{
 					trace(dialogue);
 					trace("plese be right");
@@ -450,16 +454,18 @@ class PlayState extends MusicBeatState
 					var station:FlxSprite = new FlxSprite(120, 170).loadGraphic(Paths.image('philly/bg_week_3','week3'));
 					station.setGraphicSize(Std.int(station.width * 1.5));
 					add(station);
-					/*
-					var referance:FlxSprite = new FlxSprite(200,400);
-					referance.frames = Paths.getSparrowAtlas('bop');
-					referance.setGraphicSize(Std.int(referance.width *1.50));
-					referance.animation.addByPrefix('vibe','bop',24);
-					referance.animation.play('vibe');
-					referance.scrollFactor.set(0.9, 0.9);
-					referance.antialiasing = true;
-					add(referance);
-					*/
+					
+					upperBoppers = new FlxSprite(400, 0);
+					upperBoppers.frames = Paths.getSparrowAtlas('christmas/bop','week5');
+					upperBoppers.animation.addByPrefix('bop', "bop0", 24, false);
+					upperBoppers.antialiasing = true;
+					upperBoppers.scrollFactor.set(0.33, 0.33);
+					upperBoppers.setGraphicSize(Std.int(upperBoppers.width * 0.85));
+					upperBoppers.updateHitbox();
+					if(FlxG.save.data.distractions){
+						add(upperBoppers);
+					}
+					
 
 					phillyTrain = new FlxSprite(2000, 360).loadGraphic(Paths.image('philly/train','week3'));
 					if(FlxG.save.data.distractions){
@@ -919,7 +925,7 @@ class PlayState extends MusicBeatState
 				}
 
 			case "spooky":
-				dad.y += 100;
+				dad.y += 200;
 				camPos.x += 500;
 				camPos.y += 100;
 			case "monster":
@@ -930,7 +936,8 @@ class PlayState extends MusicBeatState
 			case 'monster-christmas':
 				dad.y += 130;
 			case 'dad':
-				camPos.x += 400;
+				camPos.x += 200;
+				camPos.x += 100;
 			case 'pico':
 				camPos.x += 600;
 				dad.y += 300;
@@ -996,8 +1003,11 @@ class PlayState extends MusicBeatState
 				boyfriend.y += 20;
 
 			case 'stage1':
-				dad.y += 350;
-				gf.y -= 200;
+				dad.y += 400;
+				gf.y -= 50;
+			case 'stage':
+				camPos.x += 360;
+				camPos.y -= 200;
 			case 'school':
 				boyfriend.x += 200;
 				boyfriend.y += 220;

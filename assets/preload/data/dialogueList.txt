@@ -19,3 +19,5 @@ preface
 hope
 repressed
 dadbattle 
+no-cigar
+stay

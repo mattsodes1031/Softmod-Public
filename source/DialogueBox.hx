@@ -1,27 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 package;
 
 import flixel.system.FlxSound;
@@ -96,6 +73,7 @@ class DialogueBox extends FlxSpriteGroup
 
 	public function new(talkingRight:Bool = true, ?dialogueList:Array<String>)
 	{
+
 		super();
 
 		new FlxTimer().start(0.5, function(tmr:FlxTimer)
@@ -118,6 +96,12 @@ class DialogueBox extends FlxSpriteGroup
 		bgFade.scrollFactor.set();
 		bgFade.alpha = 0;
 		add(bgFade);
+		
+		cutsceneImage = new FlxSprite(0, 0);
+		cutsceneImage.visible = false;
+		add(cutsceneImage);	
+		
+
 
 		new FlxTimer().start(0.83, function(tmr:FlxTimer)
 		{
@@ -137,7 +121,6 @@ class DialogueBox extends FlxSpriteGroup
 				box.frames = Paths.getSparrowAtlas('bawks', 'shared');
 				box.animation.addByPrefix('normalOpen', 'dialogue_box.png', 24, false);
 				box.animation.addByIndices('normal', 'dialogue_box.png', [1], "", 24);
-				trace('Bawks loaded');
 				count+=1;
 				
 			case 'senpai':
@@ -190,7 +173,6 @@ class DialogueBox extends FlxSpriteGroup
 		
 		if (!hasDialog)
 			return;
-			trace('Dialog returned');
 		if (PlayState.SONG.song.toLowerCase() == 'senpai'
 			|| PlayState.SONG.song.toLowerCase() == 'roses'
 			|| PlayState.SONG.song.toLowerCase() == 'thorns')
@@ -260,7 +242,7 @@ class DialogueBox extends FlxSpriteGroup
 			portraitNARRATOR =  new Portrait (210, 130, "narrator");
 			add(portraitNARRATOR);
 			
-			trace('Portraits here');
+
 		}
 		//portraitLeft = new FlxSprite(-20, 190);
 		
@@ -316,18 +298,7 @@ class DialogueBox extends FlxSpriteGroup
 		box.setGraphicSize(Std.int(box.width * 0.9));
 		box.updateHitbox();
 		add(box);
-		trace('Box default');
-		/*
-		if(count == 1){
-		blackBG = new FlxSprite(-256, -256).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
-		add(blackBG);
-		trace(blackBG.x);
-		}
-		else if(blackBG.x == -256){
-		blackBG.setGraphicSize(Std.int(width * .01));
-		}
-		*/
-		trace("num ="+count);
+	
 		}
 
 		box.screenCenter(X);
@@ -350,7 +321,7 @@ class DialogueBox extends FlxSpriteGroup
 		dropText.font = 'DK Inky Fingers';
 		dropText.color = 0xFFD89494;
 		add(dropText);
-		trace('Font loaded');
+
 
 		swagDialogue = new FlxTypeText(240, 500, Std.int(FlxG.width * 0.6), "", 32);
 		swagDialogue.font = 'DK Inky Fingers';
@@ -419,6 +390,7 @@ class DialogueBox extends FlxSpriteGroup
 
 			if (dialogueList[1] == null && dialogueList[0] != null)
 			{
+				trace(dialogueList+" null");
 				if (!isEnding)
 				{
 					isEnding = true;
@@ -428,6 +400,7 @@ class DialogueBox extends FlxSpriteGroup
 			}
 			else
 			{
+				trace(";-; else");
 				dialogueList.remove(dialogueList[0]);
 				startDialogue();
 				//trace('You better work');
@@ -441,7 +414,7 @@ class DialogueBox extends FlxSpriteGroup
 
 	function endDialogue(){
 		hideAll();
-		
+		FlxTween.tween(cutsceneImage, {alpha: 0}, 1.2, {ease: FlxEase.circOut});
 		new FlxTimer().start(1.2, function(tmr:FlxTimer)
 		{
 			finishThing();
@@ -491,33 +464,27 @@ class DialogueBox extends FlxSpriteGroup
 
 	}
 
+
+		
+
+	
+
 	function startDialogue():Void
 	{
-		hideAll();
+
 		var setDialogue = false;
 		var skipDialogue = false;
 		cleanDialog();
-		
+		hideAll();
+
 		box.visible = true;
-		box.flipX = false;
+		box.flipX = true;
 		swagDialogue.visible = true;
 		dropText.visible = true;
-		
+		trace(curCharacter);
 		switch (curCharacter)
 		{
-			case "effect":
-				switch(curAnim){
-					case "hidden":
-						swagDialogue.visible = false;
-						dropText.visible = false;
-						box.visible = false;
-						setDialogue = true;
-						swagDialogue.resetText("");
-					default:
-						effectQue.push(curAnim);
-						effectParamQue.push(dialogueList[0]);
-						skipDialogue = true;
-				}
+			
 			case "bf":
 				portraitBF.playFrame(curAnim);
 			case "bfxmas":
@@ -550,13 +517,37 @@ class DialogueBox extends FlxSpriteGroup
 				portraitSHADOWS.playFrame(curAnim);
 			case "narrator":
 				portraitNARRATOR.playFrame(curAnim);
-				
 			
+			case "effect":
+				switch(curAnim){
+					case "hidden":
+						swagDialogue.visible = false;
+						dropText.visible = false;
+						box.visible = false;
+						setDialogue = true;
+						swagDialogue.resetText("");
+					default:
+						effectQue.push(curAnim);
+						effectParamQue.push(dialogueList[0]);
+						skipDialogue = true;
+				}
+			case "bg":
+				trace(curAnim);
+				skipDialogue = true;
+				switch(curAnim){
+					case "hide":
+						cutsceneImage.visible = false;
+					default:
+						cutsceneImage.visible = true;
+						cutsceneImage.loadGraphic(BitmapData.fromFile("assets/dialogue/images/bg/" + curAnim + ".png"));
+				}
+			
+				
 			default:
 				trace("default dialogue event");
 				portraitBF.playFrame();
 		}
-		
+
 		prevChar = curCharacter;
 
 		if(!skipDialogue){
@@ -566,23 +557,27 @@ class DialogueBox extends FlxSpriteGroup
 
 			swagDialogue.start(0.04, true);
 			runEffectsQue();
-			
 		}
 		else{
 
+			trace("sad");
 			dialogueList.remove(dialogueList[0]);
 			startDialogue();
 			
 		}
+
 	}
 	
 	function cleanDialog():Void
 	{
+		trace(dialogueList[0]+" new");
 		while(dialogueList[0] == ""){
 			dialogueList.remove(dialogueList[0]);
 		}
 
 		var splitName:Array<String> = dialogueList[0].split(":");
+		trace(dialogueList[1]+" curCharacter");
+		trace(dialogueList[2]+" curanim");
 		curCharacter = splitName[1];
 		curAnim = splitName[2];
 	
