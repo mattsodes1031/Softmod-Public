@@ -1440,7 +1440,10 @@ class PlayState extends MusicBeatState
 			if(pain==false){
 				dad.dance();
 				gf.dance();
-				boyfriend.playAnim('idle');
+				if(boyfriend.curCharacter == 'bf-car')
+					boyfriend.dance();
+				else
+					boyfriend.playAnim('idle');
 				}
 
 			var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
@@ -3307,7 +3310,7 @@ class PlayState extends MusicBeatState
 				if (boyfriend.holdTimer > Conductor.stepCrochet * 4 * 0.001 && (!holdArray.contains(true) || FlxG.save.data.botplay))
 				{
 					if (boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.animation.curAnim.name.endsWith('miss'))
-						boyfriend.playAnim('idle');
+						boyfriend.dance();
 						
 				}
 		 
@@ -3776,7 +3779,7 @@ class PlayState extends MusicBeatState
 		if (!boyfriend.animation.curAnim.name.startsWith("sing"))
 		{
 			if(pain==false){
-				boyfriend.playAnim('idle');
+				boyfriend.dance();
 				}
 		}
 		

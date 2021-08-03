@@ -512,6 +512,7 @@ class Character extends FlxSprite
 				addOffset("hey", 3, -2);
 
 				playAnim('idle');
+				
 			
 				flipX = true;
 			case 'bf-car':
@@ -665,14 +666,14 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT-alt', 'Parent Right Note Mom', 24, false);
 
 				addOffset('idle');
-				addOffset("singUP", -47, 24);
-				addOffset("singRIGHT", -1, -23);
-				addOffset("singLEFT", -30, 16);
-				addOffset("singDOWN", -31, -29);
-				addOffset("singUP-alt", -47, 24);
+				addOffset("singUP", -12, 64);
+				addOffset("singRIGHT", -15, -15);
+				addOffset("singLEFT", -3, 20);
+				addOffset("singDOWN", -3, -36);
+				addOffset("singUP-alt", -10, 62);
 				addOffset("singRIGHT-alt", -1, -24);
-				addOffset("singLEFT-alt", -30, 15);
-				addOffset("singDOWN-alt", -30, -27);
+				addOffset("singLEFT-alt", -3, 18);
+				addOffset("singDOWN-alt", -4, -32);
 
 				playAnim('idle');
 
@@ -786,7 +787,7 @@ class Character extends FlxSprite
 			case 'gf':
 				if (animation.curAnim.name == 'hairFall' && animation.curAnim.finished)
 					playAnim('danceRight');
-			case 'hot_mom_phase_1'|'hot_mom_phase_2':
+			case 'hot_mom_phase_1'|'hot_mom_phase_2'|'bf-car':
 			if(animation.curAnim.name == 'idle' && animation.curAnim.finished)
 				playAnim('idle',false,false,11);
 		}
@@ -810,6 +811,10 @@ class Character extends FlxSprite
 					if(danced)
 						playAnim('idle',true);
 					danced = !danced;
+				case 'bf-car':
+					if(!danced)
+						playAnim('idle' ,true);
+					danced = !danced;	
 				case 'gf':
 					if (!animation.curAnim.name.startsWith('hair'))
 					{
@@ -852,7 +857,7 @@ class Character extends FlxSprite
 						else
 							playAnim('danceLeft');
 					}
-
+				
 				case 'spooky':
 					danced = !danced;
 

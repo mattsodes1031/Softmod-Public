@@ -274,7 +274,7 @@ class DialogueBox extends FlxSpriteGroup
 		}
 
 		dropText = new FlxText(242, 502, Std.int(FlxG.width * 0.6), "", 32);
-		dropText.font = 'Pixel Arial 11 Bold';
+		dropText.font = 'DK Inky Fingers';
 		dropText.color = 0xFFD89494;
 		add(dropText);
 		skipText = new FlxText(5, 695, 640, "Press SPACE to skip the dialogue.\n", 40);
@@ -285,7 +285,7 @@ class DialogueBox extends FlxSpriteGroup
 		add(skipText);
 
 		swagDialogue = new FlxTypeText(240, 500, Std.int(FlxG.width * 0.6), "", 32);
-		swagDialogue.font = 'Pixel Arial 11 Bold';
+		swagDialogue.font = 'DK Inky Fingers';
 		swagDialogue.color = 0xFF3F2021;
 		swagDialogue.finishSounds = true;
 		swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];

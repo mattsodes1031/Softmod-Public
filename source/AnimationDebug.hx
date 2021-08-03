@@ -15,6 +15,9 @@ import flixel.util.FlxColor;
 class AnimationDebug extends FlxState
 {
 	var bf:Boyfriend;
+	var bfOverlay:Boyfriend;
+	var dadOverlay:Character;
+	var isBF = false;
 	var dad:Character;
 	var char:Character;
 	var textAnim:FlxText;
@@ -41,23 +44,44 @@ class AnimationDebug extends FlxState
 
 		if (daAnim == 'bf')
 			isDad = false;
-
+		
 		if (isDad)
 		{
 			dad = new Character(0, 0, daAnim);
 			dad.screenCenter();
 			dad.debugMode = true;
 			add(dad);
+			
+			
 
 			char = dad;
+			if (daAnim == 'pico' )
+			dad.flipX = true;
+			else
 			dad.flipX = false;
+
+			dadOverlay = new Character(0, 0, daAnim);
+			dadOverlay.screenCenter();
+			dadOverlay.debugMode = true;
+			
+			dadOverlay.alpha = 0;
+			add(dadOverlay);
 		}
 		else
 		{
+
+			isBF = true;
+
 			bf = new Boyfriend(0, 0);
 			bf.screenCenter();
 			bf.debugMode = true;
 			add(bf);
+
+			bfOverlay = new Boyfriend(0, 0);
+			bfOverlay.screenCenter();
+			bfOverlay.debugMode = true;
+			bfOverlay.alpha = 0;
+			add(bfOverlay);
 
 			char = bf;
 			bf.flipX = false;
@@ -71,6 +95,10 @@ class AnimationDebug extends FlxState
 		textAnim.scrollFactor.set();
 		add(textAnim);
 
+
+		if (isDad)
+		trace('DAD');
+		
 		genBoyOffsets();
 
 		camFollow = new FlxObject(0, 0, 2, 2);
@@ -111,6 +139,28 @@ class AnimationDebug extends FlxState
 
 	override function update(elapsed:Float)
 	{
+
+
+		if (FlxG.keys.justPressed.END){
+		trace('FLIP THE DAMN X NIGGA');
+		dadOverlay.flipX = false;
+		}
+		if(isBF){
+
+			if(FlxG.keys.justPressed.DELETE && bfOverlay.alpha == 0)
+				bfOverlay.alpha = 0.4;
+			else if(FlxG.keys.justPressed.DELETE && bfOverlay.alpha == 0.4)
+				bfOverlay.alpha = 0;
+
+		}
+		if (isDad){
+			
+			if(FlxG.keys.justPressed.DELETE && dadOverlay.alpha == 0)
+				dadOverlay.alpha = 0.4;
+			else if(FlxG.keys.justPressed.DELETE && dadOverlay.alpha == 0.4)
+				dadOverlay.alpha = 0;
+		}
+
 		textAnim.text = char.animation.curAnim.name;
 
 		if (FlxG.keys.justPressed.E)
@@ -161,6 +211,11 @@ class AnimationDebug extends FlxState
 
 			updateTexts();
 			genBoyOffsets(false);
+		}
+		
+		if (FlxG.keys.justPressed.ESCAPE)
+		{
+			FlxG.switchState(new PlayState());
 		}
 
 		var upP = FlxG.keys.anyJustPressed([UP]);
