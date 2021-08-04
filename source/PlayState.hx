@@ -455,16 +455,16 @@ class PlayState extends MusicBeatState
 					station.setGraphicSize(Std.int(station.width * 1.5));
 					add(station);
 					
-					upperBoppers = new FlxSprite(400, 0);
-					upperBoppers.frames = Paths.getSparrowAtlas('christmas/bop','week5');
-					upperBoppers.animation.addByPrefix('bop', "bop0", 24, false);
-					upperBoppers.antialiasing = true;
-					upperBoppers.scrollFactor.set(0.33, 0.33);
-					upperBoppers.setGraphicSize(Std.int(upperBoppers.width * 0.85));
-					upperBoppers.updateHitbox();
-					if(FlxG.save.data.distractions){
-						add(upperBoppers);
-					}
+					//upperBoppers = new FlxSprite(400, 0);
+					//upperBoppers.frames = Paths.getSparrowAtlas('christmas/bop','week5');
+					//upperBoppers.animation.addByPrefix('bop', "bop0", 24, false);
+					//upperBoppers.antialiasing = true;
+					//upperBoppers.scrollFactor.set(0.33, 0.33);
+					//upperBoppers.setGraphicSize(Std.int(upperBoppers.width * 0.85));
+					//upperBoppers.updateHitbox();
+					//if(FlxG.save.data.distractions){
+					//	add(upperBoppers);
+					//}
 					
 
 					phillyTrain = new FlxSprite(2000, 360).loadGraphic(Paths.image('philly/train','week3'));
@@ -484,7 +484,7 @@ class PlayState extends MusicBeatState
 			case 'limo':
 			{
 					curStage = 'limo';
-					defaultCamZoom = 0.90;
+					defaultCamZoom = 0.88;
 
 					var skyBG:FlxSprite = new FlxSprite(-520, -50).loadGraphic(Paths.image('limo/limoSunset','week4'));
 					skyBG.scrollFactor.set(0.1, 0.1);
@@ -502,13 +502,25 @@ class PlayState extends MusicBeatState
 						grpLimoDancers = new FlxTypedGroup<BackgroundDancer>();
 						add(grpLimoDancers);
 	
-						for (i in 0...5)
+						for (i in 0...4)
 						{
-								var dancer:BackgroundDancer = new BackgroundDancer((370 * i) + 130, bgLimo.y - 400);
+								var dancer:BackgroundDancer = new BackgroundDancer((370 * i) + 850, bgLimo.y - 355);
 								dancer.scrollFactor.set(0.4, 0.4);
 								grpLimoDancers.add(dancer);
 						}
+						var dancer:BackgroundDancer = new BackgroundDancer(110, bgLimo.y - 355);
+								dancer.scrollFactor.set(0.4, 0.4);
+								grpLimoDancers.add(dancer);
 					}
+
+					var pico:FlxSprite = new FlxSprite(315, 190);
+					pico.frames = Paths.getSparrowAtlas('characters/soft_pico_blow_car');
+					pico.animation.addByPrefix('vibe', "soft_pico hair blow CAR0", 24);
+					pico.setGraphicSize(Std.int(pico.width * 0.6));
+					pico.animation.play('vibe');
+					pico.scrollFactor.set(0.4, 0.4);	
+					add(pico);				
+
 
 					var overlayShit:FlxSprite = new FlxSprite(-500, -600).loadGraphic(Paths.image('limo/limoOverlay','week4'));
 					overlayShit.alpha = 0.5;
@@ -1005,15 +1017,16 @@ class PlayState extends MusicBeatState
 				gf.x += 100;
 
 			case 'limo':
-				boyfriend.y -= 220;
-				boyfriend.x += 260;
-				gf.y += 5;
+				boyfriend.y -= 245;
+				boyfriend.x += 290;
+				gf.y -= 2000;
+				gf.x -= 30;
 				camPos.x += 450;
 				camPos.y -= 200;
 				if(FlxG.save.data.distractions){
 					resetFastCar();
 					add(fastCar);
-				}
+				}	
 
 			case 'mall':
 				boyfriend.x += 200;
@@ -1035,8 +1048,8 @@ class PlayState extends MusicBeatState
 				dad.y += 400;
 				gf.y -= 50;
 			case 'stage':
-				camPos.x += 360;
-				camPos.y -= 200;
+				camPos.x += 0;
+				camPos.y -= 0;
 			case 'school':
 				boyfriend.x += 200;
 				boyfriend.y += 220;
@@ -2379,11 +2392,11 @@ class PlayState extends MusicBeatState
 							camFollow.y = dad.getMidpoint().y + 50;
 							camFollow.x = dad.getMidpoint().x + 100;
 						case 'softgf2':
-							camFollow.y = dad.getMidpoint().y - 50;
-							camFollow.x = dad.getMidpoint().x - 100;
+							camFollow.y = dad.getMidpoint().y + 50;
+							camFollow.x = dad.getMidpoint().x + 200;
 						case 'softgf3':
-							camFollow.y = dad.getMidpoint().y - 50;
-							camFollow.x = dad.getMidpoint().x + 100;
+							camFollow.y = dad.getMidpoint().y + 50;
+							camFollow.x = dad.getMidpoint().x + 200;
 					}
 
 					if (dad.curCharacter == 'mom')

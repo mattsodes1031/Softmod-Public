@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="Limo stage-idle.png">
-	<!-- Created with Adobe Animate version 21.0.0.35450 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Limo stage-idle0000" x="5" y="5" width="2048" height="670" frameX="0" frameY="-3" frameWidth="2048" frameHeight="673"/>
-	<SubTexture name="Limo stage-idle0001" x="5" y="680" width="2048" height="670" frameX="0" frameY="-3" frameWidth="2048" frameHeight="673"/>
-	<SubTexture name="Limo stage-idle0002" x="5" y="1355" width="2048" height="673"/>
-	<SubTexture name="Limo stage-idle0003" x="5" y="2033" width="2048" height="670" frameX="0" frameY="-3" frameWidth="2048" frameHeight="673"/>
-</TextureAtlas>
