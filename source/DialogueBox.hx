@@ -115,7 +115,7 @@ class DialogueBox extends FlxSpriteGroup
 	
 	
 
-		box = new FlxSprite(-20, 45);
+		box = new FlxSprite(-20, 385);
 		
 		var hasDialog = false;
 		switch (PlayState.SONG.song.toLowerCase())
@@ -123,12 +123,9 @@ class DialogueBox extends FlxSpriteGroup
 			
 			default:
 				hasDialog = true;
-				box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
-				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
-				box.animation.addByPrefix('normal', 'speech bubble normal', 24, true);
-				box.y += 345;
-				box.x += 60;
-				box.flipX = true;
+				box.frames = Paths.getSparrowAtlas('bawks', 'shared');
+				box.animation.addByPrefix('normalOpen', 'dialogue_box.png', 24, false);
+				box.animation.addByIndices('normal', 'dialogue_box.png', [1], "", 24);
 			case 'senpai':
 				hasDialog = true;
 				box.frames = Paths.getSparrowAtlas('weeb/pixelUI/dialogueBox-pixel');
