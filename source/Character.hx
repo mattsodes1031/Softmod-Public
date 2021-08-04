@@ -456,8 +456,6 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 
-				flipX = true;
-
 			case 'bf-christmas':
 				var tex = Paths.getSparrowAtlas('characters/softie_crimmus');
 				frames = tex;

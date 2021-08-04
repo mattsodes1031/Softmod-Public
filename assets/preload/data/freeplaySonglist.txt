@@ -3,4 +3,5 @@ Playdate:pico:1
 Genesis:monster:1
 dadbattle:dad:1
 philly:pico:1
-blammed:pico:1
+its-complicated
+diplopia:bf:6

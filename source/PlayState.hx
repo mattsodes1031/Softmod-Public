@@ -683,6 +683,34 @@ class PlayState extends MusicBeatState
 						evilSnow.antialiasing = true;
 					add(evilSnow);
 					}
+					
+			case 'stagesix':
+			{
+						defaultCamZoom = 0.9;
+						curStage = 'stagesix';
+						var bg2:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('stagesix/stageback'));
+						bg2.antialiasing = true;
+						bg2.scrollFactor.set(0.9, 0.9);
+						bg2.active = false;
+						add(bg2);
+	
+						var stageFront2:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('stagesix/stagefront'));
+						stageFront2.setGraphicSize(Std.int(stageFront2.width * 1.1));
+						stageFront2.updateHitbox();
+						stageFront2.antialiasing = true;
+						stageFront2.scrollFactor.set(0.9, 0.9);
+						stageFront2.active = false;
+						add(stageFront2);
+	
+						var stageCurtains2:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagesix/stagecurtains'));
+						stageCurtains2.setGraphicSize(Std.int(stageCurtains2.width * 0.9));
+						stageCurtains2.updateHitbox();
+						stageCurtains2.antialiasing = true;
+						stageCurtains2.scrollFactor.set(1.3, 1.3);
+						stageCurtains2.active = false;
+	
+						add(stageCurtains2);
+			}
 			case 'school':
 			{
 					curStage = 'school';

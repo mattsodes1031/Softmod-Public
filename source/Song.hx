@@ -56,7 +56,7 @@ class Song
 			case 'philly-nice': folderLowercase = 'philly';
 			//case 'no-cigar': folderLowercase = 'nocigar';
 		}
-		trace(folderLowercase+jsonInput);
+		trace(folderLowercase);
 		var rawJson = Assets.getText(Paths.json(folderLowercase + '/' + jsonInput.toLowerCase())).trim();
 
 		while (!rawJson.endsWith("}"))

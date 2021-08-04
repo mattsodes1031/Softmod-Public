@@ -24,13 +24,13 @@ class StoryMenuState extends MusicBeatState
 	var scoreText:FlxText;
 
 	var weekData:Array<Dynamic> = [
-		['Preface'],
+		['Tutorial'],
 		['Fresh','DadBattle', "No-Cigar"],
 		['Spookeez', 'South',"Repressed"],
-		['Playdate','Stay',"its-Complicated"],
+		['Playdate','Stay',"It's-Complicated"],
 		['High',"MILF",'Spotlight'],
 		['Eggnog','Hope','Genesis'],
-		['Senpai', 'Roses', 'Thorns']
+		['Diplopia', 'In-Fighting', 'Envy']
 	];
 	var curDifficulty:Int = 1;
 
@@ -43,7 +43,7 @@ class StoryMenuState extends MusicBeatState
 		['pico', 'bf', 'gf'],
 		['mom', 'bf', 'gf'],
 		['parents-christmas', 'bf', 'gf'],
-		['senpai', 'bf', 'gf']
+		['', 'bf', 'gf']
 	];
 
 	var weekNames:Array<String> = [
