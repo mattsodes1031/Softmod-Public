@@ -80,6 +80,7 @@ class DialogueBox extends FlxSpriteGroup
 		super();
 		
 		
+		
 	
 
 
@@ -225,6 +226,7 @@ class DialogueBox extends FlxSpriteGroup
 
 			portraitNARRATOR =  new Portrait (210, 130, "narrator");
 			add(portraitNARRATOR);
+			hideAll();
 			
 			
 		}
