@@ -583,7 +583,7 @@ class PlayState extends MusicBeatState
 					add(tree);
 
 					bottomBoppers = new FlxSprite(-300, 140);
-					bottomBoppers.frames = Paths.getSparrowAtlas('christmas/bottomBop','week5');
+					bottomBoppers.frames = Paths.getSparrowAtlas('christmas/bottomBop1','week5');
 					bottomBoppers.animation.addByPrefix('bop', 'Bottom Level Boppers', 24, false);
 					bottomBoppers.antialiasing = true;
 					bottomBoppers.scrollFactor.set(0.9, 0.9);
@@ -666,10 +666,13 @@ class PlayState extends MusicBeatState
 					fgSnow.antialiasing = true;
 					add(fgSnow);
 
+					//Jonny Utah is hot af
 					santa = new FlxSprite(-840, 150);
-					santa.frames = Paths.getSparrowAtlas('christmas/santa','week5');
+					santa.frames = Paths.getSparrowAtlas('christmas/santa1','week5');
 					santa.animation.addByPrefix('idle', 'santa idle in fear', 24, false);
+					//jeff when he buys grownups 2^
 					santa.antialiasing = true;
+					santa.animation.play('idle');
 					if(FlxG.save.data.distractions){
 						add(santa);
 					}
@@ -984,6 +987,8 @@ class PlayState extends MusicBeatState
 				dad.y += 300;
 			case 'parents-christmas':
 				dad.x -= 500;
+			case 'parents-christmas2':
+				dad.x -= 500;
 			case 'senpai':
 				dad.x += 150;
 				dad.y += 360;
@@ -1030,13 +1035,15 @@ class PlayState extends MusicBeatState
 
 			case 'mall':
 				boyfriend.x += 200;
+			case 'mall2':
+				boyfriend.x += 200;
 
 			case 'mallEvil':
 				boyfriend.x += 320;
 				boyfriend.y -=30;
 				dad.x += 230;
 				dad.y += 10;
-				camPos.x += 600;
+				camPos.x += 400;
 			case 'philly':
 				camPos.x += 430;
 				camPos.y += 200;
@@ -2431,6 +2438,9 @@ class PlayState extends MusicBeatState
 							camFollow.y = boyfriend.getMidpoint().y - 200;
 						case 'mall2':
 							camFollow.y = boyfriend.getMidpoint().y - 200;
+						case 'mallEvil':
+							camFollow.y = boyfriend.getMidpoint().y - 200;
+							camFollow.x = boyfriend.getMidpoint().x - 100;
 						case 'school':
 							camFollow.x = boyfriend.getMidpoint().x - 200;
 							camFollow.y = boyfriend.getMidpoint().y - 200;
