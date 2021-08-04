@@ -65,6 +65,8 @@ class StoryMenuState extends MusicBeatState
 	var grpWeekText:FlxTypedGroup<MenuItem>;
 	var grpWeekCharacters:FlxTypedGroup<MenuCharacter>;
 	var weekSprites:FlxSprite;
+	var weekSprites2:FlxSprite;
+	var thing:Bool = false;
 	var grpLocks:FlxTypedGroup<FlxSprite>;
 
 	var difficultySelectors:FlxGroup;
@@ -150,16 +152,30 @@ class StoryMenuState extends MusicBeatState
 		grpWeekCharacters.add(new MenuCharacter(850, 100, 0.5, true));
 	
 
-		weekSprites =  new FlxSprite(yellowBG.x, yellowBG.y).loadGraphic(Paths.image('fatass'), true, 1280, 400);
-		weekSprites.animation.add('week0', [0], 0, false);
-		weekSprites.animation.add('week1', [1], 0, false);
-		weekSprites.animation.add('week2', [2], 0, false);
-		weekSprites.animation.add('week3', [3], 0, false);
-		weekSprites.animation.add('week4', [4], 0, false);
-		weekSprites.animation.add('week5', [5], 0, false);
-		weekSprites.animation.add('week6', [6], 0, false);
-		weekSprites.antialiasing = true;
-
+	if( FlxG.random.int(1, 100)== 20){
+			weekSprites2 = new FlxSprite(yellowBG.x, yellowBG.y).loadGraphic(Paths.image('fatass2'), true, 1280, 400);
+			weekSprites2.animation.add('week0', [0], 0, false);
+			weekSprites2.animation.add('week1', [1], 0, false);
+			weekSprites2.animation.add('week2', [2], 0, false);
+			weekSprites2.animation.add('week3', [3], 0, false);
+			weekSprites2.animation.add('week4', [4], 0, false);
+			weekSprites2.animation.add('week5', [5], 0, false);
+			weekSprites2.animation.add('week6', [6], 0, false);
+			weekSprites2.antialiasing = true;
+			thing = true;
+		}
+		else{
+			weekSprites =  new FlxSprite(yellowBG.x, yellowBG.y).loadGraphic(Paths.image('fatass'), true, 1280, 400);
+			weekSprites.animation.add('week0', [0], 0, false);
+			weekSprites.animation.add('week1', [1], 0, false);
+			weekSprites.animation.add('week2', [2], 0, false);
+			weekSprites.animation.add('week3', [3], 0, false);
+			weekSprites.animation.add('week4', [4], 0, false);
+			weekSprites.animation.add('week5', [5], 0, false);
+			weekSprites.animation.add('week6', [6], 0, false);
+			weekSprites.antialiasing = true;
+		}
+		
 		difficultySelectors = new FlxGroup();
 		add(difficultySelectors);
 
@@ -193,7 +209,12 @@ class StoryMenuState extends MusicBeatState
 
 		add(yellowBG);
 		add(grpWeekCharacters);
-		add(weekSprites);
+		if(thing == true) {
+			add(weekSprites2);
+		}
+		else {
+			add(weekSprites);
+		}
 
 
 		txtTracklist = new FlxText(FlxG.width * 0.05, yellowBG.x + yellowBG.height + 100, 0, "Tracks", 32);
@@ -368,7 +389,12 @@ class StoryMenuState extends MusicBeatState
 			curWeek = 0;
 		if (curWeek < 0)
 			curWeek = weekData.length - 1;
-		weekSprites.animation.play('week' + curWeek);
+		if(thing == true){
+			weekSprites2.animation.play('week' + curWeek);
+		}
+		else{
+			weekSprites.animation.play('week' + curWeek);
+		}
 		var bullShit:Int = 0;
 
 		for (item in grpWeekText.members)
