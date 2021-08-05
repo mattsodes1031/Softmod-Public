@@ -456,12 +456,11 @@ class PlayState extends MusicBeatState
 					station.setGraphicSize(Std.int(station.width * 1.5));
 					add(station);
 					
-					trainBop = new FlxSprite(400, 0);
+					trainBop = new FlxSprite(-150, 375);
 					trainBop.frames = Paths.getSparrowAtlas('philly/boppers','week3');
 					trainBop.animation.addByPrefix('boping', "bop", 24, false);
 					trainBop.antialiasing = true;
-					trainBop.scrollFactor.set(0.3, 0.3);
-					trainBop.setGraphicSize(Std.int(trainBop.width * 0.85));
+					trainBop.setGraphicSize(Std.int(trainBop.width * 1.5));
 					trainBop.updateHitbox();
 					if(FlxG.save.data.distractions){
 						add(trainBop);
@@ -946,6 +945,8 @@ class PlayState extends MusicBeatState
 				gfVersion = 'gf-christmas';
 			case 'gf-pixel':
 				gfVersion = 'gf-pixel';
+			case 'oggf':
+				gfVersion = 'gf-pixel';
 			default:
 				gfVersion = 'gf';
 		}
@@ -1052,11 +1053,13 @@ class PlayState extends MusicBeatState
 				boyfriend.y += 20;
 
 			case 'stage1':
-				dad.y += 400;
-				gf.y -= 50;
+				dad.y += 380;
+				gf.y -= 250;
+				gf.x += 70;
 			case 'stage':
 				camPos.x += 0;
 				camPos.y -= 0;
+
 			case 'school':
 				boyfriend.x += 200;
 				boyfriend.y += 220;
