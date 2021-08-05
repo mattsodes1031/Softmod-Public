@@ -47,13 +47,13 @@ class StoryMenuState extends MusicBeatState
 	];
 
 	var weekNames:Array<String> = [
-		"",
-		"Daddy Dearest",
-		"Spooky Month",
-		"PICO",
-		"Mommy Mearest",
-		"RED SNOW",
-		"Hating Simulator ft. Moawling"
+		"Preface",
+		"FFather Fairest",
+		"Hair-Raising Hideout",
+		"A Childhood Friend",
+		"Mother Knows Best",
+		"In The Present",
+		"Alternative Nightmare"
 	];
 
 	var txtWeekTitle:FlxText;
@@ -152,7 +152,7 @@ class StoryMenuState extends MusicBeatState
 		grpWeekCharacters.add(new MenuCharacter(850, 100, 0.5, true));
 	
 
-	if( FlxG.random.int(1, 100)== 20){
+	if( FlxG.random.int(1, 50)== 20){
 			weekSprites2 = new FlxSprite(yellowBG.x, yellowBG.y).loadGraphic(Paths.image('fatass2'), true, 1280, 400);
 			weekSprites2.animation.add('week0', [0], 0, false);
 			weekSprites2.animation.add('week1', [1], 0, false);
