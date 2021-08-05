@@ -690,7 +690,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT-alt', 'Parent Right Note Mom', 24, false);
 
 				addOffset('idle');
-				addOffset("singUP", -12, 64);
+				/*addOffset("singUP", -12, 64);
 				addOffset("singRIGHT", -15, -15);
 				addOffset("singLEFT", -3, 20);
 				addOffset("singDOWN", -3, -36);
@@ -698,7 +698,7 @@ class Character extends FlxSprite
 				addOffset("singRIGHT-alt", -1, -24);
 				addOffset("singLEFT-alt", -3, 18);
 				addOffset("singDOWN-alt", -4, -32);
-
+*/
 				playAnim('idle');
 
 

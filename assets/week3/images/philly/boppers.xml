@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="boppers.png">
+	<!-- Created with Adobe Animate version 21.0.2.37893 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bop0000" x="20" y="20" width="1112" height="216" frameX="0" frameY="-8" frameWidth="1113" frameHeight="230"/>
+	<SubTexture name="bop0001" x="20" y="20" width="1112" height="216" frameX="0" frameY="-8" frameWidth="1113" frameHeight="230"/>
+	<SubTexture name="bop0002" x="20" y="246" width="1110" height="227" frameX="-3" frameY="0" frameWidth="1113" frameHeight="230"/>
+	<SubTexture name="bop0003" x="20" y="246" width="1110" height="227" frameX="-3" frameY="0" frameWidth="1113" frameHeight="230"/>
+	<SubTexture name="bop0004" x="20" y="483" width="1109" height="230" frameX="-3" frameY="0" frameWidth="1113" frameHeight="230"/>
+	<SubTexture name="bop0005" x="20" y="483" width="1109" height="230" frameX="-3" frameY="0" frameWidth="1113" frameHeight="230"/>
+	<SubTexture name="bop0006" x="20" y="483" width="1109" height="230" frameX="-3" frameY="0" frameWidth="1113" frameHeight="230"/>
+	<SubTexture name="bop0007" x="20" y="483" width="1109" height="230" frameX="-3" frameY="0" frameWidth="1113" frameHeight="230"/>
+	<SubTexture name="bop0008" x="20" y="483" width="1109" height="230" frameX="-3" frameY="0" frameWidth="1113" frameHeight="230"/>
+	<SubTexture name="bop0009" x="20" y="483" width="1109" height="230" frameX="-3" frameY="0" frameWidth="1113" frameHeight="230"/>
+	<SubTexture name="bop0010" x="20" y="483" width="1109" height="230" frameX="-3" frameY="0" frameWidth="1113" frameHeight="230"/>
+	<SubTexture name="bop0011" x="20" y="483" width="1109" height="230" frameX="-3" frameY="0" frameWidth="1113" frameHeight="230"/>
+	<SubTexture name="bop0012" x="20" y="483" width="1109" height="230" frameX="-3" frameY="0" frameWidth="1113" frameHeight="230"/>
+</TextureAtlas>

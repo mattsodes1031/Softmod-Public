@@ -174,6 +174,7 @@ class PlayState extends MusicBeatState
 	var phillyCityLights:FlxTypedGroup<FlxSprite>;
 	var phillyTrain:FlxSprite;
 	var trainSound:FlxSound;
+	var trainBop:FlxSprite;
 
 	var limo:FlxSprite;
 	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
@@ -455,17 +456,16 @@ class PlayState extends MusicBeatState
 					station.setGraphicSize(Std.int(station.width * 1.5));
 					add(station);
 					
-					//upperBoppers = new FlxSprite(400, 0);
-					//upperBoppers.frames = Paths.getSparrowAtlas('christmas/bop','week5');
-					//upperBoppers.animation.addByPrefix('bop', "bop0", 24, false);
-					//upperBoppers.antialiasing = true;
-					//upperBoppers.scrollFactor.set(0.33, 0.33);
-					//upperBoppers.setGraphicSize(Std.int(upperBoppers.width * 0.85));
-					//upperBoppers.updateHitbox();
-					//if(FlxG.save.data.distractions){
-					//	add(upperBoppers);
-					//}
-					
+					trainBop = new FlxSprite(400, 0);
+					trainBop.frames = Paths.getSparrowAtlas('philly/boppers','week3');
+					trainBop.animation.addByPrefix('boping', "bop", 24, false);
+					trainBop.antialiasing = true;
+					trainBop.scrollFactor.set(0.3, 0.3);
+					trainBop.setGraphicSize(Std.int(trainBop.width * 0.85));
+					trainBop.updateHitbox();
+					if(FlxG.save.data.distractions){
+						add(trainBop);
+					}
 
 					phillyTrain = new FlxSprite(2000, 360).loadGraphic(Paths.image('philly/train','week3'));
 					if(FlxG.save.data.distractions){
@@ -558,7 +558,7 @@ class PlayState extends MusicBeatState
 					add(bg);
 
 					upperBoppers = new FlxSprite(-240, -90);
-					upperBoppers.frames = Paths.getSparrowAtlas('christmas/upperBop','week5');
+					upperBoppers.frames = Paths.getSparrowAtlas('christmas/normalfuckerspng','week5');
 					upperBoppers.animation.addByPrefix('bop', "Upper Crowd Bob", 24, false);
 					upperBoppers.antialiasing = true;
 					upperBoppers.scrollFactor.set(0.33, 0.33);
@@ -583,7 +583,7 @@ class PlayState extends MusicBeatState
 					add(tree);
 
 					bottomBoppers = new FlxSprite(-300, 140);
-					bottomBoppers.frames = Paths.getSparrowAtlas('christmas/bottomBop1','week5');
+					bottomBoppers.frames = Paths.getSparrowAtlas('christmas/bop1','week5');
 					bottomBoppers.animation.addByPrefix('bop', 'Bottom Level Boppers', 24, false);
 					bottomBoppers.antialiasing = true;
 					bottomBoppers.scrollFactor.set(0.9, 0.9);
@@ -625,7 +625,7 @@ class PlayState extends MusicBeatState
 					add(bg);
 
 					upperBoppers = new FlxSprite(-240, -90);
-					upperBoppers.frames = Paths.getSparrowAtlas('christmas/upperBopPISSED','week5');
+					upperBoppers.frames = Paths.getSparrowAtlas('christmas/angrybogosbinted','week5');
 					upperBoppers.animation.addByPrefix('bop', "Upper Crowd Bob", 24, false);
 					upperBoppers.antialiasing = true;
 					upperBoppers.scrollFactor.set(0.33, 0.33);
@@ -650,7 +650,7 @@ class PlayState extends MusicBeatState
 					add(tree);
 
 					bottomBoppers = new FlxSprite(-300, 140);
-					bottomBoppers.frames = Paths.getSparrowAtlas('christmas/bottomBopPISSED','week5');
+					bottomBoppers.frames = Paths.getSparrowAtlas('christmas/bopit','week5');
 					bottomBoppers.animation.addByPrefix('bop', 'Bottom Level Boppers', 24, false);
 					bottomBoppers.antialiasing = true;
 					bottomBoppers.scrollFactor.set(0.9, 0.9);
@@ -1272,7 +1272,7 @@ class PlayState extends MusicBeatState
 		{
 			switch (StringTools.replace(curSong," ", "-").toLowerCase())
 			{
-				case "winter-horrorland":
+				case "genesis":
 					var blackScreen:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
 					add(blackScreen);
 					blackScreen.scrollFactor.set();
@@ -3879,6 +3879,9 @@ class PlayState extends MusicBeatState
 				}
 			case "philly":
 				if(FlxG.save.data.distractions){
+					
+					trainBop.animation.play('boping', true);
+					
 					if (!trainMoving)
 						trainCooldown += 1;
 	
