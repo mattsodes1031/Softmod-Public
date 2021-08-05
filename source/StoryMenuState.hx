@@ -29,7 +29,7 @@ class StoryMenuState extends MusicBeatState
 		['Spookeez', 'South',"Repressed"],
 		['Playdate','Stay',"Its-Complicated"],
 		['High',"MILF",'Spotlight'],
-		['Hope','Genesis','Eggnog'],
+		['Genesis','Eggnog','Hope'],
 		['Diplopia', 'In-Fighting', 'Envy']
 	];
 	var curDifficulty:Int = 1;
@@ -48,7 +48,7 @@ class StoryMenuState extends MusicBeatState
 
 	var weekNames:Array<String> = [
 		"Preface",
-		"FFather Fairest",
+		"Father Fairest",
 		"Hair-Raising Hideout",
 		"A Childhood Friend",
 		"Mother Knows Best",

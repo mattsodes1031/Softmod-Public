@@ -4,13 +4,20 @@
 :pico:p6: Softie!
 :bf:b4: Huh?!
 :pico:p6: Jump!
-:bf:b11: WE ARE ON TOP OF A MOVING CAR!
+:bf:b17: 
+:bf:b3: Babe, I love you 
+:bf:b11: BUT WE ARE ON TOP OF A MOVING CAR!
 :bf:b12: ARE YOU CRAZY?!
 :pico:p4: Do you trust me?
 :bf:b11: I-
 :pico:p6: DO YOU TRUST ME?!
-:bf:b19: …
+:bf:b19: ...
 :bf:b23: Yes?
-:pico:p6: Then close your eyes and jump!
+:pico:p6: Then on the count of three, close your eyes and jump!
+:pico:p6: One...
+:bf:b11: Wait a minute!
+:pico:p6: Two...
+:bf:b2: Isn't there like a plan B or something we could try!?
+:pico:p6: THREE!
 
 

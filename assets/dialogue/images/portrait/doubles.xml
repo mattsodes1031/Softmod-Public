@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="doubles.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bois.png" x="0" y="0" width="877" height="640"/>
+	<SubTexture name="cacete.png" x="877" y="0" width="832" height="632"/>
+	<SubTexture name="dois.png" x="1709" y="0" width="1340" height="975"/>
+	<SubTexture name="dois2.png" x="0" y="975" width="1362" height="1039"/>
+	<SubTexture name="shadowbois.png" x="1362" y="975" width="877" height="640"/>
+	<SubTexture name="uuuuuuuu.png" x="2239" y="975" width="871" height="620"/>
+</TextureAtlas>

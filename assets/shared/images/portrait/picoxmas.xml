@@ -6,5 +6,6 @@
 	<SubTexture name="P11xmas.png" x="738" y="0" width="738" height="770"/>
 	<SubTexture name="P4xmas.png" x="1476" y="0" width="738" height="770"/>
 	<SubTexture name="P6xmas.png" x="2214" y="0" width="738" height="770"/>
-	<SubTexture name="yougotitbabe.png" x="2952" y="0" width="1001" height="777"/>
+	<SubTexture name="unhe.png" x="2952" y="0" width="738" height="770"/>
+	<SubTexture name="yougotitbabe.png" x="0" y="770" width="1001" height="777"/>
 </TextureAtlas>

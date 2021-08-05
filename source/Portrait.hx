@@ -18,7 +18,7 @@ class Portrait extends FlxSprite
 
     private var resize = 0.35;
 
-    private var characters:Array<String> = ["narrator", "bf", "bfxmas", "gf", "dad", "dadxmas", "mom", "momxmas", "pico", "picoxmas", "monster", "monsterxmas", "skidnpump", "ogbf", "oggf", "shadows"];
+    private var characters:Array<String> = ["narrator", "bf", "bfxmas", "gf", "dad", "dadxmas", "mom", "momxmas", "pico", "picoxmas", "monster", "monsterxmas", "skidnpump", "ogbf", "oggf", "shadows", "doubles", "icons"];
 
 	var posTween:FlxTween;
     var alphaTween:FlxTween;
@@ -72,6 +72,10 @@ class Portrait extends FlxSprite
                 setGraphicSize(Std.int(width * .29)); 
             case "shadows":
                 setGraphicSize(Std.int(width * .38));
+			case "doubles":
+				setGraphicSize(Std.int(width * .38));
+			case "icons":
+				setGraphicSize(Std.int(width * .2));
 		}
         updateHitbox();
         scrollFactor.set();
@@ -229,6 +233,7 @@ class Portrait extends FlxSprite
 				addAnim("px11", "P11xmas.png");
 				addAnim("px4", "P4xmas.png");
 				addAnim("px6", "P6xmas.png");
+				addAnim("worry", "unhe.png");
                 addAnim("yougotitbabe", "yougotitbabe.png");
                 animation.play("default");
 			case "monster":
@@ -245,7 +250,7 @@ class Portrait extends FlxSprite
 				addAnim("pn", "pump_normal.png");
 				addAnim("sl", "skid_looks_into_your_soul.png");
 				addAnim("snm", "skid_nightmare.png");
-				addAnim("sn", "pump_normal.png");
+				addAnim("sn", "skid_normal.png");
 				animation.play("default");
 			case "ogbf":
 				addAnim("default", "BF.png");
@@ -263,6 +268,16 @@ class Portrait extends FlxSprite
 				addAnim("skidshadow", "skid.png");
 				addAnim("pumpshadow", "pump.png");
 				animation.play("default");
+			case "doubles":
+				addAnim("default", "bois.png");
+				addAnim("nightmare", "cacete.png");
+				addAnim("dois", "dois.png");
+				addAnim("dois2", "dois2.png");
+				addAnim("shadow", "shadowbois.png");
+				addAnim("soul", "uuuuuuuu.ppng");
+			case "icons":
+				addAnim("default", "iconbf.png");
+				addAnim("pico", "iconpico.png");
         }
     }
     

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="icons.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="iconbf.png" x="0" y="0" width="425" height="426"/>
+	<SubTexture name="iconpico.png" x="425" y="0" width="425" height="426"/>
+</TextureAtlas>
