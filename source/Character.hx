@@ -466,18 +466,15 @@ class Character extends FlxSprite
 			case 'bf-christmas':
 				var tex = Paths.getSparrowAtlas('characters/softie_crimmus');
 				frames = tex;
-				animation.addByPrefix('idle', 'BF idle dance0', 24, false);
-				animation.addByPrefix('singUP', 'BF NOTE UP deter0', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT deter0', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT deter0', 24, false);
-				animation.addByPrefix('singDOWN', 'BF NOTE DOWN deter0', 24, false);
+				animation.addByPrefix('idle', 'BF idle dance', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN', 24, false);
 				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
 				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
 				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
-				animation.addByPrefix('hey', 'BF HEY', 24, false);
-				animation.addByPrefix('bigYell', 'BF SCREAMING INSIDE', 24, false);
-				animation.addByPrefix('sadSmile', 'BF idle dance copy0', 24, false);
 
 				addOffset('idle', -5);
 				addOffset("singUP", 0, 10);
@@ -488,24 +485,22 @@ class Character extends FlxSprite
 				addOffset("singRIGHTmiss", -53, -8);
 				addOffset("singLEFTmiss", 20, -8);
 				addOffset("singDOWNmiss", 0, -53);
-				addOffset("hey", 3, -2);
 
 				playAnim('idle');
 				flipX = true;
 
 			case 'bf-christmas2':
-				var tex = Paths.getSparrowAtlas('characters/softie_crimmus');
+				var tex = Paths.getSparrowAtlas('characters/softie_crimmus2');
 				frames = tex;
-				animation.addByPrefix('idle', 'BF idle dance', 24, false);
-				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT deter0', 24, false);
-				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
-				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
-				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
-				animation.addByPrefix('hey', 'BF HEY', 24, false);
+				animation.addByPrefix('idle', 'BF idle dance determined norm', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP deter', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT deter', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT deter', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN deter', 24, false);
+				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS deter', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS deter', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS deter', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS deter', 24, false);
 
 				addOffset('idle', -5);
 				addOffset("singUP", 0, 10);
@@ -516,12 +511,43 @@ class Character extends FlxSprite
 				addOffset("singRIGHTmiss", -53, -8);
 				addOffset("singLEFTmiss", 20, -8);
 				addOffset("singDOWNmiss", 0, -53);
-				addOffset("hey", 3, -2);
 
 				playAnim('idle');
 				
 			
 				flipX = true;
+				
+			case 'bf-christmas3':
+				var tex = Paths.getSparrowAtlas('characters/softie_crimmus3');
+				frames = tex;
+				animation.addByPrefix('idle', 'BF idle dance determined sad', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP deter', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT deter', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT deter', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN deter', 24, false);
+				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS deter', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS deter', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS deter', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS deter', 24, false);
+				animation.addByPrefix('bigYell', 'BF SCREAMING INSIDE', 24, false);
+				animation.addByPrefix('sadSmile', 'BF idle dance copy', 24, false);
+
+				addOffset('idle', -5);
+				addOffset("singUP", 0, 10);
+				addOffset("singRIGHT", -43, -7);
+				addOffset("singLEFT", 19, -9);
+				addOffset("singDOWN", 1, -53);
+				addOffset("singUPmiss", -12, 9);
+				addOffset("singRIGHTmiss", -53, -8);
+				addOffset("singLEFTmiss", 20, -8);
+				addOffset("singDOWNmiss", 0, -53);
+				
+
+				playAnim('idle');
+				
+			
+				flipX = true;
+				
 			case 'bf-car':
 				var tex = Paths.getSparrowAtlas('characters/softieblowing');
 				frames = tex;
