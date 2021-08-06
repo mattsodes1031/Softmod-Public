@@ -25,16 +25,16 @@ class StoryMenuState extends MusicBeatState
 
 	var weekData:Array<Dynamic> = [
 		['Starcrossed'],
-		['Fresh','DadBattle', "No-Cigar"],
+		['DadBattle','Fresh', "No-Cigar"],
 		['Spookeez', 'South',"Repressed"],
 		['Playdate','Stay',"Its-Complicated"],
 		['High',"MILF",'Spotlight'],
 		['Genesis','Eggnog','Hope'],
-		['Diplopia', 'In-Fighting', 'Envy']
+		[ 'Envy','Diplopia', 'In-Fighting']
 	];
 	var curDifficulty:Int = 1;
 
-	public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, true, true];
+	public static var weekUnlocked:Array<Bool> = [true, true, true, true, false, false, false, false];
 
 	var weekCharacters:Array<Dynamic> = [
 		['', 'bf', 'gf'],
@@ -152,7 +152,7 @@ class StoryMenuState extends MusicBeatState
 		grpWeekCharacters.add(new MenuCharacter(850, 100, 0.5, true));
 	
 
-	if( FlxG.random.int(1, 50)== 20){
+	if( FlxG.random.int(1, 40)== 20){
 			weekSprites2 = new FlxSprite(yellowBG.x, yellowBG.y).loadGraphic(Paths.image('fatass2'), true, 1280, 400);
 			weekSprites2.animation.add('week0', [0], 0, false);
 			weekSprites2.animation.add('week1', [1], 0, false);
@@ -435,4 +435,10 @@ class StoryMenuState extends MusicBeatState
 		intendedScore = Highscore.getWeekScore(curWeek, curDifficulty);
 		#end
 	}
+
+	public static function getLocks(){
+		return weekUnlocked;
+	}
+	
+
 }

@@ -52,11 +52,11 @@ class Song
 		var folderLowercase = StringTools.replace(folder, " ", "-").toLowerCase();
 		trace(folderLowercase);
 		switch (folderLowercase) {
-			case 'dad-battle': folderLowercase = 'dadbattle';
 			case 'philly-nice': folderLowercase = 'philly';
 			//case 'no-cigar': folderLowercase = 'nocigar';
 		}
 		trace(folderLowercase);
+		trace(jsonInput);
 		var rawJson = Assets.getText(Paths.json(folderLowercase + '/' + jsonInput.toLowerCase())).trim();
 
 		while (!rawJson.endsWith("}"))

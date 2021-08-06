@@ -15,14 +15,13 @@ class CoolUtil
 
 	public static function coolTextFile(path:String):Array<String>
 	{
-		trace('COOOOOOLUTIL');
 		var daList:Array<String> = Assets.getText(path).trim().split('\n');
-		trace('COOOOOOLUTILBABY');
 		for (i in 0...daList.length)
 		{
 			daList[i] = daList[i].trim();
 		}
-
+		trace(daList);
+		trace("cringe");
 		return daList;
 	}
 	

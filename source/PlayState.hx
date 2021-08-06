@@ -1033,6 +1033,7 @@ class PlayState extends MusicBeatState
 				boyfriend.x += 290;
 				gf.y -= 2000;
 				gf.x -= 30;
+				dad.x += 50;
 				camPos.x += 450;
 				camPos.y -= 200;
 				if(FlxG.save.data.distractions){
