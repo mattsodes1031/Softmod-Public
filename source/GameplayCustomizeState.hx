@@ -10,14 +10,16 @@ import flixel.FlxObject;
 import Discord.DiscordClient;
 import sys.thread.Thread;
 #end
-
 import flixel.group.FlxGroup.FlxTypedGroup;
 import openfl.ui.Keyboard;
 import flixel.FlxSprite;
 import flixel.FlxG;
+import Song.SwagSong;
 
 class GameplayCustomizeState extends MusicBeatState
 {
+    
+    public static var SONG:SwagSong;
 
     var defaultX:Float = FlxG.width * 0.55 - 135;
     var defaultY:Float = FlxG.height / 2 - 50;
@@ -188,7 +190,19 @@ class GameplayCustomizeState extends MusicBeatState
     {
         super.beatHit();
 
-        bf.playAnim('idle');
+        if (curBeat  > 335 && SONG.song == 'Genesis')
+			{
+               // trace("yellgcp");
+				bf.playAnim('sadSmile', true);
+			}					
+		else if (curBeat > 248 && curBeat < 258 && SONG.song == 'Genesis')
+			{
+				bf.playAnim('bigYell', true);
+			}
+		else
+			{
+				bf.playAnim('idle');
+			}
         dad.dance();
 
         FlxG.camera.zoom += 0.015;

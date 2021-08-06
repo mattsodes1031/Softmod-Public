@@ -4,6 +4,9 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.animation.FlxBaseAnimation;
 import flixel.graphics.frames.FlxAtlasFrames;
+import Song.SwagSong;
+
+
 
 using StringTools;
 
@@ -11,6 +14,8 @@ class Character extends FlxSprite
 {
 	public var animOffsets:Map<String, Array<Dynamic>>;
 	public var debugMode:Bool = false;
+
+	public static var SONG:SwagSong;
 
 	public var isPlayer:Bool = false;
 	public var curCharacter:String = 'bf';
@@ -328,8 +333,8 @@ class Character extends FlxSprite
 				animation.addByPrefix('idle', 'monster idle', 24, false);
 				animation.addByPrefix('singUP', 'monster up note', 24, false);
 				animation.addByPrefix('singDOWN', 'monster down', 24, false);
-				animation.addByPrefix('singLEFT', 'Monster left note', 24, false);
-				animation.addByPrefix('singRIGHT', 'Monster Right note', 24, false);
+				animation.addByPrefix('singLEFT', 'Monster Right note', 24, false);
+				animation.addByPrefix('singRIGHT', 'Monster left note', 24, false);
 
 				addOffset('idle');
 				addOffset("singUP", -20, 50);
@@ -461,7 +466,7 @@ class Character extends FlxSprite
 			case 'bf-christmas':
 				var tex = Paths.getSparrowAtlas('characters/softie_crimmus');
 				frames = tex;
-				animation.addByPrefix('idle', 'BF idle dance determined sad', 24, false);
+				animation.addByPrefix('idle', 'BF idle dance0', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP deter0', 24, false);
 				animation.addByPrefix('singLEFT', 'BF NOTE LEFT deter0', 24, false);
 				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT deter0', 24, false);
@@ -471,6 +476,8 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
 				animation.addByPrefix('hey', 'BF HEY', 24, false);
+				animation.addByPrefix('bigYell', 'BF SCREAMING INSIDE', 24, false);
+				animation.addByPrefix('sadSmile', 'BF idle dance copy0', 24, false);
 
 				addOffset('idle', -5);
 				addOffset("singUP", 0, 10);
@@ -893,7 +900,19 @@ class Character extends FlxSprite
 					else
 						playAnim('danceLeft');
 				default:
-					playAnim('idle');
+					 if (PlayState.getBeat()  > 332 && PlayState.getStage() == 'mallEvil' && curCharacter == "bf-christmas" )
+					{
+						playAnim('sadSmile', true);
+					}					
+					else if (PlayState.getBeat() > 248 && PlayState.getBeat() < 257 && PlayState.getStage() == 'mallEvil' && curCharacter == "bf-christmas")
+					{
+						trace("beegoof");
+						playAnim('bigYell');
+					}
+					else
+					{
+						playAnim('idle');
+					}
 			}
 		}
 	}

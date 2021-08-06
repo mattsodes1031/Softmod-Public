@@ -36,12 +36,15 @@ import openfl.events.IOErrorEvent;
 import openfl.media.Sound;
 import openfl.net.FileReference;
 import openfl.utils.ByteArray;
+import Song.SwagSong;
 
 using StringTools;
 
 class ChartingState extends MusicBeatState
 {
 	var _file:FileReference;
+
+	public static var SONG:SwagSong;
 
 	public var playClaps:Bool = false;
 
@@ -1053,7 +1056,18 @@ class ChartingState extends MusicBeatState
 		super.beatHit();
 		if (!player2.animation.curAnim.name.startsWith("sing"))
 		{
-			player2.playAnim('idle');
+			 if (curBeat  > 335 && SONG.song == 'Genesis')
+			{
+				player2.playAnim('sadSmile', true);
+			}					
+			else if (curBeat > 248 && curBeat < 258 && SONG.song == 'Genesis')
+			{
+				player2.playAnim('bigYell', true);
+			}
+			else
+			{
+				player2.playAnim('idle');
+			}
 		}
 		player1.dance();
 	}

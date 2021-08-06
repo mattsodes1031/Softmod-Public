@@ -10,13 +10,13 @@ import flixel.graphics.FlxGraphic;
 import openfl.utils.AssetManifest;
 import openfl.utils.AssetLibrary;
 import flixel.system.FlxAssets;
+import Song.SwagSong;
 
 import lime.app.Application;
 import lime.media.AudioContext;
 import lime.media.AudioManager;
 import openfl.Lib;
 import Section.SwagSection;
-import Song.SwagSong;
 import WiggleEffect.WiggleEffectType;
 import flixel.FlxBasic;
 import flixel.FlxCamera;
@@ -66,6 +66,8 @@ using StringTools;
 
 class PlayState extends MusicBeatState
 {
+
+	public static var curB:Int = 0;
 	public static var instance:PlayState = null;
 
 	public static var curStage:String = '';
@@ -401,8 +403,8 @@ class PlayState extends MusicBeatState
 				else{
 					defaultCamZoom = 0.95;
 				}
-				var hallowTex = Paths.getSparrowAtlas('halloween_bg','week2');
-
+				var hallowTex = Paths.getSparrowAtlas('softW2-background','week2');
+				/*
 				halloweenBG = new FlxSprite(-200, -100);
 				halloweenBG.frames = hallowTex;
 				halloweenBG.animation.addByPrefix('idle', 'halloweem bg0');
@@ -412,6 +414,7 @@ class PlayState extends MusicBeatState
 				add(halloweenBG);
 
 				isHalloween = true;
+				*/
 			}
 			case 'philly': 
 					{
@@ -491,7 +494,7 @@ class PlayState extends MusicBeatState
 
 					var bgLimo:FlxSprite = new FlxSprite(-200, 480);
 					bgLimo.frames = Paths.getSparrowAtlas('limo/bgLimo','week4');
-					bgLimo.animation.addByPrefix('drive', "background limo pink", 24);
+					bgLimo.animation.addByPrefix('drive', "BG limo0", 24);
 					bgLimo.animation.play('drive');
 					bgLimo.scrollFactor.set(0.4, 0.4);
 					//bgLimo.setGraphicSize(Std.int(bgLimo.width * 1.5));
@@ -581,7 +584,7 @@ class PlayState extends MusicBeatState
 					tree.scrollFactor.set(0.40, 0.40);
 					add(tree);
 
-					bottomBoppers = new FlxSprite(-300, 140);
+					bottomBoppers = new FlxSprite(-300, 90);
 					bottomBoppers.frames = Paths.getSparrowAtlas('christmas/bop1','week5');
 					bottomBoppers.animation.addByPrefix('bop', 'Bottom Level Boppers', 24, false);
 					bottomBoppers.antialiasing = true;
@@ -648,7 +651,7 @@ class PlayState extends MusicBeatState
 					tree.scrollFactor.set(0.40, 0.40);
 					add(tree);
 
-					bottomBoppers = new FlxSprite(-300, 140);
+					bottomBoppers = new FlxSprite(-300, 90);
 					bottomBoppers.frames = Paths.getSparrowAtlas('christmas/bopit','week5');
 					bottomBoppers.animation.addByPrefix('bop', 'Bottom Level Boppers', 24, false);
 					bottomBoppers.antialiasing = true;
@@ -979,7 +982,10 @@ class PlayState extends MusicBeatState
 				camPos.x += 600;
 				camPos.y += 100;
 			case 'monster-christmas':
-				dad.y += 130;
+				dad.y += 80;
+				gf.y += 10000;
+				camPos.x += 600;
+				camPos.y += 100;
 			case 'dad':
 				camPos.x += 200;
 				camPos.x += 100;
@@ -1276,6 +1282,10 @@ class PlayState extends MusicBeatState
 			switch (StringTools.replace(curSong," ", "-").toLowerCase())
 			{
 				case "genesis":
+					inCutscene = true;
+					camHUD.visible = false;
+					add(doof);
+					trace('Dialogue box added');
 					var blackScreen:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
 					add(blackScreen);
 					blackScreen.scrollFactor.set();
@@ -1284,7 +1294,9 @@ class PlayState extends MusicBeatState
 					new FlxTimer().start(0.1, function(tmr:FlxTimer)
 					{
 						remove(blackScreen);
+						if(inCutscene == false){
 						FlxG.sound.play(Paths.sound('Lights_Turn_On'));
+						}
 						camFollow.y = -2050;
 						camFollow.x += 200;
 						FlxG.camera.focusOn(camFollow.getPosition());
@@ -1298,7 +1310,6 @@ class PlayState extends MusicBeatState
 								ease: FlxEase.quadInOut,
 								onComplete: function(twn:FlxTween)
 								{
-									schoolIntro(doof);
 								}
 							});
 						});
@@ -3429,7 +3440,8 @@ class PlayState extends MusicBeatState
 			switch (direction)
 			{
 				case 0:
-					boyfriend.playAnim('singLEFTmiss', true);
+
+						boyfriend.playAnim('singLEFTmiss', true);
 				case 1:
 					boyfriend.playAnim('singDOWNmiss', true);
 				case 2:
@@ -3773,6 +3785,10 @@ class PlayState extends MusicBeatState
 		{
 			luaModchart.setVar('curBeat',curBeat);
 			luaModchart.executeState('beatHit',[curBeat]);
+			
+		}
+		if(curBeat > 0){
+			curB = curBeat;
 		}
 		#end
 		if (curSong == 'Tutorial' && dad.curCharacter == 'gf') {
@@ -3849,6 +3865,12 @@ class PlayState extends MusicBeatState
 				dad.playAnim('cheer', true);
 			}
 
+		if (curBeat  == 330 && SONG.song == 'Genesis')
+			{
+				boyfriend.playAnim('sadSmile', true);
+			}
+		
+
 		switch (curStage)
 		{
 			case 'school':
@@ -3918,6 +3940,13 @@ class PlayState extends MusicBeatState
 				lightningStrikeShit();
 			}
 		}
+	}
+
+	public static function getBeat(){
+		return curB;
+	}
+	public static function getStage(){
+		return curStage;
 	}
 
 	var curLight:Int = 0;

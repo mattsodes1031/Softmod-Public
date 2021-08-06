@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="softW2-background.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="background-w-lightning0000" x="5" y="5" width="2056" height="1335" frameX="-1" frameY="0" frameWidth="2057" frameHeight="1335"/>
+	<SubTexture name="background-w-lightning0001" x="2066" y="5" width="2057" height="1335"/>
+	<SubTexture name="background-w-lightning0002" x="2066" y="5" width="2057" height="1335"/>
+	<SubTexture name="background-w-lightning0003" x="5" y="5" width="2056" height="1335" frameX="-1" frameY="0" frameWidth="2057" frameHeight="1335"/>
+	<SubTexture name="background-w-lightning0004" x="5" y="5" width="2056" height="1335" frameX="-1" frameY="0" frameWidth="2057" frameHeight="1335"/>
+	<SubTexture name="background-w-lightning0005" x="4128" y="5" width="2057" height="1335"/>
+	<SubTexture name="background-w-lightning0006" x="5" y="1345" width="2057" height="1335"/>
+	<SubTexture name="background-w-lightning0007" x="5" y="1345" width="2057" height="1335"/>
+	<SubTexture name="background-w-lightning0008" x="2067" y="1345" width="2057" height="1335"/>
+	<SubTexture name="background-w-lightning0009" x="2067" y="1345" width="2057" height="1335"/>
+	<SubTexture name="background-w-lightning0010" x="4129" y="1345" width="2057" height="1335"/>
+	<SubTexture name="background-w-lightning0011" x="2066" y="5" width="2057" height="1335"/>
+	<SubTexture name="background-w-lightning0012" x="2066" y="5" width="2057" height="1335"/>
+	<SubTexture name="background-w-lightning0013" x="2066" y="5" width="2057" height="1335"/>
+	<SubTexture name="background-w-lightning0014" x="2066" y="5" width="2057" height="1335"/>
+	<SubTexture name="background-w-lightning0015" x="2066" y="5" width="2057" height="1335"/>
+	<SubTexture name="background-w-lightning0016" x="2066" y="5" width="2057" height="1335"/>
+	<SubTexture name="background-w-lightning0017" x="2066" y="5" width="2057" height="1335"/>
+	<SubTexture name="background-w-lightning0018" x="2066" y="5" width="2057" height="1335"/>
+	<SubTexture name="background-w-lightning0019" x="2066" y="5" width="2057" height="1335"/>
+	<SubTexture name="halloweem bg0" x="2066" y="5" width="2057" height="1335"/>
+	
+</TextureAtlas>
