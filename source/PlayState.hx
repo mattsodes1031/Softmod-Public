@@ -404,17 +404,17 @@ class PlayState extends MusicBeatState
 					defaultCamZoom = 0.95;
 				}
 				var hallowTex = Paths.getSparrowAtlas('softW2-background','week2');
-				/*
+				
 				halloweenBG = new FlxSprite(-200, -100);
 				halloweenBG.frames = hallowTex;
 				halloweenBG.animation.addByPrefix('idle', 'halloweem bg0');
-				halloweenBG.animation.addByPrefix('lightning', 'halloweem bg lightning strike', 24, false);
+				halloweenBG.animation.addByPrefix('lightning', 'background-w-lightning0', 24, false);
 				halloweenBG.animation.play('idle');
 				halloweenBG.antialiasing = true;
 				add(halloweenBG);
 
 				isHalloween = true;
-				*/
+				
 			}
 			case 'philly': 
 					{
