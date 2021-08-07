@@ -1266,7 +1266,6 @@ class PlayState extends MusicBeatState
 				case "genesis":
 					inCutscene = true;
 					camHUD.visible = false;
-					add(doof);
 					trace('Dialogue box added');
 					var blackScreen:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
 					add(blackScreen);
@@ -1292,6 +1291,7 @@ class PlayState extends MusicBeatState
 								ease: FlxEase.quadInOut,
 								onComplete: function(twn:FlxTween)
 								{
+									add(doof);
 								}
 							});
 						});
