@@ -23,6 +23,8 @@ class StoryMenuState extends MusicBeatState
 {
 	var scoreText:FlxText;
 
+	var blackBG:FlxSprite;
+
 	var weekData:Array<Dynamic> = [
 		['Starcrossed'],
 		['DadBattle','Fresh', "No-Cigar"],
@@ -34,7 +36,7 @@ class StoryMenuState extends MusicBeatState
 	];
 	var curDifficulty:Int = 1;
 
-	public static var weekUnlocked:Array<Bool> = [true, true, true, true, false, false, false, false];
+	public static var weekUnlocked:Array<Bool> = [false, false, false, false, false, false, false, false];
 
 	var weekCharacters:Array<Dynamic> = [
 		['', 'bf', 'gf'],
@@ -150,6 +152,9 @@ class StoryMenuState extends MusicBeatState
 		grpWeekCharacters.add(new MenuCharacter(0, 100, 0.5, false));
 		grpWeekCharacters.add(new MenuCharacter(450, 25, 0.9, true));
 		grpWeekCharacters.add(new MenuCharacter(850, 100, 0.5, true));
+
+		blackBG = new FlxSprite(750,-400).makeGraphic(200,600 , FlxColor.BLACK);
+		add(blackBG);
 	
 
 	if( FlxG.random.int(1, 40)== 20){
