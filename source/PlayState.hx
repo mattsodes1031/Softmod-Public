@@ -2806,7 +2806,7 @@ class PlayState extends MusicBeatState
 					fReturn = "story";
 	
 					// if ()
-					StoryMenuState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryMenuState.weekUnlocked.length - 1))] = true;
+					StoryMenuState.softWeekUnlocked[Std.int(Math.min(storyWeek + 1, StoryMenuState.softWeekUnlocked.length - 1))] = true;
 	
 					if (SONG.validScore)
 					{
@@ -2814,7 +2814,7 @@ class PlayState extends MusicBeatState
 						Highscore.saveWeekScore(storyWeek, campaignScore, storyDifficulty);
 					}
 	
-					FlxG.save.data.weekUnlocked = StoryMenuState.weekUnlocked;
+					FlxG.save.data.softWeekUnlocked = StoryMenuState.softWeekUnlocked;
 					FlxG.save.flush();
 				}
 				else

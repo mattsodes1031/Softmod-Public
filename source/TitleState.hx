@@ -94,11 +94,18 @@ class TitleState extends MusicBeatState
 
 		Highscore.load();
 
-		if(FlxG.save.data.weekUnlocked == null){
-			FlxG.save.data.weekUnlocked = [false, false, false, false, false, false, false, false];
+		// Create save data for week unlocks. Changed name to softWeekUnlock so that it doesn't share data with other mods.
+		if(FlxG.save.data.softWeekUnlocked == null){
+			FlxG.save.data.softWeekUnlocked = [true, false, false, false, false, false, false, false];
 			FlxG.save.flush();
 		}
-		StoryMenuState.weekUnlocked = FlxG.save.data.weekUnlocked;
+		// This one is just incase everything gets fucky, it'll reset the unlock data rather than lock you out of all weeks. Shouldn't need to be here, just a safty net.
+		else if(FlxG.save.data.softWeekUnlocked[0] == false){ 
+			FlxG.save.data.softWeekUnlocked = [true, false, false, false, false, false, false, false];
+			FlxG.save.flush();
+		}
+
+		StoryMenuState.softWeekUnlocked = FlxG.save.data.softWeekUnlocked;
 
 		#if FREEPLAY
 		FlxG.switchState(new FreeplayState());

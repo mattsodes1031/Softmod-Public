@@ -89,7 +89,10 @@ class CreditsMenu extends MusicBeatState
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("Inside The Credits Menu...", null);
 
-		FlxG.sound.playMusic(Paths.music("SoftConfig", "shared"));
+		if(!FlxG.sound.music.playing){
+			FlxG.sound.playMusic(Paths.music("SoftConfig", "shared"));
+		}
+		
 		FlxG.autoPause = false;
 	
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBG'));
