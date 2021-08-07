@@ -90,6 +90,7 @@ class FreeplayState extends MusicBeatState
 					daList.push("Envy:ogbf:1");
 				}
 			}
+
 		}
 		trace(StoryMenuState.getLocks());
 		trace(daList);

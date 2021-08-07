@@ -316,7 +316,6 @@ class TitleState extends MusicBeatState
 			transitioning = true;
 			// FlxG.sound.music.stop();
 
-			MainMenuState.firstStart = true;
 
 			new FlxTimer().start(2, function(tmr:FlxTimer)
 			{
@@ -406,15 +405,6 @@ class TitleState extends MusicBeatState
 			// credTextShit.visible = false;
 			// credTextShit.text = "Friday";
 			// credTextShit.screenCenter();
-			case 13:
-				addMoreText('fuck');
-			// credTextShit.visible = true;
-			case 14:
-				addMoreText('you');
-			// credTextShit.text += '\nNight';
-			case 15:
-				addMoreText('smokey'); // credTextShit.text += '\nFunkin';
-
 			case 16:
 				skipIntro();
 		}

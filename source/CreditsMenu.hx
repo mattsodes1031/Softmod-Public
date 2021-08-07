@@ -23,10 +23,13 @@ class CreditsMenu extends MusicBeatState
 
 	private var grpSongs:FlxTypedGroup<Alphabet>;
 	private var curPlaying:Bool = false;
+	var boolList = StoryMenuState.getLocks();
 	
 	private var iconArray:Array<CreditIcon> = [];
 	
 	public static var credits:Array<String> = [
+	"Press Enter For Social:",
+	'',
 	'DIRECTOR:',
 	'Tamacoochi ',
 	'',
@@ -53,6 +56,7 @@ class CreditsMenu extends MusicBeatState
 	'Disky',
 	'Starrie Blu',
 	'Smokey', 
+	'Rozebud',
 	'Clowfoe', 
 	'Ash', 
 	'Flippy', ///28
@@ -66,7 +70,6 @@ class CreditsMenu extends MusicBeatState
 	'',
 	'SPECIAL THANKS:',
 	'Kolsan',
-	'Rozebud',
 	'Wiki',
 	'Crystal',
 	'Danni',
@@ -179,70 +182,76 @@ class CreditsMenu extends MusicBeatState
 		{
 			trace(curSelected);
 			switch (curSelected){
-
 				case 0:
 				case 1:
-					fancyOpenURL("https://twitter.com/tamacoochi");
 				case 2:
 				case 3:
+					fancyOpenURL("https://twitter.com/tamacoochi");
 				case 4:
-					fancyOpenURL("https://twitter.com/drizzleastra");
 				case 5:
-					fancyOpenURL("Blu https://twitter.com/starrie_blu");
 				case 6:
-					fancyOpenURL("https://twitter.com/peep_face");
+					fancyOpenURL("https://twitter.com/drizzleastra");
 				case 7:
-					fancyOpenURL("https://elikapika.newgrounds.com/");
-				case 8:
-					fancyOpenURL("https://twitter.com/CitrusSlugLuca");
-				case 9:
-					fancyOpenURL("https://www.youtube.com/channel/UCdkHxFQnvyIKHSPcRRu-9PQ");
-				case 10:
-					fancyOpenURL("https://twitter.com/teradriive");
-				case 11:
-					fancyOpenURL("https://twitter.com/HexerRush");
-				case 12:
-					trace("No social media found");
-				case 13:
-					fancyOpenURL("https://twitter.com/VanillaSwirlx");
-				case 14:
-				case 15:
-				case 16:
 					fancyOpenURL("Blu https://twitter.com/starrie_blu");
+				case 8:
+					fancyOpenURL("https://twitter.com/peep_face");
+				case 9:
+					fancyOpenURL("https://elikapika.newgrounds.com/");
+				case 10:
+					fancyOpenURL("https://twitter.com/CitrusSlugLuca");
+				case 11:
+					fancyOpenURL("https://www.youtube.com/channel/UCdkHxFQnvyIKHSPcRRu-9PQ");
+				case 12:
+					fancyOpenURL("https://twitter.com/teradriive");
+				case 13:
+					fancyOpenURL("https://twitter.com/HexerRush");
+				case 14:
+					trace("No social media found");
+				case 15:
+					fancyOpenURL("https://twitter.com/VanillaSwirlx");
+				case 16:
 				case 17:
-					fancyOpenURL("https://twitter.com/MegaBlade");
 				case 18:
-					fancyOpenURL("https://www.youtube.com/channel/UCPJgxE6emiRHcjDn5IIjH3Q");
+					fancyOpenURL("Blu https://twitter.com/starrie_blu");
 				case 19:
-					fancyOpenURL("https://twitter.com/hamm_slamm");
+					fancyOpenURL("https://twitter.com/MegaBlade");
 				case 20:
-					fancyOpenURL("https://www.youtube.com/c/StardustTunes");
+					fancyOpenURL("https://www.youtube.com/channel/UCPJgxE6emiRHcjDn5IIjH3Q");
 				case 21:
+					fancyOpenURL("https://twitter.com/hamm_slamm");
 				case 22:
-					fancyOpenURL("https://github.com/mattsodes1031/Softmod-Public");
+					fancyOpenURL("https://www.youtube.com/c/StardustTunes");
 				case 23:
-					fancyOpenURL("https://twitter.com/Disky_1");
 				case 24:
-					fancyOpenURL("https://twitter.com/starrie_blu");
+					if(boolList[6] == true)
+						FlxG.switchState(new CheckText());
+					else
+						fancyOpenURL("https://github.com/mattsodes1031/Softmod-Public");
 				case 25:
-					fancyOpenURL("https://twitter.com/Smokey_5_");
+					fancyOpenURL("https://twitter.com/Disky_1");
 				case 26:
-					fancyOpenURL("https://twitter.com/Clowfoe");
+					fancyOpenURL("https://twitter.com/starrie_blu");
 				case 27:
-					fancyOpenURL("https://twitter.com/ash__i_guess_");
-				case 28:
-					fancyOpenURL("https://www.youtube.com/channel/UCMIGpjyL6H__IFp7emWErlw");
+					fancyOpenURL("https://twitter.com/Smokey_5_");
+				case 28:	
+						fancyOpenURL("https://twitter.com/helpme_thebigt");
 				case 29:
+					fancyOpenURL("https://twitter.com/Clowfoe");
 				case 30:
+					fancyOpenURL("https://twitter.com/ash__i_guess_");
 				case 31:
 					fancyOpenURL("https://www.youtube.com/channel/UCMIGpjyL6H__IFp7emWErlw");
 				case 32:
-					fancyOpenURL("https://www.youtube.com/channel/UCPJgxE6emiRHcjDn5IIjH3Q");
 				case 33:
-					fancyOpenURL("https://twitter.com/EthanTheDoodler");
 				case 34:
-					fancyOpenURL("https://twitter.com/cval_brown");
+					fancyOpenURL("https://www.youtube.com/channel/UCMIGpjyL6H__IFp7emWErlw");
 				case 35:
+					fancyOpenURL("https://www.youtube.com/channel/UCPJgxE6emiRHcjDn5IIjH3Q");
+				case 36:
+					fancyOpenURL("https://twitter.com/EthanTheDoodler");
+				case 37:
+					fancyOpenURL("https://twitter.com/cval_brown");
+				case 38:
 					fancyOpenURL("https://twitter.com/alienshea");
 				
 				default:
@@ -268,7 +277,7 @@ class CreditsMenu extends MusicBeatState
 
 		var changeTest = curSelected;
 
-		if(credits[curSelected] == "" || credits[curSelected].contains(":")){
+		if(credits[curSelected] == "" || credits[curSelected].contains(":") && credits[curSelected] != "PROGRAMMERS:" && credits[curSelected] != "Press Enter For Social:"){
 			changeSelection(change == 0 ? 1 : change);
 		}
 

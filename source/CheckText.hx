@@ -24,9 +24,8 @@ import io.newgrounds.NG;
 import lime.app.Application;
 import openfl.Assets;
 
-#if windows
+
 import Discord.DiscordClient;
-#end
 
 #if cpp
 import sys.thread.Thread;
@@ -34,7 +33,7 @@ import sys.thread.Thread;
 
 using StringTools;
 
-class WarningState extends MusicBeatState
+class CheckText extends MusicBeatState
 {   
 
     
@@ -42,19 +41,23 @@ class WarningState extends MusicBeatState
 
     override  function create():Void
 	{
-        DiscordClient.changePresence("Inside The Opening Menu", null);
+        DiscordClient.changePresence("Inside The Credits Menu", null);
 
-        FlxG.sound.music.stop();
 
-        var pic:FlxSprite = new FlxSprite(-150, -50).loadGraphic(Paths.image('Not_Safe_Warning'));
-		pic.setGraphicSize(Std.int(pic.width * .9));
+        var pic:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('menuGB'));
+		pic.setGraphicSize(Std.int(pic.width * 1.0));
 		add(pic);
+        var icon:FlxSprite = new FlxSprite(325, 200).loadGraphic(Paths.image('disky Tile'));
+		icon.setGraphicSize(Std.int(icon.width * .4));
+		add(icon);
 
-        dropText = new FlxText(-150, 0, Std.int(FlxG.width * 1.2), "", 22);
+        dropText = new FlxText(-175, 75, Std.int(FlxG.width * 1.2), "", 20);
 		dropText.font = 'DK Inky Fingers';
-		dropText.color = FlxColor.WHITE;
+		dropText.color = 0xFFD89894;
         dropText.alignment = FlxTextAlign.CENTER;
 		add(dropText);
+
+
         
        
     }
@@ -62,22 +65,17 @@ class WarningState extends MusicBeatState
 
     override function update(elapsed:Float)
 	{
-        dropText.text = "Warning!
-This mod handles topics that some may find triggering.
-It is possible to play the mod safely by pressing Shift to skip dialogue.
-Triggers may include:
-Implied domestic abuse,
-Physical signs of domestic abuse,
-PTSD,
-Mentions of Pico’s School,
-If you are a victim of domestic violence, remember that you aren’t alone.
-If you have any questions regarding the mod, contact @SoftModFNF on Twitter.
-Enjoy the story.
-(Press any key to continue)";
+        dropText.text = "This is Disky, the main  programmer for this mod, and you found a secret menu.
+        I just wanted to say how great it has been to work on this mod, 
+        Tama and Ren especially I love and am grateful to have met.
+        Making this mod helped me through a really unhealthy realtionship and i am very thankful for that.
+        Thank you for playing, and reading this, I hope to add even more cool features to this mod in the future.
+        You can press any key to return to the credits";
         dropText.visible = true;
          if (FlxG.keys.justPressed.ANY)
 		{
-            FlxG.switchState(new MainMenuState());
+            //FlxG.sound.music.stop();
+            FlxG.switchState(new CreditsMenu());
 		}
        
     }
