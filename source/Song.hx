@@ -52,6 +52,7 @@ class Song
 		var folderLowercase = StringTools.replace(folder, " ", "-").toLowerCase();
 		trace(folderLowercase);
 		switch (folderLowercase) {
+			case 'dad-battle' : folderLowercase = 'dadbattle';
 			case 'philly-nice': folderLowercase = 'philly';
 			//case 'no-cigar': folderLowercase = 'nocigar';
 		}

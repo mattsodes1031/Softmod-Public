@@ -333,35 +333,9 @@ class PlayState extends MusicBeatState
 		Conductor.mapBPMChanges(SONG);
 		Conductor.changeBPM(SONG.bpm);
 		
-			if(dialogueList.contains(SONG.song.toLowerCase())){
+	if(dialogueList.contains(SONG.song.toLowerCase())){
 			//I hate kade engine i hate kade engine
-				if(SONG.song.toLowerCase()== "dad battle"){
-					dialogue = CoolUtil.coolTextFile("assets/data/stupiddialogue/dialogued.txt");
-					usesDialogue = true;
-					trace(dialogue);
-				}
-				else if(SONG.song.toLowerCase()== "milf"){
-					trace(dialogue);
-					dialogue = CoolUtil.coolTextFile("assets/data/stupiddialogue/dialoguem.txt");
-					usesDialogue = true;
-					
-				}
-				else if(SONG.song.toLowerCase()== "hope"){
-					trace(dialogue);
-					dialogue = CoolUtil.coolTextFile("assets/data/stupiddialogue/dialogueh.txt");
-					usesDialogue = true;
-				}
-				else if(SONG.song.toLowerCase()== "fresh"){
-					trace(dialogue);
-					dialogue = CoolUtil.coolTextFile("assets/data/stupiddialogue/dialoguef.txt");
-					usesDialogue = true;
-				}
-				//else if(SONG.song.toLowerCase()== "playdate"){
-				//	trace(dialogue);
-				//	dialogue = CoolUtil.coolTextFile("assets/data/stupiddialogue/dialogueplaydate.txt");
-				//	usesDialogue = true;
-				//}
-				else{
+			
 					trace(dialogue);
 					trace("plese be right");
 					dialogue = CoolUtil.coolTextFile("assets/data/" + SONG.song.toLowerCase() + "/dialogue.txt");
@@ -370,11 +344,10 @@ class PlayState extends MusicBeatState
 				}
 
 				
-			}
 			
 			
 			if(dialogueEndList.contains(SONG.song.toLowerCase())){
-				if(SONG.song.toLowerCase()== "dad battle"){
+				if(SONG.song.toLowerCase()== "dadbattle"){
 					trace("end");
 				//	dialogueEnd = CoolUtil.coolTextFile("assets/data/dadbattle/dialogueEnd.txt");
 				//	usesDialogue = true;

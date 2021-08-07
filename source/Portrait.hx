@@ -75,7 +75,7 @@ class Portrait extends FlxSprite
 			case "doubles":
 				setGraphicSize(Std.int(width * .38));
 			case "icons":
-				setGraphicSize(Std.int(width * .2));
+				setGraphicSize(Std.int(width * .3));
 		}
         updateHitbox();
         scrollFactor.set();

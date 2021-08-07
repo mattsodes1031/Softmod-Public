@@ -62,6 +62,8 @@ class DialogueBox extends FlxSpriteGroup
 	var portraitOGGF:Portrait;
 	var portraitSHADOWS:Portrait;
 	var portraitNARRATOR:Portrait;
+	var portraitDOUBLES:Portrait;
+	var portraitICONS:Portrait;
 
 	var portraitLeft:FlxSprite;
 	var portraitRight:FlxSprite;
@@ -220,6 +222,12 @@ class DialogueBox extends FlxSpriteGroup
 
 			portraitNOCHAR = new Portrait (0, 9999, "noChar");
 			add(portraitNOCHAR);
+			
+			portraitDOUBLES = new Portrait (180, 260, "doubles");
+			add(portraitDOUBLES);
+			
+			portraitICONS = new Portrait (180, 260, "icons");
+			add(portraitICONS);
 
 			portraitNARRATOR =  new Portrait (210, 130, "narrator");
 			add(portraitNARRATOR);
@@ -445,6 +453,10 @@ class DialogueBox extends FlxSpriteGroup
 				portraitSHADOWS.playFrame(curAnim);
 			case "narrator":
 				portraitNARRATOR.playFrame(curAnim);
+			case "doubles":
+				portraitDOUBLES.playFrame(curAnim);
+			case "icons":
+				portraitICONS.playFrame(curAnim);
 			
 			case "effect":
 				switch(curAnim){
@@ -573,7 +585,10 @@ class DialogueBox extends FlxSpriteGroup
 			portraitMONSTERXMAS,
 			portraitOGBF,
 			portraitOGGF,
-			portraitSHADOWS];
+			portraitSHADOWS,
+			portraitDOUBLES,
+			portraitICONS];
+			
 			return portraitArray;
 		}
 	
@@ -597,6 +612,8 @@ class DialogueBox extends FlxSpriteGroup
 			portraitOGBF.hide();
 			portraitOGGF.hide();
 			portraitSHADOWS.hide();
+			portraitDOUBLES.hide();
+			portraitICONS.hide();
 			
 			
 	

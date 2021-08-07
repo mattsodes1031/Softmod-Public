@@ -25,16 +25,16 @@ class StoryMenuState extends MusicBeatState
 
 	var weekData:Array<Dynamic> = [
 		['Starcrossed'],
-		['DadBattle','Fresh', "No-Cigar"],
+		['DadBattle', 'Fresh', "No-Cigar"],
 		['Spookeez', 'South',"Repressed"],
 		['Playdate','Stay',"Its-Complicated"],
 		['High',"MILF",'Spotlight'],
 		['Genesis','Eggnog','Hope'],
-		[ 'Envy','Diplopia', 'In-Fighting']
+		['Envy','Diplopia', 'In-Fighting']
 	];
 	var curDifficulty:Int = 1;
 
-	public static var weekUnlocked:Array<Bool> = [true, true, true, true, false, false, false, false];
+	public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, true, true];
 
 	var weekCharacters:Array<Dynamic> = [
 		['', 'bf', 'gf'],
