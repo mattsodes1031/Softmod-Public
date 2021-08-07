@@ -221,7 +221,11 @@ class FreeplayState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
+
 		super.update(elapsed);
+
+
+		
 
 		if (FlxG.sound.music.volume < 0.7)
 		{

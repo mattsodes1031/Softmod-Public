@@ -926,11 +926,11 @@ class Character extends FlxSprite
 					else
 						playAnim('danceLeft');
 				default:
-					 if (PlayState.getBeat()  > 332 && PlayState.getStage() == 'mallEvil' && curCharacter == "bf-christmas" )
+					 if (PlayState.getBeat()  > 332 && PlayState.getStage() == 'mallEvil' && curCharacter == "bf-christmas3" )
 					{
 						playAnim('sadSmile', true);
 					}					
-					else if (PlayState.getBeat() > 248 && PlayState.getBeat() < 257 && PlayState.getStage() == 'mallEvil' && curCharacter == "bf-christmas")
+					else if (PlayState.getBeat() > 248 && PlayState.getBeat() < 257 && PlayState.getStage() == 'mallEvil' && curCharacter == "bf-christmas3")
 					{
 						trace("beegoof");
 						playAnim('bigYell');
