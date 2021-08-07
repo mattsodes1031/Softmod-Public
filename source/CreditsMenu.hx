@@ -87,6 +87,7 @@ class CreditsMenu extends MusicBeatState
 		DiscordClient.changePresence("Inside The Credits Menu...", null);
 
 		FlxG.sound.playMusic(Paths.music("SoftConfig", "shared"));
+		FlxG.autoPause = false;
 	
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBG'));
 		add(bg);
@@ -169,8 +170,9 @@ class CreditsMenu extends MusicBeatState
 
 		if (controls.BACK)
 		{
-			FlxG.switchState(new MainMenuState());
 			FlxG.sound.music.stop();
+			FlxG.autoPause = true;
+			FlxG.switchState(new MainMenuState());
 		}
 
 		if (accepted)
