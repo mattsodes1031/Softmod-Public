@@ -333,12 +333,20 @@ class PlayState extends MusicBeatState
 		Conductor.mapBPMChanges(SONG);
 		Conductor.changeBPM(SONG.bpm);
 		
-	if(dialogueList.contains(SONG.song.toLowerCase())){
+	var daigleufggeeNAEMMEA = SONG.song.toLowerCase();
+
+	trace("1- " + daigleufggeeNAEMMEA);
+	
+	daigleufggeeNAEMMEA = daigleufggeeNAEMMEA.replace(" ", "");
+
+	trace("2- " + daigleufggeeNAEMMEA);
+
+	if(dialogueList.contains(daigleufggeeNAEMMEA)){
 			//I hate kade engine i hate kade engine
 			
 					trace(dialogue);
 					trace("plese be right");
-					dialogue = CoolUtil.coolTextFile("assets/data/" + SONG.song.toLowerCase() + "/dialogue.txt");
+					dialogue = CoolUtil.coolTextFile("assets/data/" + daigleufggeeNAEMMEA + "/dialogue.txt");
 					usesDialogue = true;
 					trace(dialogue);
 				}
@@ -346,7 +354,7 @@ class PlayState extends MusicBeatState
 				
 			
 			
-			if(dialogueEndList.contains(SONG.song.toLowerCase())){
+			if(dialogueEndList.contains(daigleufggeeNAEMMEA)){
 				if(SONG.song.toLowerCase()== "dadbattle"){
 					trace("end");
 				//	dialogueEnd = CoolUtil.coolTextFile("assets/data/dadbattle/dialogueEnd.txt");
@@ -355,7 +363,7 @@ class PlayState extends MusicBeatState
 				}
 
 				else{
-					dialogueEnd = CoolUtil.coolTextFile("assets/data/" + SONG.song.toLowerCase() + "/dialogueEnd.txt");
+					dialogueEnd = CoolUtil.coolTextFile("assets/data/" + daigleufggeeNAEMMEA + "/dialogueEnd.txt");
 					usesEndDialogue = true;
 					trace('IT FUCKIN WORKED TWICE');
 				}

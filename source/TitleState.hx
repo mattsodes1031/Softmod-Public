@@ -94,18 +94,9 @@ class TitleState extends MusicBeatState
 
 		Highscore.load();
 
-		if (FlxG.save.data.weekUnlocked != null)
-		{
-			// FIX LATER!!!
-			// WEEK UNLOCK PROGRESSION!!
-			// StoryMenuState.weekUnlocked = FlxG.save.data.weekUnlocked;
-
-			if (StoryMenuState.weekUnlocked.length < 4)
-				StoryMenuState.weekUnlocked.insert(0, true);
-
-			// QUICK PATCH OOPS!
-			if (!StoryMenuState.weekUnlocked[0])
-				StoryMenuState.weekUnlocked[0] = true;
+		if(FlxG.save.data.weekUnlocked == null){
+			FlxG.save.data.weekUnlocked = [false, false, false, false, false, false, false, false];
+			FlxG.save.flush();
 		}
 
 		#if FREEPLAY
@@ -415,13 +406,13 @@ class TitleState extends MusicBeatState
 			// credTextShit.text = "Friday";
 			// credTextShit.screenCenter();
 			case 13:
-				addMoreText('FNF');
+				addMoreText('fuck');
 			// credTextShit.visible = true;
 			case 14:
-				addMoreText('Soft');
+				addMoreText('you');
 			// credTextShit.text += '\nNight';
 			case 15:
-				addMoreText('Mod'); // credTextShit.text += '\nFunkin';
+				addMoreText('smokey'); // credTextShit.text += '\nFunkin';
 
 			case 16:
 				skipIntro();
