@@ -75,6 +75,7 @@ class OptionsMenu extends MusicBeatState
 	{
 		instance = this;
 		var menuBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image("menuDesat"));
+		FlxG.sound.playMusic(Paths.music("SoftConfig", "shared"));
 
 		menuBG.color = 0xFFea71fd;
 		menuBG.setGraphicSize(Std.int(menuBG.width * 1.1));
@@ -123,8 +124,10 @@ class OptionsMenu extends MusicBeatState
 
 		if (acceptInput)
 		{
-			if (controls.BACK && !isCat)
+			if (controls.BACK && !isCat){
+				FlxG.sound.music.stop();
 				FlxG.switchState(new MainMenuState());
+			}
 			else if (controls.BACK)
 			{
 				isCat = false;

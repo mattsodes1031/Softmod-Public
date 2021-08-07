@@ -165,7 +165,7 @@ class FreeplayState extends MusicBeatState
 
 		add(scoreText);
 
-		changeSelection();
+		changeSelection(0);
 		changeDiff();
 
 		// FlxG.sound.playMusic(Paths.music('title'), 0);
@@ -255,6 +255,7 @@ class FreeplayState extends MusicBeatState
 		if (controls.BACK)
 		{
 			FlxG.switchState(new MainMenuState());
+			FlxG.sound.music.stop();
 		}
 
 		if (accepted)
@@ -334,6 +335,8 @@ class FreeplayState extends MusicBeatState
 			curSelected = songs.length - 1;
 		if (curSelected >= songs.length)
 			curSelected = 0;
+		
+		
 
 		// selector.y = (70 * curSelected) + 30;
 		

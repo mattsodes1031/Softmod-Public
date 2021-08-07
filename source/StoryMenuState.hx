@@ -38,6 +38,8 @@ class StoryMenuState extends MusicBeatState
 
 	public static var weekUnlocked:Array<Bool> = [];
 
+	public static var restartMusic = false;
+
 	var weekCharacters:Array<Dynamic> = [
 		['', 'bf', 'gf'],
 		['dad', 'bf', 'gf'],
@@ -83,16 +85,14 @@ class StoryMenuState extends MusicBeatState
 		DiscordClient.changePresence("In the Story Mode Menu", null);
 		#end
 
-		weekUnlocked = FlxG.save.data.weekUnlocked;
-
 		transIn = FlxTransitionableState.defaultTransIn;
 		transOut = FlxTransitionableState.defaultTransOut;
 
-		if (FlxG.sound.music != null)
-		{
-			if (!FlxG.sound.music.playing)
-				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+		if(restartMusic){
+			FlxG.sound.playMusic(Paths.music('freakyMenu'));
+			restartMusic = false;
 		}
+		
 
 		persistentUpdate = persistentDraw = true;
 

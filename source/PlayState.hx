@@ -404,12 +404,12 @@ class PlayState extends MusicBeatState
 					defaultCamZoom = 0.90;
 
 
-					var bg:FlxSprite = new FlxSprite(100,0).loadGraphic(Paths.image('philly/bg_week_3_sky', 'week3'));
+					var bg:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image('philly/bg_week_3_sky', 'week3'));
 					bg.scrollFactor.set(0.1, 0.1);
 					bg.setGraphicSize(Std.int(bg.width * 1.5));
 					add(bg);
 
-					var city:FlxSprite = new FlxSprite(-150,180).loadGraphic(Paths.image('philly/bg_week_3_city', 'week3'));
+					var city:FlxSprite = new FlxSprite(-250,180).loadGraphic(Paths.image('philly/bg_week_3_city', 'week3'));
 					city.scrollFactor.set(0.2, 0.2);
 					city.setGraphicSize(Std.int(city.width * 1.4));
 					city.updateHitbox();
@@ -422,7 +422,7 @@ class PlayState extends MusicBeatState
 
 					for (i in 0...5)
 					{
-							var light:FlxSprite = new FlxSprite(200).loadGraphic(Paths.image('philly/win' + i, 'week3'));
+							var light:FlxSprite = new FlxSprite(100).loadGraphic(Paths.image('philly/win' + i, 'week3'));
 							light.scrollFactor.set(0.3, 0.3);
 							light.visible = false;
 							light.setGraphicSize(Std.int(light.width * 0.85));
@@ -433,14 +433,14 @@ class PlayState extends MusicBeatState
 
 
 
-					var streetBehind:FlxSprite = new FlxSprite(-40, 50).loadGraphic(Paths.image('philly/behindTrain','week3'));
+					var streetBehind:FlxSprite = new FlxSprite(-140, 50).loadGraphic(Paths.image('philly/behindTrain','week3'));
 					add(streetBehind);
 
-					var station:FlxSprite = new FlxSprite(120, 170).loadGraphic(Paths.image('philly/bg_week_3','week3'));
+					var station:FlxSprite = new FlxSprite(20, 170).loadGraphic(Paths.image('philly/bg_week_3','week3'));
 					station.setGraphicSize(Std.int(station.width * 1.5));
 					add(station);
 					
-					trainBop = new FlxSprite(-150, 375);
+					trainBop = new FlxSprite(-250, 375);
 					trainBop.frames = Paths.getSparrowAtlas('philly/boppers','week3');
 					trainBop.animation.addByPrefix('boping', "bop", 24, false);
 					trainBop.antialiasing = true;
@@ -460,7 +460,7 @@ class PlayState extends MusicBeatState
 
 					// var cityLights:FlxSprite = new FlxSprite().loadGraphic(AssetPaths.win0.png);
 
-					var street:FlxSprite = new FlxSprite(120, streetBehind.y+152).loadGraphic(Paths.image('philly/bg_week_3_street','week3'));
+					var street:FlxSprite = new FlxSprite(20, streetBehind.y+152).loadGraphic(Paths.image('philly/bg_week_3_street','week3'));
 					street.setGraphicSize(Std.int(street.width * 1.5));
 					add(street);
 			}
@@ -565,7 +565,7 @@ class PlayState extends MusicBeatState
 					tree.scrollFactor.set(0.40, 0.40);
 					add(tree);
 
-					bottomBoppers = new FlxSprite(-300, 90);
+					bottomBoppers = new FlxSprite(-150, 0);
 					bottomBoppers.frames = Paths.getSparrowAtlas('christmas/bop1','week5');
 					bottomBoppers.animation.addByPrefix('bop', 'Bottom Level Boppers', 24, false);
 					bottomBoppers.antialiasing = true;
@@ -589,9 +589,7 @@ class PlayState extends MusicBeatState
 					//jeff when he buys grownups 2^
 					santa.antialiasing = true;
 					santa.animation.play('idle');
-					if(FlxG.save.data.distractions){
-						add(santa);
-					}
+					
 			}
 			case 'mall2':
 			{
@@ -632,7 +630,7 @@ class PlayState extends MusicBeatState
 					tree.scrollFactor.set(0.40, 0.40);
 					add(tree);
 
-					bottomBoppers = new FlxSprite(-300, 90);
+					bottomBoppers = new FlxSprite(-150, 0);
 					bottomBoppers.frames = Paths.getSparrowAtlas('christmas/bopit','week5');
 					bottomBoppers.animation.addByPrefix('bop', 'Bottom Level Boppers', 24, false);
 					bottomBoppers.antialiasing = true;
@@ -656,9 +654,6 @@ class PlayState extends MusicBeatState
 					//jeff when he buys grownups 2^
 					santa.antialiasing = true;
 					santa.animation.play('idle');
-					if(FlxG.save.data.distractions){
-						add(santa);
-					}
 			}
 			case 'mallEvil':
 			{
@@ -1078,6 +1073,16 @@ class PlayState extends MusicBeatState
 
 		add(dad);
 		add(boyfriend);
+
+		switch(curStage){
+
+			case "mall" | "mall2":
+				if(FlxG.save.data.distractions){
+					add(santa);
+				}
+
+		}
+
 		if (loadRep)
 		{
 			FlxG.watch.addQuick('rep rpesses',repPresses);
@@ -3386,10 +3391,10 @@ class PlayState extends MusicBeatState
 					case "play":
 						LoadingState.loadAndSwitchState(new PlayState());
 					case "story":
-					FlxG.sound.playMusic(Paths.music('freakyMenu'));
-					FlxG.switchState(new StoryMenuState());
+						StoryMenuState.restartMusic = true;
+						FlxG.switchState(new StoryMenuState());
 					case "free":
-					FlxG.switchState(new FreeplayState());
+						FlxG.switchState(new FreeplayState());
 				}
 		
 			}

@@ -85,6 +85,8 @@ class CreditsMenu extends MusicBeatState
 		
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("Inside The Credits Menu...", null);
+
+		FlxG.sound.playMusic(Paths.music("SoftConfig", "shared"));
 	
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBG'));
 		add(bg);
@@ -103,6 +105,11 @@ class CreditsMenu extends MusicBeatState
 			var songText:Alphabet = new Alphabet(0, (70 * i) + 30, new EReg('_', 'g').replace(new EReg('0', 'g').replace(credits[i], 'O'), ' '), true, false);
 			songText.isMenuItem = true;
 			songText.targetY = i;
+
+			if(credits[i].contains(":")){
+				songText.color = 0xFFFFFF00;
+			}
+
 			grpSongs.add(songText);
 
 			var icon:CreditIcon = new CreditIcon(credits[i]);
@@ -163,6 +170,7 @@ class CreditsMenu extends MusicBeatState
 		if (controls.BACK)
 		{
 			FlxG.switchState(new MainMenuState());
+			FlxG.sound.music.stop();
 		}
 
 		if (accepted)
@@ -248,7 +256,6 @@ class CreditsMenu extends MusicBeatState
 
 	function changeSelection(change:Int = 0)
 	{
-		FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 
 		curSelected += change;
 
@@ -256,6 +263,18 @@ class CreditsMenu extends MusicBeatState
 			curSelected = credits.length - 1;
 		if (curSelected >= credits.length)
 			curSelected = 0;
+
+		var changeTest = curSelected;
+
+		if(credits[curSelected] == "" || credits[curSelected].contains(":")){
+			changeSelection(change == 0 ? 1 : change);
+		}
+
+		if(changeTest == curSelected){
+			FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
+			trace("ayo doep"); // ?????
+		}
+		
 
 		var bullShit:Int = 0;
 		
@@ -280,5 +299,6 @@ class CreditsMenu extends MusicBeatState
 				// item.setGraphicSize(Std.int(item.width));
 			}
 		}
+
 	}
 }
