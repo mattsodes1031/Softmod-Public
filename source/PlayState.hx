@@ -1121,6 +1121,15 @@ class PlayState extends MusicBeatState
 		
 
 		Conductor.songPosition = -5000;
+
+		var dreamscapeSongs = ["repressed", "genesis", "diplopia", "in-fighting", "envy"];
+
+		if(dreamscapeSongs.contains(SONG.song.toLowerCase())){
+			var dreamscape = new FlxSprite().loadGraphic(Paths.image('dreamscape', "shared"));
+			add(dreamscape);
+			dreamscape.cameras = [camHUD];
+
+		}
 		
 		strumLine = new FlxSprite(0, 50).makeGraphic(FlxG.width, 10);
 		strumLine.scrollFactor.set();
