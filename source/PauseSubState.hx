@@ -180,6 +180,14 @@ class PauseSubState extends MusicBeatSubstate
 			switch (daSelected)
 			{
 				case "Resume":
+
+					switch(PlayState.curStage){
+
+						case "limo":
+							PlayState.instance.tweenBG(60);
+
+					}
+
 					close();
 				case "Restart Song":
 					FlxG.resetState();

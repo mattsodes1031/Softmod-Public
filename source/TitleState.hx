@@ -112,6 +112,31 @@ class TitleState extends MusicBeatState
 		#elseif CHARTING
 		FlxG.switchState(new ChartingState());
 		#else
+
+		if (!initialized)
+			{
+				var diamond:FlxGraphic = FlxGraphic.fromClass(GraphicTransTileDiamond);
+				diamond.persist = true;
+				diamond.destroyOnNoUse = false;
+	
+				FlxTransitionableState.defaultTransIn = new TransitionData(FADE, FlxColor.BLACK, 1, new FlxPoint(0, -1), {asset: diamond, width: 32, height: 32},
+					new FlxRect(-200, -200, FlxG.width * 1.4, FlxG.height * 1.4));
+				FlxTransitionableState.defaultTransOut = new TransitionData(FADE, FlxColor.BLACK, 0.7, new FlxPoint(0, 1),
+					{asset: diamond, width: 32, height: 32}, new FlxRect(-200, -200, FlxG.width * 1.4, FlxG.height * 1.4));
+	
+				transIn = FlxTransitionableState.defaultTransIn;
+				transOut = FlxTransitionableState.defaultTransOut;
+	
+				// HAD TO MODIFY SOME BACKEND SHIT
+				// IF THIS PR IS HERE IF ITS ACCEPTED UR GOOD TO GO
+				// https://github.com/HaxeFlixel/flixel-addons/pull/348
+	
+				// var music:FlxSound = new FlxSound();
+				// music.loadStream(Paths.music('freakyMenu'));
+				// FlxG.sound.list.add(music);
+				// music.play();
+			}
+
 		new FlxTimer().start(1, function(tmr:FlxTimer)
 		{
 			startIntro();
@@ -128,32 +153,6 @@ class TitleState extends MusicBeatState
 
 	function startIntro()
 	{
-		if (!initialized)
-		{
-			var diamond:FlxGraphic = FlxGraphic.fromClass(GraphicTransTileDiamond);
-			diamond.persist = true;
-			diamond.destroyOnNoUse = false;
-
-			FlxTransitionableState.defaultTransIn = new TransitionData(FADE, FlxColor.BLACK, 1, new FlxPoint(0, -1), {asset: diamond, width: 32, height: 32},
-				new FlxRect(-200, -200, FlxG.width * 1.4, FlxG.height * 1.4));
-			FlxTransitionableState.defaultTransOut = new TransitionData(FADE, FlxColor.BLACK, 0.7, new FlxPoint(0, 1),
-				{asset: diamond, width: 32, height: 32}, new FlxRect(-200, -200, FlxG.width * 1.4, FlxG.height * 1.4));
-
-			transIn = FlxTransitionableState.defaultTransIn;
-			transOut = FlxTransitionableState.defaultTransOut;
-
-			// HAD TO MODIFY SOME BACKEND SHIT
-			// IF THIS PR IS HERE IF ITS ACCEPTED UR GOOD TO GO
-			// https://github.com/HaxeFlixel/flixel-addons/pull/348
-
-			// var music:FlxSound = new FlxSound();
-			// music.loadStream(Paths.music('freakyMenu'));
-			// FlxG.sound.list.add(music);
-			// music.play();
-			FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
-
-			FlxG.sound.music.fadeIn(4, 0, 0.7);
-		}
 
 		Conductor.changeBPM(102);
 		persistentUpdate = true;
@@ -168,33 +167,26 @@ class TitleState extends MusicBeatState
 			logoBl = new FlxSprite(-150, -100);
 			logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 			logoBl.antialiasing = true;
-			logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
+			logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
 			logoBl.animation.play('bump');
 			logoBl.updateHitbox();
 			logoBl.screenCenter(X);
 			// logoBl.color = FlxColor.BLACK;
-		
-
-		gfDance = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.07);
-		gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
-		gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-		gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
-		gfDance.antialiasing = true;
 
 		bfmenu = new FlxSprite(900,300);
 		bfmenu.frames = Paths.getSparrowAtlas('softie');
-		bfmenu.animation.addByPrefix('idle', 'BF idle dance', 24, true);
+		bfmenu.animation.addByPrefix('idle', 'BF idle dance', 24, false);
 		bfmenu.animation.addByPrefix('hey', 'BF HEY', 24, false);
 		bfmenu.animation.play('idle');
 		bfmenu.antialiasing = true;
 
 		picomenu = new FlxSprite(0,310);
 		picomenu.frames = Paths.getSparrowAtlas('soft_pico_assets');
-		picomenu.animation.addByPrefix('idle', 'soft_pico idle', 24, true);
-	//	picomenu.animation.addByIndices('danceLeft', 'soft_pico idle', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-	//	picomenu.animation.addByIndices('danceRight', 'soft_pico idle', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+		//picomenu.animation.addByPrefix('idle', 'soft_pico idle', 24, true);
+		picomenu.animation.addByIndices('danceLeft', 'soft_pico idle', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+		picomenu.animation.addByIndices('danceRight', 'soft_pico idle', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
 		picomenu.animation.addByPrefix('hey', 'soft_pico cheer', 24, false);
-		picomenu.animation.play('idle');
+		picomenu.animation.play('danceLeft');
 		picomenu.antialiasing = true;
 		picomenu.flipX = true;
 
@@ -243,8 +235,11 @@ class TitleState extends MusicBeatState
 
 		if (initialized)
 			skipIntro();
-		else
+		else{
 			initialized = true;
+			FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
+			FlxG.sound.music.fadeIn(1, 0, 0.8);
+		}
 
 		// credGroup.add(credTextShit);
 	}
@@ -305,17 +300,16 @@ class TitleState extends MusicBeatState
 		if (pressedEnter && !transitioning && skippedIntro)
 		{
 			#if !switch
-			NGio.unlockMedal(60960);
+			//NGio.unlockMedal(60960);
 
 			// If it's Friday according to da clock
-			if (Date.now().getDay() == 5)
-				NGio.unlockMedal(61034);
+			//if (Date.now().getDay() == 5)
+			//	NGio.unlockMedal(61034);
 			#end
 
-			if (FlxG.save.data.flashing)
-				titleText.animation.play('press');
-				bfmenu.animation.play('hey');
-				picomenu.animation.play('hey');
+			titleText.animation.play('press');
+			bfmenu.animation.play('hey');
+			picomenu.animation.play('hey');
 
 			FlxG.camera.flash(FlxColor.WHITE, 1);
 			FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
@@ -373,13 +367,19 @@ class TitleState extends MusicBeatState
 	{
 		super.beatHit();
 
-		logoBl.animation.play('bump');
+		logoBl.animation.play('bump', true);
 		danceLeft = !danceLeft;
 
-	//	if (danceLeft)
-	//		picomenu.animation.play('danceRight');
-	//	else
-	//		picomenu.animation.play('danceLeft');
+		if(!transitioning){
+
+		bfmenu.animation.play('idle', true);
+
+		if (danceLeft)
+			picomenu.animation.play('danceRight', true);
+		else
+			picomenu.animation.play('danceLeft', true);
+
+		}
 
 		FlxG.log.add(curBeat);
 
@@ -412,6 +412,12 @@ class TitleState extends MusicBeatState
 			// credTextShit.visible = false;
 			// credTextShit.text = "Friday";
 			// credTextShit.screenCenter();
+			case 13:
+				createCoolText(['FNF']);
+			case 14:
+				addMoreText("SOFT");
+			case 15:
+				addMoreText("MOD");
 			case 16:
 				skipIntro();
 		}

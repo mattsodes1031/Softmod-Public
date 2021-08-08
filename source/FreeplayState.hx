@@ -42,48 +42,48 @@ class FreeplayState extends MusicBeatState
 		boolList = StoryMenuState.getLocks();
 		for (i in 0...boolList.length){
 			trace(boolList);
-			if (boolList[0] != true){
+			if (boolList[0] == true){
 				if(daList[0] != "Starcrossed:gf:1"){
 					daList.push("Starcrossed:gf:1");
 				}
 
 			}
-			if (boolList[2] != true){
+			if (boolList[2] == true){
 				if(daList[1] != "Fresh:dad:1"){
 					daList.push("Fresh:dad:1");
 					daList.push("Dadbattle:dad:1");
 					daList.push("No-Cigar:dad:1");
 				}
 			}
-			if (boolList[3] != true){
+			if (boolList[3] == true){
 				if(daList[4] != "Spookeez:spooky:1"){
 					daList.push("Spookeez:spooky:1");
 					daList.push("South:spooky:1");
 					daList.push("Repressed:monster:1");
 				}
 			}
-			if (boolList[4] != true){
+			if (boolList[4] == true){
 				if(daList[7] != "Playdate:pico:1"){
 					daList.push("Playdate:pico:1");
 					daList.push("Stay:pico:1");
 					daList.push("Its-Complicated:pico:1");
 				}
 			}
-			if (boolList[5] != true){
+			if (boolList[5] == true){
 				if(daList[10] != "High:mom:1"){
 					daList.push("High:mom:1");
 					daList.push("Milf:mom:1");
 					daList.push("Spotlight:mom:1");
 				}
 			}
-			if (boolList[6] != true){
+			if (boolList[6] == true){
 				if(daList[13] != "Eggnog:parents-christmas:1"){
 					daList.push("Eggnog:parents-christmas:1");
 					daList.push("Hope:parents-christmas:1");
 					daList.push("Genesis:monster:1");
 				}
 			}
-			if (boolList[7] != true){
+			if (boolList[7] == true){
 				if(daList[16] != "Diplopia:ogbf:1"){
 					daList.push("Diplopia:ogbf:1");
 					daList.push("In-Fighting:ogbf:1");
@@ -303,6 +303,12 @@ class FreeplayState extends MusicBeatState
 		if (curDifficulty > 2)
 			curDifficulty = 0;
 
+		var hardOnlySongs:Array<String> = ["diplopia", "in-fighting", "envy"];
+
+		if(hardOnlySongs.contains(songs[curSelected].songName.toLowerCase())){
+			curDifficulty = 2;
+		}
+
 		// adjusting the highscore song name to be compatible (changeDiff)
 		var songHighscore = StringTools.replace(songs[curSelected].songName, " ", "-");
 		switch (songHighscore) {
@@ -341,7 +347,7 @@ class FreeplayState extends MusicBeatState
 		if (curSelected >= songs.length)
 			curSelected = 0;
 		
-		
+		changeDiff();
 
 		// selector.y = (70 * curSelected) + 30;
 		

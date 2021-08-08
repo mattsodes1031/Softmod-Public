@@ -357,6 +357,9 @@ class StoryMenuState extends MusicBeatState
 		if (curDifficulty > 2)
 			curDifficulty = 0;
 
+		if(curWeek == 6)
+			curDifficulty = 2;
+
 		sprDifficulty.offset.x = 0;
 
 		switch (curDifficulty)
@@ -415,6 +418,8 @@ class StoryMenuState extends MusicBeatState
 		}
 
 		FlxG.sound.play(Paths.sound('scrollMenu'));
+
+		changeDifficulty();
 
 		updateText();
 	}

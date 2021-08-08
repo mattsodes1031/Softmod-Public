@@ -68,7 +68,7 @@ class WarningState extends MusicBeatState
 	{
         dropText.text = "Warning!
 This mod handles topics that some may find triggering.
-It is possible to play the mod safely by pressing Shift to skip dialogue.
+It is possible to play the mod safely by pressing SPACE to skip dialogue.
 Triggers may include:
 Implied domestic abuse,
 Physical signs of domestic abuse,
@@ -79,8 +79,10 @@ If you have any questions regarding the mod, contact @SoftModFNF on Twitter.
 Enjoy the story.
 (Press any key to continue)";
         dropText.visible = true;
+        dropText.screenCenter();
          if (FlxG.keys.justPressed.ANY)
 		{
+            FlxG.sound.music.stop();
             FlxG.switchState(new MainMenuState());
 		}
        

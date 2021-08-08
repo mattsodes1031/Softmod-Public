@@ -345,10 +345,10 @@ class Character extends FlxSprite
 				setGraphicSize(Std.int(width * 1.15));
 
 				addOffset('idle');
-				addOffset("singUP", -20, 50);
-				addOffset("singRIGHT", -51);
-				addOffset("singLEFT", -30);
-				addOffset("singDOWN", -40, -94);
+				addOffset("singUP", 190, 75);
+				addOffset("singRIGHT", 110, -70);
+				addOffset("singLEFT", 225, -10);
+				addOffset("singDOWN", 180, -75);
 				playAnim('idle');
 			case 'pico':
 				tex = Paths.getSparrowAtlas('characters/Pico_FNF_assetss');
@@ -549,6 +549,8 @@ class Character extends FlxSprite
 				addOffset("singRIGHTmiss", -53, -8);
 				addOffset("singLEFTmiss", 20, -8);
 				addOffset("singDOWNmiss", 0, -53);
+				addOffset("bigYell");
+				addOffset("sadSmile");
 				
 
 				playAnim('idle');
@@ -937,22 +939,23 @@ class Character extends FlxSprite
 						playAnim('danceRight');
 					else
 						playAnim('danceLeft');
-				default:
-					 if (PlayState.getBeat()  > 332 && PlayState.getStage() == 'mallEvil' && curCharacter == "bf-christmas3" )
+
+				case "bf-christmas3":
+					if (PlayState.getBeat() > 332 && PlayState.getStage() == 'mallEvil')
 					{
-						trace("smile");
 						playAnim('sadSmile');
 					}					
-					else if (PlayState.getBeat() > 248 && PlayState.getBeat() < 257 && PlayState.getStage() == 'mallEvil' && curCharacter == "bf-christmas3")
+					else if (PlayState.getBeat() >= 264 && PlayState.getBeat() < 272 && PlayState.getStage() == 'mallEvil')
 					{
-						trace("beegoof");
-						playAnim('bigYell');
+						//playAnim('bigYell');
 					}
 					else
 					{
-						trace("noooooooo");
 						playAnim('idle');
 					}
+
+				default:
+					playAnim('idle');
 			}
 		}
 	}
