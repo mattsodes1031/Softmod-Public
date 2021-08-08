@@ -99,6 +99,15 @@ class Character extends FlxSprite
 				playAnim('danceRight');
 
 			case 'gf-car':
+				tex = Paths.getSparrowAtlas('characters/soft_pico_blow_car');
+				frames = tex;
+				animation.addByPrefix('schmoovin', 'soft_pico hair blow CAR', 24, true);
+
+				addOffset('schmoovin');
+
+				playAnim('schmoovin');
+
+			case 'oggf':
 				tex = Paths.getSparrowAtlas('characters/gflol');
 				frames = tex;
 				animation.addByPrefix('cheer', 'GF Cheer', 24, false);
@@ -128,9 +137,6 @@ class Character extends FlxSprite
 				addOffset('scared', -2, -17);
 
 				playAnim('danceRight');
-				
-			case 'oggf':
-				
 
 			case 'gf-pixel':
 				tex = Paths.getSparrowAtlas('characters/gfPixel');
@@ -900,6 +906,9 @@ class Character extends FlxSprite
 					}
 
 				case 'gf-car':
+					playAnim('schmoovin', true);
+
+				case 'gf-pixel':
 					if (!animation.curAnim.name.startsWith('hair'))
 					{
 						danced = !danced;
@@ -909,7 +918,8 @@ class Character extends FlxSprite
 						else
 							playAnim('danceLeft');
 					}
-				case 'gf-pixel':
+
+				case 'oggf':
 					if (!animation.curAnim.name.startsWith('hair'))
 					{
 						danced = !danced;

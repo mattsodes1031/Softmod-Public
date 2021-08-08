@@ -184,6 +184,7 @@ class PlayState extends MusicBeatState
 	var limo:FlxSprite;
 	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
 	var fastCar:FlxSprite;
+	var skyBG:FlxSprite;
 	var songName:FlxText;
 	var upperBoppers:FlxSprite;
 	var bottomBoppers:FlxSprite;
@@ -473,15 +474,20 @@ class PlayState extends MusicBeatState
 					curStage = 'limo';
 					defaultCamZoom = 0.88;
 
-					var skyBG:FlxSprite = new FlxSprite(-520, -50).loadGraphic(Paths.image('limo/limoSunset','week4'));
+					skyBG = new FlxSprite(-800, -500).loadGraphic(Paths.image('limo/limoSunset','week4'));
 					skyBG.scrollFactor.set(0.1, 0.1);
+					skyBG.setGraphicSize(Std.int(skyBG.width * 0.75));
+					skyBG.antialiasing = true;
 					add(skyBG);
+
+					tweenBG(60);
 
 					var bgLimo:FlxSprite = new FlxSprite(-200, 480);
 					bgLimo.frames = Paths.getSparrowAtlas('limo/bgLimo','week4');
 					bgLimo.animation.addByPrefix('drive', "BG limo0", 24);
 					bgLimo.animation.play('drive');
 					bgLimo.scrollFactor.set(0.4, 0.4);
+					bgLimo.antialiasing = true;
 					//bgLimo.setGraphicSize(Std.int(bgLimo.width * 1.5));
 					//bgLimo.updateHitbox();
 					add(bgLimo);
@@ -493,10 +499,13 @@ class PlayState extends MusicBeatState
 						{
 								var dancer:BackgroundDancer = new BackgroundDancer((370 * i) + 850, bgLimo.y - 355);
 								dancer.scrollFactor.set(0.4, 0.4);
+								dancer.antialiasing = true;
 								grpLimoDancers.add(dancer);
 						}
+
 						var dancer:BackgroundDancer = new BackgroundDancer(110, bgLimo.y - 355);
 								dancer.scrollFactor.set(0.4, 0.4);
+								dancer.antialiasing = true;
 								grpLimoDancers.add(dancer);
 					}
 
@@ -511,8 +520,8 @@ class PlayState extends MusicBeatState
 					*/			
 
 
-					var overlayShit:FlxSprite = new FlxSprite(-500, -600).loadGraphic(Paths.image('limo/limoOverlay','week4'));
-					overlayShit.alpha = 0.5;
+					//var overlayShit:FlxSprite = new FlxSprite(-500, -600).loadGraphic(Paths.image('limo/limoOverlay','week4'));
+					//overlayShit.alpha = 0.5;
 					// add(overlayShit);
 
 					// var shaderBullshit = new BlendModeEffect(new OverlayShader(), FlxColor.RED);
@@ -931,7 +940,7 @@ class PlayState extends MusicBeatState
 			case 'gf-pixel':
 				gfVersion = 'gf-pixel';
 			case 'oggf':
-				gfVersion = 'gf-pixel';
+				gfVersion = 'oggf';
 			default:
 				gfVersion = 'gf';
 		}
@@ -1019,11 +1028,20 @@ class PlayState extends MusicBeatState
 			case 'limo':
 				boyfriend.y -= 245;
 				boyfriend.x += 290;
-				gf.y -= 200;
-				gf.x -= 30;
+
+				gf.y = 190;
+				gf.x = 315;
+
+				gf.setGraphicSize(Std.int(gf.width * 0.6));
+				gf.scrollFactor.set(0.4, 0.4);
+
 				dad.x += 50;
+
 				camPos.x += 450;
 				camPos.y -= 200;
+
+
+
 				if(FlxG.save.data.distractions){
 					resetFastCar();
 					add(fastCar);
@@ -3961,4 +3979,13 @@ class PlayState extends MusicBeatState
 	}
 
 	var curLight:Int = 0;
+
+	function tweenBG(_time):Void{
+
+		FlxTween.tween(skyBG, {x: skyBG.x + SONG.bpm}, _time, {onComplete: function(twn:FlxTween){
+			tweenBG(_time);
+		}});
+
+	}
 }
+
