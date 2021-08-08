@@ -45,17 +45,21 @@ class WarningState extends MusicBeatState
         DiscordClient.changePresence("Inside The Opening Menu", null);
 
         FlxG.sound.music.stop();
+        FlxG.sound.playMusic(Paths.music("SoftConfig", "shared"));
 
         var pic:FlxSprite = new FlxSprite(-150, -50).loadGraphic(Paths.image('Not_Safe_Warning'));
 		pic.setGraphicSize(Std.int(pic.width * .9));
+        pic.alpha = 0;
 		add(pic);
 
         dropText = new FlxText(-150, 0, Std.int(FlxG.width * 1.2), "", 22);
 		dropText.font = 'DK Inky Fingers';
 		dropText.color = FlxColor.WHITE;
         dropText.alignment = FlxTextAlign.CENTER;
+        dropText.alpha = 0;
 		add(dropText);
-        
+        FlxTween.tween(pic, {alpha: 1}, 1.2, {ease: FlxEase.circOut});
+        FlxTween.tween(dropText, {alpha: 1}, 1.2, {ease: FlxEase.circOut});
        
     }
 

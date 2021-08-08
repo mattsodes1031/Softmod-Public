@@ -112,6 +112,8 @@ class Character extends FlxSprite
 				animation.addByIndices('hairBlow', "GF Dancing Beat Hair blowing", [0, 1, 2, 3], "", 24);
 				animation.addByIndices('hairFall', "GF Dancing Beat Hair Landing", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "", 24, false);
 				animation.addByPrefix('scared', 'GF FEAR', 24);
+				setGraphicSize(Std.int(width * .6));
+
 
 				addOffset('cheer');
 				addOffset('sad', -2, -2);
@@ -929,7 +931,8 @@ class Character extends FlxSprite
 				default:
 					 if (PlayState.getBeat()  > 332 && PlayState.getStage() == 'mallEvil' && curCharacter == "bf-christmas3" )
 					{
-						playAnim('sadSmile', true);
+						trace("smile");
+						playAnim('sadSmile');
 					}					
 					else if (PlayState.getBeat() > 248 && PlayState.getBeat() < 257 && PlayState.getStage() == 'mallEvil' && curCharacter == "bf-christmas3")
 					{
@@ -938,6 +941,7 @@ class Character extends FlxSprite
 					}
 					else
 					{
+						trace("noooooooo");
 						playAnim('idle');
 					}
 			}
