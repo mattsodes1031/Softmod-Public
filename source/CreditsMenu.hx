@@ -209,7 +209,7 @@ class CreditsMenu extends MusicBeatState
 				case 13:
 					fancyOpenURL("https://twitter.com/HexerRush");
 				case 14:
-					trace("No social media found");
+					fancyOpenURL("https://twitter.com/LIYAZURE");
 				case 15:
 					fancyOpenURL("https://twitter.com/VanillaSwirlx");
 				case 16:

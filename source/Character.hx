@@ -540,6 +540,8 @@ class Character extends FlxSprite
 				animation.addByPrefix('bigYell', 'BF SCREAMING INSIDE', 24, false);
 				animation.addByPrefix('sadSmile', 'BF idle dance copy', 24, false);
 
+
+				addOffset('bigYell', -5);
 				addOffset('idle', -5);
 				addOffset("singUP", 0, 10);
 				addOffset("singRIGHT", -43, -7);
@@ -889,11 +891,14 @@ class Character extends FlxSprite
 					if (!animation.curAnim.name.startsWith('hair'))
 					{
 						danced = !danced;
-
-						if (danced)
-							playAnim('danceRight');
-						else
-							playAnim('danceLeft');
+					//	if (curSong == 'No-Cigar' && PlayState.getBeat == 116) 
+					//		playAnim('cheer');
+					//	else{
+							if (danced)
+								playAnim('danceRight');
+							else
+								playAnim('danceLeft');
+					//	}
 					}
 
 				case 'gf-christmas':
