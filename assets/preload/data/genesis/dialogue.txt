@@ -1,6 +1,6 @@
 :bg:christmasbgevil:
 
-:bfxmas:bx11: ?!
+:bfxmas:default: ?!
 :bfxmas:bx12: PICO?!
 :monsterxmas:default: ...
 :bfxmas:bx15: YOU!
@@ -13,7 +13,7 @@
 :bfxmas:bx20: Well... who you’re supposed to be.
 :monsterxmas:default: ...
 :bfxmas:bx20: Anyways.
-:bfxmas:bx20 Things are different now.
+:bfxmas:bx20: Things are different now.
 :bfxmas:bx14: You don’t scare me anymore.
 :bfxmas:bx15: THEY don’t scare me anymore!
 :monsterxmas:angy2: ?

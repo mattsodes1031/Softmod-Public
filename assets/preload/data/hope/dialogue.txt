@@ -3,18 +3,18 @@
 :momxmas:mx5: YOU LITTLE SHIT!
 :picoxmas:px6: !
 :bfxmas:bx5: !
-:dadxmas:dx6: You know…
+:dadxmas:dx6: You know...
 :dadxmas:dx6: If you just did as you were told,
 :dadxmas:dx6: You wouldn’t need to wear that damn sweatshirt all the time.
 :dadxmas:dx6: You’d have nothing to hide.
 :dadxmas:dx6: You could actually call yourself a man.
 :bfxmas:bx6: ...
-:momxmas:mx10: Now be a good son and listen to your parents this instant!
+:momxmas:default: Now be a good son and listen to your parents this instant!
 :bfxmas:bx14: DON’T CALL ME YOUR SON!
 :doubles:dois2: !
 :bfxmas:bx14: You tried to make me a mindless slave!
 :bfxmas:bx14: Just like GF's parents did to her!
-:momxmas:mx10: SHUT IT-
+:momxmas:default: SHUT IT-
 :bfxmas:bx14: NO!
 :bfxmas:bx14: Parents are supposed to protect and care about their children.
 :bfxmas:bx14: You took away my dreams...
@@ -25,7 +25,7 @@
 :bfxmas:bx14: But in reality...
 :bfxmas:bx14: You were never my parents...
 :bfxmas:bx14: And never will be!
-:picoxmas:px10: 
+:picoxmas:default: 
 :bfxmas:bx18: Pico! Hit it!
 :picoxmas:yougotitbabe: You got it babe! 
 

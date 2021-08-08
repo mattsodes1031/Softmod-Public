@@ -39,13 +39,18 @@ class WarningState extends MusicBeatState
 
     
 	var dropText:FlxText;
+	var warningMusic:FlxSound;
 
     override  function create():Void
 	{
         DiscordClient.changePresence("Inside The Opening Menu", null);
 
         FlxG.sound.music.stop();
-        FlxG.sound.playMusic(Paths.music("SoftConfig", "shared"));
+        warningMusic = new FlxSound().loadEmbedded(Paths.music("PauseTheme-Soft", "shared"), true, true);
+		warningMusic.volume = 0;
+		warningMusic.play(false, FlxG.random.int(0, Std.int(warningMusic.length / 2)));
+		
+		FlxG.sound.list.add(warningMusic);
 
         var pic:FlxSprite = new FlxSprite(-150, -50).loadGraphic(Paths.image('Not_Safe_Warning'));
 		pic.setGraphicSize(Std.int(pic.width * .9));
@@ -66,6 +71,9 @@ class WarningState extends MusicBeatState
 
     override function update(elapsed:Float)
 	{
+		if (warningMusic.volume < 0.3)
+			warningMusic.volume += 0.01 * elapsed;
+			
         dropText.text = "Warning!
 This mod handles topics that some may find triggering.
 It is possible to play the mod safely by pressing Shift to skip dialogue.

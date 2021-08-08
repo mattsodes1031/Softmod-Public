@@ -2,8 +2,8 @@
 
 :narrator:tamashadow: Despite being battered and bruised, Pico and BF find solace in one another’s company. 
 :narrator:tamashadow: While healing, a treacherous month flies by, which they spend tending to wounds.
-:narrator:tamashadow: Soon, the boys feel well enough and brave enough to face the streets once again.
-:narrator:tamashadow: Signs of the holiday season litter the scene, with snowflakes dancing in the air, golden bells ringing, and children laughing…
+:narrator:tamashadow: Soon, the boys feel well and brave enough to face the streets once again.
+:narrator:tamashadow: Signs of the holiday season litter the scene, with snowflakes dancing in the air, golden bells ringing, and children laughing.
 :narrator:tamashadow: A crowd of strangers whisper to one another in excitement, waiting beside a sign that reads: 
 :narrator:tamashadow: “Annual Holiday Fairest Meet and Greet!”
 :narrator:tamashadow: The two boys enjoy the winter season with smiles, distracted by one another’s company.
@@ -11,10 +11,11 @@
 :bfxmas:bx24: What? You look adorable!
 :picoxmas:px11: I know...
 :picoxmas:px11: That's the problem... 
-:bfxmas:bx3: Come on Toughie… this is our first time out and about in a month… at least try to enjoy it-
+:bfxmas:bx3: Come on Toughie, this is our first time out and about in a month. At least try to enjoy it-
 :narrator:default: THERE THEY ARE!
-:pico:px4: ?!
-:bfxmas:bx4: ............ fuck.
+:picoxmas:px4: ?!
+:bfxmas:bx4: ... 
+:bfxmas:bx4: Fuck.
 :picoxmas:px4: A crowd…?
 :bfxmas:bx5: ... Oh no...
 :bfxmas:bx5: What… day is it?
@@ -23,7 +24,7 @@
 :bfxmas:bx6: ... that’s why...
 
 :dadxmas:default: Just in time for the holidays!
-:momxmas:mx2: We were beginning to fear the worst...
+:momxmas:mx3: We were beginning to fear the worst...
 :bfxmas:bx6: ...
 :dadxmas:dx4: How about we celebrate, s p o r t?
 :momxmas:mx11: Aaaaaaand finally get you home!
