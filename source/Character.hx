@@ -929,6 +929,7 @@ class Character extends FlxSprite
 				default:
 					 if (PlayState.getBeat()  > 332 && PlayState.getStage() == 'mallEvil' && curCharacter == "bf-christmas3" )
 					{
+						trace("smile");
 						playAnim('sadSmile', true);
 					}					
 					else if (PlayState.getBeat() > 248 && PlayState.getBeat() < 257 && PlayState.getStage() == 'mallEvil' && curCharacter == "bf-christmas3")
@@ -938,6 +939,7 @@ class Character extends FlxSprite
 					}
 					else
 					{
+						trace("noooooooo");
 						playAnim('idle');
 					}
 			}
