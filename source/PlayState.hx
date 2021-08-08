@@ -4004,7 +4004,7 @@ class PlayState extends MusicBeatState
 		if (curBeat == 344 && SONG.song == 'Genesis')
 		{
 				//boyfriend.playAnim('sadSmile', true);
-				FlxTween.tween(dreamscape, {alpha: 0}, 15, {onComplete: function(twn:FlxTween){
+				/*FlxTween.tween(dreamscape, {alpha: 0}, 15, {onComplete: function(twn:FlxTween){
 					dreamscape.destroy();
 				}});
 				FlxTween.tween(dad, {alpha: 0}, 23, {ease: FlxEase.quintIn});
@@ -4013,7 +4013,7 @@ class PlayState extends MusicBeatState
 				cpuStrums.forEach(function(spr:FlxSprite)
 				{
 					FlxTween.tween(spr, {alpha: 0}, 23, {ease: FlxEase.quintIn});
-				});
+				});*/
 
 		}
 	
