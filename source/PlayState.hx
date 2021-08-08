@@ -144,6 +144,9 @@ class PlayState extends MusicBeatState
 	private var healthBarBG:FlxSprite;
 	private var healthBar:FlxBar;
 	private var songPositionBar:Float = 0;
+
+	private var oppColor:FlxColor = 0xFFFF0000;
+	private var bfColor:FlxColor = 0xFF6C97ED;
 	
 	private var generatedMusic:Bool = false;
 	private var startingSong:Bool = false;
@@ -948,6 +951,7 @@ class PlayState extends MusicBeatState
 					camPos.x += 600;
 					tweenCamIn();
 				}
+				oppColor = 0xFFDB522F;
 
 			case "spooky":
 				dad.y += 200;
@@ -958,11 +962,13 @@ class PlayState extends MusicBeatState
 				gf.y += 10000;
 				camPos.x += 600;
 				camPos.y += 100;
+				oppColor = 0xFF282623;
 			case 'monster-christmas':
 				dad.y += 80;
 				gf.y += 10000;
 				camPos.x += 600;
 				camPos.y += 100;
+				oppColor = 0xFF282623;
 			case 'dad':
 				camPos.x += 200;
 				camPos.x += 100;
@@ -985,6 +991,9 @@ class PlayState extends MusicBeatState
 				dad.x -= 150;
 				dad.y += 100;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
+			case 'ogbf':
+				oppColor = 0xFF66FF33;
+				
 		}
 
 
@@ -1192,7 +1201,7 @@ class PlayState extends MusicBeatState
 		healthBar = new FlxBar(healthBarBG.x + 4, healthBarBG.y + 4, RIGHT_TO_LEFT, Std.int(healthBarBG.width - 8), Std.int(healthBarBG.height - 8), this,
 			'health', 0, 2);
 		healthBar.scrollFactor.set();
-		healthBar.createFilledBar(0xFFFF0000, 0xFF66FF33);
+		healthBar.createFilledBar(oppColor, bfColor);
 		// healthBar
 		add(healthBar);
 
@@ -2672,8 +2681,8 @@ class PlayState extends MusicBeatState
 								if (spr.animation.curAnim.name == 'confirm' && !curStage.startsWith('school'))
 								{
 									spr.centerOffsets();
-									spr.offset.x -= 13;
-									spr.offset.y -= 13;
+									spr.offset.x -= 14;
+									spr.offset.y -= 14;
 								}
 								else
 									spr.centerOffsets();
@@ -2692,10 +2701,13 @@ class PlayState extends MusicBeatState
 	
 						daNote.active = false;
 
-
 						daNote.kill();
 						notes.remove(daNote, true);
 						daNote.destroy();
+
+						if(dad.curCharacter == "ogbf" && health > 0.04){
+							health -= 0.04;
+						}
 					}
 
 					if (daNote.mustPress && !daNote.modifiedByLua)
@@ -3377,8 +3389,8 @@ class PlayState extends MusicBeatState
 					if (spr.animation.curAnim.name == 'confirm' && !curStage.startsWith('school'))
 					{
 						spr.centerOffsets();
-						spr.offset.x -= 13;
-						spr.offset.y -= 13;
+						spr.offset.x -= 14;
+						spr.offset.y -= 14;
 					}
 					else
 						spr.centerOffsets();
@@ -3751,7 +3763,7 @@ class PlayState extends MusicBeatState
 		songLength = FlxG.sound.music.length;
 
 		// Updating Discord Rich Presence (with Time Left)
-		trace(detailsText + " " + SONG.song + " (" + storyDifficultyText + ") " + Ratings.GenerateLetterRank(accuracy), "Acc: " + HelperFunctions.truncateFloat(accuracy, 2) + "% | Score: " + songScore + " | Misses: " + misses  , iconRPC,true,  songLength - Conductor.songPosition);
+		//trace(detailsText + " " + SONG.song + " (" + storyDifficultyText + ") " + Ratings.GenerateLetterRank(accuracy), "Acc: " + HelperFunctions.truncateFloat(accuracy, 2) + "% | Score: " + songScore + " | Misses: " + misses  , iconRPC,true,  songLength - Conductor.songPosition);
 		DiscordClient.changePresence(detailsText + " " + SONG.song + " (" + storyDifficultyText + ") " + Ratings.GenerateLetterRank(accuracy), "Acc: " + HelperFunctions.truncateFloat(accuracy, 2) + "% | Score: " + songScore + " | Misses: " + misses  , iconRPC,true,  songLength - Conductor.songPosition);
 		#end
 

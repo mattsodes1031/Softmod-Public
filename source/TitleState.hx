@@ -100,10 +100,10 @@ class TitleState extends MusicBeatState
 			FlxG.save.flush();
 		}
 		// This one is just incase everything gets fucky, it'll reset the unlock data rather than lock you out of all weeks. Shouldn't need to be here, just a safty net.
-		else if(FlxG.save.data.softWeekUnlocked[0] == false){ 
+		/*else if(FlxG.save.data.softWeekUnlocked[0] == false){ 
 			FlxG.save.data.softWeekUnlocked = [true, false, false, false, false, false, false, false];
 			FlxG.save.flush();
-		}
+		}*/
 
 		StoryMenuState.softWeekUnlocked = FlxG.save.data.softWeekUnlocked;
 
