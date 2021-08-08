@@ -68,7 +68,7 @@ class CheckText extends MusicBeatState
         dropText.text = "This is Disky, the main  programmer for this mod, and you found a secret menu.
         I just wanted to say how great it has been to work on this mod, 
         Tama and Ren especially I love and am grateful to have met.
-        Making this mod helped me through a really unhealthy realtionship and i am very thankful for that.
+        Making this mod helped me through a really tramatizing realtionship and i am very thankful for that.
         Thank you for playing, and reading this, I hope to add even more cool features to this mod in the future.
         You can press any key to return to the credits";
         dropText.visible = true;

@@ -540,6 +540,8 @@ class Character extends FlxSprite
 				animation.addByPrefix('bigYell', 'BF SCREAMING INSIDE', 24, false);
 				animation.addByPrefix('sadSmile', 'BF idle dance copy', 24, false);
 
+
+				addOffset('bigYell', -5);
 				addOffset('idle', -5);
 				addOffset("singUP", 0, 10);
 				addOffset("singRIGHT", -43, -7);
@@ -887,11 +889,14 @@ class Character extends FlxSprite
 					if (!animation.curAnim.name.startsWith('hair'))
 					{
 						danced = !danced;
-
-						if (danced)
-							playAnim('danceRight');
-						else
-							playAnim('danceLeft');
+					//	if (curSong == 'No-Cigar' && PlayState.getBeat == 116) 
+					//		playAnim('cheer');
+					//	else{
+							if (danced)
+								playAnim('danceRight');
+							else
+								playAnim('danceLeft');
+					//	}
 					}
 
 				case 'gf-christmas':
@@ -938,19 +943,16 @@ class Character extends FlxSprite
 					else
 						playAnim('danceLeft');
 				default:
-					 if (PlayState.getBeat()  > 332 && PlayState.getStage() == 'mallEvil' && curCharacter == "bf-christmas3" )
+					 if (PlayState.getBeat()  > 338 && PlayState.getStage() == 'mallEvil' && curCharacter == "bf-christmas3" )
 					{
-						trace("smile");
 						playAnim('sadSmile');
 					}					
-					else if (PlayState.getBeat() > 248 && PlayState.getBeat() < 257 && PlayState.getStage() == 'mallEvil' && curCharacter == "bf-christmas3")
+					else if (PlayState.getBeat()  > 261 && PlayState.getBeat() < 273 && PlayState.getStage() == 'mallEvil' && curCharacter == "bf-christmas3")
 					{
-						trace("beegoof");
 						playAnim('bigYell');
 					}
 					else
 					{
-						trace("noooooooo");
 						playAnim('idle');
 					}
 			}
