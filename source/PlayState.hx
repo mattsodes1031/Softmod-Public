@@ -497,13 +497,15 @@ class PlayState extends MusicBeatState
 								grpLimoDancers.add(dancer);
 					}
 
+					/*
 					var pico:FlxSprite = new FlxSprite(315, 190);
 					pico.frames = Paths.getSparrowAtlas('characters/soft_pico_blow_car');
 					pico.animation.addByPrefix('vibe', "soft_pico hair blow CAR0", 24);
 					pico.setGraphicSize(Std.int(pico.width * 0.6));
 					pico.animation.play('vibe');
 					pico.scrollFactor.set(0.4, 0.4);	
-					add(pico);				
+					add(pico);	
+					*/			
 
 
 					var overlayShit:FlxSprite = new FlxSprite(-500, -600).loadGraphic(Paths.image('limo/limoOverlay','week4'));
@@ -1008,7 +1010,7 @@ class PlayState extends MusicBeatState
 			case 'limo':
 				boyfriend.y -= 245;
 				boyfriend.x += 290;
-				gf.y -= 2000;
+				gf.y -= 200;
 				gf.x -= 30;
 				dad.x += 50;
 				camPos.x += 450;
