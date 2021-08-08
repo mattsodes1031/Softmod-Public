@@ -1,3 +1,5 @@
+:bg:spookyhouse:
+
 :narrator:tamashadow: The moon had risen over the cityscape after the sun went to rest it’s head for the night.
 :narrator:tamashadow: Clouds joined in to keep it company, creating a stormy ruckus to keep it awake.
 :narrator:tamashadow: Our protagonists found themselves taking cover in a building which was long overdue for a visit... 
@@ -36,5 +38,5 @@
 :skidnpump:pn: Then let’s do a rap battle!
 :pico:p4: Probably not the best idea...
 :doubles:default: Pleaaaase?
-:bf:8b: Aw... alright little dudes. 
+:bf:b8: Aw... alright little dudes. 
 :pico:p4: ... you've got to be kidding me...

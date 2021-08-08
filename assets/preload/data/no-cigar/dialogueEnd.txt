@@ -1,3 +1,5 @@
+:bg:alleybgfull:
+
 :pico:p10: You did it! 
 :bf:b6: I...
 :bf:b3: yeah!

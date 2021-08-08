@@ -1,12 +1,25 @@
 :narrator:tamashadow: The city of stars...
 :narrator:tamashadow: A place where the celebrities and rich live lavishly...
 :narrator:tamashadow: and the not so fortunate struggle to thrive day by day.
+
+:bg:alleybgfull:
+:effect:hidden:
+
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :narrator:tamashadow: Two boys who have been on the run for two weeks are spotted dashing into an alleyway as the sun begins to set over the skyline.
 :narrator:tamashadow: A high school dropout and notorious graffiti artist named Pico...
 :narrator:tamashadow: and BF, a blue haired boy on the somewhat shorter side with aspirations of becoming a painter.
 :narrator:tamashadow: The two come to a halt, visibly out of breath.
+
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :pico:p2: Another close call.
-:bf:b1: Do you think he saw us...?
+
+:effect:fadeIn:0.4
+:effect:enterStageRight:0.8
+:bf:default: Do you think he saw us...?
+
 :pico:p4: I don’t think so.
 :pico:p4: This is the third time this week we’ve almost been caught.
 :bf:b3: I-I know...

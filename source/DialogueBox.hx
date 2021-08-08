@@ -229,7 +229,7 @@ class DialogueBox extends FlxSpriteGroup
 			portraitICONS = new Portrait (180, 260, "icons");
 			add(portraitICONS);
 
-			portraitNARRATOR =  new Portrait (210, 130, "narrator");
+			portraitNARRATOR =  new Portrait (180, 180, "narrator");
 			add(portraitNARRATOR);
 			hideAll();
 			

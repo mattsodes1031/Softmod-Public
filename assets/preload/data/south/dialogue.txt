@@ -1,4 +1,6 @@
-:bf:b1: Wow... you guys are... waaay tougher than I thought.
+:bg:spookyhouse:
+
+:bf:default: Wow... you guys are... waaay tougher than I thought.
 :skidnpump:sn: That was fun!
 :skidnpump:pn: Let’s do another!
 :bf:b2: Oh...? You wanna keep going?

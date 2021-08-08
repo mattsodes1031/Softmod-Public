@@ -1,3 +1,5 @@
+:bg:stagebg:
+
 :ogbf:default: Beep bop!
 :bf:b21: Hey! You’re pretty good at this!
 :bf:b16: Really good at this.

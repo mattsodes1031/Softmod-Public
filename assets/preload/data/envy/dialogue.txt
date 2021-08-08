@@ -1,3 +1,5 @@
+:bg:stagebg:
+
 :ogbf:default: Ska bep!
 :bf:b20: Alright, I get it!
 :bf:b20: You’re a singer, you get the girl!

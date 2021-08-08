@@ -1,10 +1,12 @@
+:bg:alleybgfull:
+
 :bf:b26: ...
 :pico:p11: ...
 :bf:b2: How was that…?
 :pico:p1: You did great!
 :pico:p10: I knew you could do it.
 :bf:b7: Really?
-:pico:p1: Mhm! 
+:pico:default: Mhm! 
 :pico:p4: Though...
 :pico:p4: We should probably get a move on before-
 [footsteps sound effect] 

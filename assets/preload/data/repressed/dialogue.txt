@@ -5,6 +5,9 @@
 :narrator:tamashadow: He looked... so familiar.
 :narrator:tamashadow: Probably because his visits were more than common.
 :narrator:tamashadow: But... It was a lot more than just that...
+
+:bg:spookyhouse:
+
 :bf:b19: Wha...?
 :bf:b12: No... 
 :bf:b23: Not you again...
