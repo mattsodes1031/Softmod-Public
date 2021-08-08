@@ -32,7 +32,7 @@ class StoryMenuState extends MusicBeatState
 		['Playdate','Stay',"Its-Complicated"],
 		['High',"MILF",'Spotlight'],
 		['Eggnog','Hope','Genesis'],
-		['Envy','Diplopia', 'In-Fighting']
+		['Diplopia', 'In-Fighting', 'Envy']
 	];
 	var curDifficulty:Int = 1;
 
