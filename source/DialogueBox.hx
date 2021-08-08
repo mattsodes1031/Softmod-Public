@@ -479,7 +479,7 @@ class DialogueBox extends FlxSpriteGroup
 						cutsceneImage.visible = false;
 					default:
 						cutsceneImage.visible = true;
-						cutsceneImage.loadGraphic(BitmapData.fromFile("assets/dialogue/images/bg/" + curAnim + ".png"));
+						cutsceneImage.loadGraphic(Paths.image('bg/' + curAnim, 'dialogue'));
 				}
 			
 				

@@ -36,7 +36,7 @@ class StoryMenuState extends MusicBeatState
 	];
 	var curDifficulty:Int = 1;
 
-	public static var softWeekUnlocked:Array<Bool> = [];
+	public static var softWeekUnlocked:Array<Bool> = [true, true,true, true, true, true,true,true,true,true,true,true];
 
 	public static var restartMusic = false;
 
@@ -311,8 +311,8 @@ class StoryMenuState extends MusicBeatState
 
 	function selectWeek()
 	{
-		if (softWeekUnlocked[curWeek])
-		{
+	
+		
 			if (stopspamming == false)
 			{
 				FlxG.sound.play(Paths.sound('confirmMenu'));
@@ -345,7 +345,7 @@ class StoryMenuState extends MusicBeatState
 			{
 				LoadingState.loadAndSwitchState(new PlayState(), true);
 			});
-		}
+		
 	}
 
 	function changeDifficulty(change:Int = 0):Void
