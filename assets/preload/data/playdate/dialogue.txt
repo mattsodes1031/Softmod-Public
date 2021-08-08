@@ -3,17 +3,17 @@
 :narrator:tamashadow: After what felt like a never ending night...
 :narrator:tamashadow: Both Pico and BF were quite easily the opposite of well rested.
 :narrator:tamashadow: The two did not want to overstay their welcome however,
-:narrator:tamashadow: and left the “house of horrors” which was a lot less scary in the daytime.
+:narrator:tamashadow: and left the “house of horrors” which was actually a lot less scary in the daytime.
 :narrator:tamashadow: On foot, they spent the better part of the morning heading across town to a local train station.
 :narrator:tamashadow: The last thing they wanted to do was stick around long enough to get into even more trouble.
 :pico:p4: ...
 :pico:p4: Where’s that damn train?!
-:bf:b3: Relax...it’ll be here soon, I’m sure.
+:bf:b3: Relax... it’ll be here soon, I’m sure.
 :pico:p4: It better come quick...
 :pico:p4: We’ve already been set back twice.
 :bf:b3: Yeah, I know.
 :gf:default: BF!
-:bf:b10:pico:p7: ?!
+:bf:b10: ?!
 :gf:g2: I haven’t seen you in weeks!
 :bf:b2: Heeeeeeeeeeeey GF...
 :bf:b2: What’re you doing here...?

@@ -44,7 +44,7 @@ class Portrait extends FlxSprite
 				setGraphicSize(Std.int(width * .40));
 				flipX = false;
 			case "bfxmas":
-                setGraphicSize(Std.int(width * .33));
+                setGraphicSize(Std.int(width * .37));
                 flipX = false;
 			case "gf":
                 setGraphicSize(Std.int(width * .33)); 
@@ -73,9 +73,9 @@ class Portrait extends FlxSprite
             case "shadows":
                 setGraphicSize(Std.int(width * .38));
 			case "doubles":
-				setGraphicSize(Std.int(width * .38));
+				setGraphicSize(Std.int(width * .35));
 			case "icons":
-				setGraphicSize(Std.int(width * .3));
+				setGraphicSize(Std.int(width * .50));
 		}
         updateHitbox();
         scrollFactor.set();
@@ -274,10 +274,12 @@ class Portrait extends FlxSprite
 				addAnim("dois", "dois.png");
 				addAnim("dois2", "dois2.png");
 				addAnim("shadow", "shadowbois.png");
-				addAnim("soul", "uuuuuuuu.ppng");
+				addAnim("soul", "uuuuuuuu.png");
+				animation.play("default");
 			case "icons":
 				addAnim("default", "iconbf.png");
 				addAnim("pico", "iconpico.png");
+				animation.play("default");
         }
     }
     
@@ -311,21 +313,54 @@ class Portrait extends FlxSprite
             case "g3":
                 x = refx;
                 y = (refy - height)+10;
+			case "g12":
+				x = refx;
+				y = (refy - height)+4;
+			case "g13":
+				x = refx;
+				y = (refy - height)+0.5;
+			case "g16":
+				x = refx;
+				y = (refy - height)+5;
+			case "g17":
+				x = refx;
+				y = (refy - height)+5;
+			case "g20":
+				x = refx;
+				y = (refy - height)+13;
+			case "m4":
+				x = refx;
+				y = (refy - height)+10;
+			case "m5":
+				x = refx;
+				y = (refy - height)+10;
+			case "m6":
+				x = refx;
+				y = (refy - height)+10;
+			case "m8":
+				x = refx;
+				y = (refy - height)+10;
+			case "m9":
+				x = refx;
+				y = (refy - height)+10;
             case "mx5":
                 x = refx+10;
                 y = (refy - height);
             case "bx18":
-                x = refx;
-                y = (refy - height)+10;
+                x = refx-50;
+                y = (refy - height);
             case "bx11":
                 x = refx;
-                y = (refy - height)+4;
+                y = (refy - height);
             case "bx5":
                 x = refx;
-                y = (refy - height)+3;
+                y = (refy - height);
             case "bx7":
                 x = refx;
-                y = (refy - height)+4;
+                y = (refy - height);
+			case "dois2":
+				x = refx-45;
+				y = (refy - height)+15;
             case "angy2":
                 x = refx - 50;
                 y = (refy - height);
