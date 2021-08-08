@@ -2398,7 +2398,7 @@ class PlayState extends MusicBeatState
 							camFollow.x = dad.getMidpoint().x - 100;
 						case 'softgf':
 							camFollow.y = dad.getMidpoint().y + 50;
-							camFollow.x = dad.getMidpoint().x + 100;
+							camFollow.x = dad.getMidpoint().x + 200;
 						case 'softgf2':
 							camFollow.y = dad.getMidpoint().y + 50;
 							camFollow.x = dad.getMidpoint().x + 200;

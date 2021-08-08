@@ -158,10 +158,10 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'Dad Sing Note RIGHT', 24);
 
 				addOffset('idle');
-				addOffset("singUP", -6, 42);
-				addOffset("singRIGHT", -3, -9);
-				addOffset("singLEFT", -10, 10);
-				addOffset("singDOWN", 3, -51);
+				addOffset("singUP", -6, 45);
+				addOffset("singRIGHT", -3, 13);
+				addOffset("singLEFT", -5, -6);
+				addOffset("singDOWN", 2, -50);
 
 				playAnim('idle');
 
@@ -176,9 +176,9 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'Dad Sing Note LEFT', 24);
 
 				addOffset('idle');
-				addOffset("singUP", -6, 42);
-				addOffset("singRIGHT", -3, -9);
-				addOffset("singLEFT", -10, 10);
+				addOffset("singUP", -4, 44);
+				addOffset("singRIGHT", -3, -7);
+				addOffset("singLEFT", -3, 12);
 				addOffset("singDOWN", 3, -51);
 
 				playAnim('idle');
@@ -194,10 +194,10 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'Dad Sing Note RIGHT', 24);
 
 				addOffset('idle');
-				addOffset("singUP", -6, 42);
-				addOffset("singRIGHT", -3, -9);
-				addOffset("singLEFT", -10, 10);
-				addOffset("singDOWN", 3, -51);
+				addOffset("singUP", -5, 44);
+				addOffset("singRIGHT", 0, 12);
+				addOffset("singLEFT", -5, -6);
+				addOffset("singDOWN", 3, -50);
 
 				playAnim('idle');
 
@@ -214,10 +214,10 @@ class Character extends FlxSprite
 				addOffset('danceLeft');
 				addOffset('danceRight');
 
-				addOffset("singUP", -20, 26);
-				addOffset("singRIGHT", -130, -14);
-				addOffset("singLEFT", 130, -10);
-				addOffset("singDOWN", -50, -130);
+				addOffset("singUP", -23, 35);
+				addOffset("singRIGHT", -127, -2);
+				addOffset("singLEFT", 84, -12);
+				addOffset("singDOWN", -64, -130);
 
 				playAnim('danceRight');
 			case 'mom':
@@ -270,10 +270,10 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'Mom Pose Left', 24, false);
 	
 				addOffset('idle');
-				addOffset("singUP", 14, 71);
-				addOffset("singRIGHT", 10, -60);
-				addOffset("singLEFT", 250, -23);
-				addOffset("singDOWN", 20, -160);
+				addOffset("singUP", 15, 71);
+				addOffset("singRIGHT", 21, -49);
+				addOffset("singLEFT", 91, -14);
+				addOffset("singDOWN", -11, -197);
 	
 				playAnim('idle');
 			case 'hot_mom_phase_2':
@@ -287,10 +287,10 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'Mom Pose Left', 24, false);
 		
 				addOffset('idle');
-				addOffset("singUP", 14, 71);
-				addOffset("singRIGHT", 10, -60);
-				addOffset("singLEFT", 250, -23);
-				addOffset("singDOWN", 20, -160);
+				addOffset("singUP", 15, 71);
+				addOffset("singRIGHT", 21, -49);
+				addOffset("singLEFT", 91, -14);
+				addOffset("singDOWN", -11, -197);
 		
 				playAnim('idle');
 			case 'hot_mom_phase_3':
@@ -304,10 +304,10 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'Mom Pose Left', 24, false);
 			
 				addOffset('idle');
-				addOffset("singUP", 14, 71);
-				addOffset("singRIGHT", 10, -60);
-				addOffset("singLEFT", 250, -23);
-				addOffset("singDOWN", 20, -160);
+				addOffset("singUP", 15, 71);
+				addOffset("singRIGHT", 21, -49);
+				addOffset("singLEFT", 91, -14);
+				addOffset("singDOWN", -11, -197);
 			
 				playAnim('idle');
 			case 'monster':
@@ -321,10 +321,10 @@ class Character extends FlxSprite
 				setGraphicSize(Std.int(width * 1.15));
 
 				addOffset('idle');
-				addOffset("singUP", 121, 66);
-				addOffset("singRIGHT", 66, -58);
-				addOffset("singLEFT", 198, 0);
-				addOffset("singDOWN", 119, -62);
+				addOffset("singUP", 145, 86);
+				addOffset("singRIGHT", 74, -75);
+				addOffset("singLEFT", 216, -5);
+				addOffset("singDOWN", 151, -73);
 				playAnim('idle');
 
 			case 'monster-christmas':
@@ -335,6 +335,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'monster down', 24, false);
 				animation.addByPrefix('singLEFT', 'Monster Right note', 24, false);
 				animation.addByPrefix('singRIGHT', 'Monster left note', 24, false);
+				setGraphicSize(Std.int(width * 1.15));
 
 				addOffset('idle');
 				addOffset("singUP", -20, 50);
@@ -467,14 +468,14 @@ class Character extends FlxSprite
 				var tex = Paths.getSparrowAtlas('characters/softie_crimmus');
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
-				animation.addByPrefix('singUP', 'BF NOTE UP', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT', 24, false);
-				animation.addByPrefix('singDOWN', 'BF NOTE DOWN', 24, false);
-				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
-				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
+				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS0', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS0', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS0', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS0', 24, false);
 
 				addOffset('idle', -5);
 				addOffset("singUP", 0, 10);
@@ -748,10 +749,10 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'Pico NOTE LEFT', 24, false);
 
 				addOffset('idle');
-				addOffset("singUP", -13, 87);
-				addOffset("singRIGHT", 0, 19);
-				addOffset("singLEFT", -25, -2);
-				addOffset("singDOWN", 23, -53);
+				addOffset("singUP", -10, 88);
+				addOffset("singRIGHT", 52, 26);
+				addOffset("singLEFT", -19, 4);
+				addOffset("singDOWN", 29, -55);
 
 				playAnim('idle');
 				flipX = true;
@@ -767,10 +768,10 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'Soft GF Body LEFT 2', 24, false);
 
 				addOffset('idle');
-				addOffset("singUP", -13, 87);
-				addOffset("singRIGHT", 0, 19);
-				addOffset("singLEFT", -25, -2);
-				addOffset("singDOWN", 23, -53);
+				addOffset("singUP", -10, 88);
+				addOffset("singRIGHT", 52, 26);
+				addOffset("singLEFT", -19, 4);
+				addOffset("singDOWN", 29, -55);
 
 				playAnim('idle');
 				flipX = true;
@@ -786,10 +787,10 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'Soft GF Body LEFT 3', 24, false);
 
 				addOffset('idle');
-				addOffset("singUP", -13, 87);
-				addOffset("singRIGHT", 0, 19);
-				addOffset("singLEFT", -25, -2);
-				addOffset("singDOWN", 23, -53);
+				addOffset("singUP", -10, 88);
+				addOffset("singRIGHT", 52, 26);
+				addOffset("singLEFT", -19, 4);
+				addOffset("singDOWN", 29, -55);
 
 				playAnim('idle');
 				flipX = true;
