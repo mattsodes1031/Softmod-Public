@@ -891,16 +891,14 @@ class Character extends FlxSprite
 					if (!animation.curAnim.name.startsWith('hair'))
 					{
 						danced = !danced;
-						if(PlayState.getBeat() >113 && PlayState.getBeat() < 117 ){
-							trace("hi");
-							playAnim('cheer');
-						}
-						else{
-						if (danced)
+					//	if (curSong == 'No-Cigar' && PlayState.getBeat == 116) 
+					//		playAnim('cheer');
+					//	else{
+							if (danced)
 								playAnim('danceRight');
 							else
 								playAnim('danceLeft');
-						}
+					//	}
 					}
 
 				case 'gf-christmas':

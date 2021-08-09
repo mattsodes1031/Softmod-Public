@@ -237,8 +237,6 @@ class PlayState extends MusicBeatState
 
 	private var executeModchart = false;
 
-	static var gfVersion:String = 'gf';
-
 	// API stuff
 	
 	public function addObject(object:FlxBasic) { add(object); }
@@ -959,7 +957,7 @@ class PlayState extends MusicBeatState
 
 			}
 		}
-		
+		var gfVersion:String = 'gf';
 
 		switch (SONG.gfVersion)
 		{
@@ -992,7 +990,7 @@ class PlayState extends MusicBeatState
 					camPos.x += 600;
 					tweenCamIn();
 				}
-				oppColor = 0xFF297456;
+				oppColor = 0xFFDB522F;
 
 			case "spooky":
 				dad.y += 200;
@@ -2364,28 +2362,25 @@ class PlayState extends MusicBeatState
 					// Per song treatment since some songs will only have the 'Hey' at certain times
 					switch(curSong)
 					{
-						default:
+						case 'Philly Nice':
 						{
-							if(gfVersion == "gf")
+							// General duration of the song
+							if(curBeat < 250)
 							{
-								// General duration of the song
-								if(curBeat < 250)
+								// Beats to skip or to stop GF from cheering
+								if(curBeat != 184 && curBeat != 216)
 								{
-									// Beats to skip or to stop GF from cheering
-									if(curBeat != 184 && curBeat != 216)
+									if(curBeat % 16 == 8)
 									{
-										if(curBeat % 16 == 8)
+										// Just a garantee that it'll trigger just once
+										if(!triggeredAlready)
 										{
-											// Just a garantee that it'll trigger just once
-											if(!triggeredAlready)
-											{
-												if(pain==false){
-												//gf.playAnim('cheer');
-												}
-												triggeredAlready = true;
+											if(pain==false){
+											//gf.playAnim('cheer');
 											}
-										}else triggeredAlready = false;
-									}
+											triggeredAlready = true;
+										}
+									}else triggeredAlready = false;
 								}
 							}
 						}
@@ -4133,5 +4128,6 @@ class PlayState extends MusicBeatState
 		}
 
 		return false;
+	}
 }
 
