@@ -1550,6 +1550,10 @@ class PlayState extends MusicBeatState
 	
 	function endCutscene(dialogueBox:DialogueBox){
 
+		if(curStage == "limo"){
+			skyBGTween.cancel();
+		}
+
 		trace("endCutscene");
 		var black:FlxSprite = new FlxSprite(-256, -256).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
 		black.scrollFactor.set(0);
@@ -4000,6 +4004,10 @@ class PlayState extends MusicBeatState
 				boyfriend.playAnim('hey', true);
 				dad.playAnim('cheer', true);
 			}
+			
+		if(SONG.song.toLowerCase() == "spotlight" && curBeat >= 308){
+			autoCam = false;
+		}
 
 		if (curBeat == 64 && SONG.song == 'Genesis'){
 			FlxTween.tween(camOverlay, {alpha: 1}, (Conductor.stepCrochet * 8)/1000);
