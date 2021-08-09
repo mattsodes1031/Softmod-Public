@@ -128,7 +128,7 @@ class PlayState extends MusicBeatState
 
 	private var camZooming:Bool = false;
 	private var autoCam:Bool = true;
-	private var curSong:String = "";
+	public static var curSong:String = "";
 
 	private var gfSpeed:Int = 1;
 	public var health:Float = 1; //making public because sethealth doesnt work without it
@@ -177,6 +177,8 @@ class PlayState extends MusicBeatState
 	private var gameEnd:Bool = false;
 	var stoppls:Bool = false;
 	var pain:Bool;
+
+	static var gfVersion:String = 'gf';
 
 	var halloweenBG:FlxSprite;
 	var isHalloween:Bool = false;
@@ -961,7 +963,7 @@ class PlayState extends MusicBeatState
 
 			}
 		}
-		var gfVersion:String = 'gf';
+		
 
 		switch (SONG.gfVersion)
 		{
@@ -994,7 +996,7 @@ class PlayState extends MusicBeatState
 					camPos.x += 600;
 					tweenCamIn();
 				}
-				oppColor = 0xFFDB522F;
+				oppColor = 0xFF297456;
 
 			case "spooky":
 				dad.y += 200;
@@ -2375,7 +2377,7 @@ class PlayState extends MusicBeatState
 					// Per song treatment since some songs will only have the 'Hey' at certain times
 					switch(curSong)
 					{
-						case 'Philly Nice':
+						default:
 						{
 							// General duration of the song
 							if(curBeat < 250)
@@ -2389,7 +2391,7 @@ class PlayState extends MusicBeatState
 										if(!triggeredAlready)
 										{
 											if(pain==false){
-											//gf.playAnim('cheer');
+												gf.playAnim('cheer');
 											}
 											triggeredAlready = true;
 										}
@@ -4152,5 +4154,10 @@ class PlayState extends MusicBeatState
 
 		return false;
 	}
+
+	public static function getSong(){
+		return curSong;
+	}
+
 }
 

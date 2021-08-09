@@ -385,14 +385,18 @@ class TitleState extends MusicBeatState
 
 		switch (curBeat)
 		{
+			case 0:
+				createCoolText([':3']);
 			case 1:
+				deleteCoolText();
+			case 3:
 				createCoolText(['The Soft Team']);
 			// credTextShit.visible = true;
-			case 3:
+			case 5:
 				addMoreText('presents');
 			// credTextShit.text += '\npresent...';
 			// credTextShit.addText();
-			case 4:
+			case 7:
 				deleteCoolText();
 			// credTextShit.visible = false;
 			// credTextShit.text = 'In association \nwith';

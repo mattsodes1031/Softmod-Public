@@ -890,16 +890,22 @@ class Character extends FlxSprite
 					if (!animation.curAnim.name.startsWith('hair'))
 					{
 						danced = !danced;
-					//	if (curSong == 'No-Cigar' && PlayState.getBeat == 116) 
-					//		playAnim('cheer');
-					//	else{
-							if (danced)
-								playAnim('danceRight');
-							else
-								playAnim('danceLeft');
-					//	}
-					}
+						trace(PlayState.getSong());
 
+						if(PlayState.getBeat() >113 && PlayState.getBeat() < 117 && PlayState.getSong() == "no-cigar")
+						{
+							trace("hi");
+							playAnim('cheer');
+						}
+						else
+						{
+							playAnim('cheer');
+							if (danced)
+									playAnim('danceRight');
+							else
+									playAnim('danceLeft');
+						}
+					}
 				case 'gf-christmas':
 					if (!animation.curAnim.name.startsWith('hair'))
 					{
@@ -951,7 +957,7 @@ class Character extends FlxSprite
 					}					
 					else if (PlayState.getBeat() >= 264 && PlayState.getBeat() < 272 && PlayState.getStage() == 'mallEvil')
 					{
-						//playAnim('bigYell');
+						playAnim('bigYell');
 					}
 					else
 					{

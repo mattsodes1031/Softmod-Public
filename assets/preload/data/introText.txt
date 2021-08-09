@@ -46,3 +46,4 @@ commit--troll
 revert--troll
 revert--revert troll
 shoulda used--fps plus
+Turn off ghost tapping--For week 6 -Disky

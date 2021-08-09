@@ -549,6 +549,8 @@ class DialogueBox extends FlxSpriteGroup
 					effectToLeft();
 				case "toRight":
 					effectToRight();
+				case "lightningStrike":
+					effectToRight();
 				//case "shake":
 					//effectShake(Std.parseFloat(effectParamQue[i]));
 				default:
@@ -685,6 +687,10 @@ class DialogueBox extends FlxSpriteGroup
 			portraitArray()[i].effectToLeft(time);
 			}
 		
+	}
+
+	function effectlightningStrike(){
+		FlxG.sound.play(Paths.soundRandom('thunder_', 1, 2));
 	}
 
 
