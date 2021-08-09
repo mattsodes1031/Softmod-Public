@@ -1379,19 +1379,17 @@ class PlayState extends MusicBeatState
 					new FlxTimer().start(0.1, function(tmr:FlxTimer)
 					{
 						remove(blackScreen);
-						if(inCutscene == false){
-						FlxG.sound.play(Paths.sound('Lights_Turn_On'));
-						}
+						FlxG.sound.play(Paths.sound('Lights_Turn_On', "shared"));
 						camFollow.y = -2050;
-						camFollow.x += 200;
+						camFollow.x = boyfriend.x - 800;
 						FlxG.camera.focusOn(camFollow.getPosition());
-						FlxG.camera.zoom = 1.5;
+						FlxG.camera.zoom = 2;
 
 						new FlxTimer().start(0.8, function(tmr:FlxTimer)
 						{
 							camHUD.visible = true;
 							remove(blackScreen);
-							FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom}, 2.5, {
+							FlxTween.tween(FlxG.camera, {zoom: 1.5}, 2.5, {
 								ease: FlxEase.quadInOut,
 								onComplete: function(twn:FlxTween)
 								{
@@ -1628,6 +1626,7 @@ class PlayState extends MusicBeatState
 			{
 				case 0:
 					FlxG.sound.play(Paths.sound('intro3' + altSuffix), 0.6);
+					FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom}, 1, {ease: FlxEase.sineInOut});
 				case 1:
 					var ready:FlxSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[0]));
 					ready.scrollFactor.set();
@@ -2936,7 +2935,7 @@ class PlayState extends MusicBeatState
 					trace('LOADING NEXT SONG');
 					trace(PlayState.storyPlaylist[0].toLowerCase() + difficulty);
 	
-					if (SONG.song.toLowerCase() == 'eggnog')
+					if (SONG.song.toLowerCase() == 'hope')
 					{
 						var blackShit:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,
 							-FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
@@ -2944,7 +2943,7 @@ class PlayState extends MusicBeatState
 						add(blackShit);
 						camHUD.visible = false;
 	
-						FlxG.sound.play(Paths.sound('Lights_Shut_off'));
+						FlxG.sound.play(Paths.sound('Lights_Shut_off', "shared"));
 					}
 	
 					FlxTransitionableState.skipNextTransIn = true;
@@ -3992,6 +3991,8 @@ class PlayState extends MusicBeatState
 				camGame.shake(0.005, (Conductor.stepCrochet * 32)/1000);
 
 		}
+
+		if (curBeat > 264 && curBeat < 268 && SONG.song == 'Genesis'){ health = 2;}
 
 		if (curBeat == 271 && SONG.song == 'Genesis')
 		{

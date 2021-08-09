@@ -324,14 +324,15 @@ class Character extends FlxSprite
 				animation.addByPrefix('singUP', 'monster up note', 24, false);
 				animation.addByPrefix('singDOWN', 'monster down', 24, false);
 				animation.addByPrefix('singLEFT', 'Monster left note', 24, false);
-				animation.addByPrefix('singRIGHT', 'Monster right note', 24, false);
+				animation.addByPrefix('singRIGHT', 'Monster Right note', 24, false);
 				setGraphicSize(Std.int(width * 1.15));
 
 				addOffset('idle');
-				addOffset("singUP", 145, 86);
-				addOffset("singRIGHT", 74, -75);
-				addOffset("singLEFT", 216, -5);
-				addOffset("singDOWN", 151, -73);
+				addOffset("singUP", 175, 86);
+				addOffset("singRIGHT", 214, 5);
+				addOffset("singLEFT", 106, -75);
+				addOffset("singDOWN", 181, -63);
+
 				playAnim('idle');
 
 			case 'monster-christmas':
@@ -964,13 +965,14 @@ class Character extends FlxSprite
 						playAnim('danceLeft');
 
 				case "bf-christmas3":
-					if (PlayState.getBeat() > 332 && PlayState.getStage() == 'mallEvil')
-					{
-						playAnim('sadSmile');
+					if (PlayState.getBeat() >= 264 && PlayState.getBeat() < 272 && PlayState.getStage() == 'mallEvil'){}
+					else if (PlayState.getBeat() <= 332 && PlayState.getStage() == 'mallEvil'){
+						playAnim('idle');
 					}					
-					else if (PlayState.getBeat() >= 264 && PlayState.getBeat() < 272 && PlayState.getStage() == 'mallEvil'){}
-					else
-					{
+					else if (PlayState.getStage() == 'mallEvil'){
+						playAnim('sadSmile');
+					}
+					else{
 						playAnim('idle');
 					}
 
