@@ -76,7 +76,7 @@ class WarningState extends MusicBeatState
 			
         dropText.text = "Warning!
 This mod handles topics that some may find triggering.
-It is possible to play the mod safely by pressing SPACE to skip dialogue.
+It is possible to play the mod safely by pressing SHIFT to skip dialogue.
 Triggers may include:
 Implied domestic abuse,
 Physical signs of domestic abuse,

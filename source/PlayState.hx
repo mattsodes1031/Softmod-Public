@@ -3921,7 +3921,7 @@ class PlayState extends MusicBeatState
 			curB = curBeat;
 		}
 		#end
-		if (curSong == 'Tutorial' && dad.curCharacter == 'gf') {
+		if (curSong.toLowerCase() == 'starcrossed' && dad.curCharacter == 'gf') {
 			if (curBeat % 2 == 1 && dad.animOffsets.exists('danceLeft'))
 				if(pain==false){
 				dad.playAnim('danceLeft');

@@ -899,9 +899,9 @@ class Character extends FlxSprite
 						{
 							playAnim('cheer');
 							if (danced)
-									playAnim('danceRight');
+									playAnim('danceRight', true);
 							else
-									playAnim('danceLeft');
+									playAnim('danceLeft', true);
 						}
 					}
 				case 'gf-christmas':
@@ -955,7 +955,7 @@ class Character extends FlxSprite
 					}					
 					else if (PlayState.getBeat() >= 264 && PlayState.getBeat() < 272 && PlayState.getStage() == 'mallEvil')
 					{
-						playAnim('bigYell');
+						//playAnim('bigYell');
 					}
 					else
 					{
