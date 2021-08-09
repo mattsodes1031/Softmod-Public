@@ -1182,7 +1182,7 @@ class PlayState extends MusicBeatState
 			add(dreamscapeOuter);
 
 			dreamscape = new FlxSprite().loadGraphic(Paths.image('dreamscapeAnim.ss', "shared"), true, 1280, 720);
-			dreamscape.animation.add("smoke", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 8, true);
+			dreamscape.animation.add("smoke", [0, 1, 2, 3, 4, 5], 8, true);
 			dreamscape.animation.play("smoke");
 			dreamscape.cameras = [camOverlay];
 			dreamscape.screenCenter();
