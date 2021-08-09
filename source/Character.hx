@@ -752,57 +752,63 @@ class Character extends FlxSprite
 				// tama is awesome
 				tex = Paths.getSparrowAtlas('characters/Soft_GF_Assets', 'shared');
 				frames = tex;
-				animation.addByPrefix('idle', 'Pico Idle Dance', 24, false);
+				animation.addByIndices('danceLeft', 'Pico Idle Dance', [0, 1, 2, 3, 4, 5, 6, 7], "", 24, false);
+				animation.addByIndices('danceRight', 'Pico Idle Dance', [8, 9, 10, 11, 12, 13, 14, 15], "", 24, false);
 				animation.addByPrefix('singUP', 'pico Up note', 24, false);
 				animation.addByPrefix('singRIGHT', 'Pico Note Right', 24, false);
 				animation.addByPrefix('singDOWN', 'Pico Down Note', 24, false);
 				animation.addByPrefix('singLEFT', 'Pico NOTE LEFT', 24, false);
 
-				addOffset('idle');
+				addOffset('danceLeft');
+				addOffset('danceRight');
 				addOffset("singUP", -10, 88);
 				addOffset("singRIGHT", 52, 26);
 				addOffset("singLEFT", -19, 4);
 				addOffset("singDOWN", 29, -55);
 
-				playAnim('idle');
+				playAnim('danceRight');
 				flipX = true;
 
 			case 'softgf2':
 				// tama is awesome
 				tex = Paths.getSparrowAtlas('characters/softgf2', 'shared');
 				frames = tex;
-				animation.addByPrefix('idle', 'Soft GF Idle 2', 24, false);
+				animation.addByIndices('danceLeft', 'Soft GF Idle 2', [0, 1, 2, 3, 4, 5, 6, 7], "", 24, false);
+				animation.addByIndices('danceRight', 'Soft GF Idle 2', [8, 9, 10, 11, 12, 13, 14, 15], "", 24, false);
 				animation.addByPrefix('singUP', 'pico Up note 2', 24, false);
 				animation.addByPrefix('singRIGHT', 'Soft GF Body RIGHT 2', 24, false);
 				animation.addByPrefix('singDOWN', 'Soft GF Body DOWN 2', 24, false);
 				animation.addByPrefix('singLEFT', 'Soft GF Body LEFT 2', 24, false);
 
-				addOffset('idle');
+				addOffset('danceLeft');
+				addOffset('danceRight');
 				addOffset("singUP", -10, 88);
 				addOffset("singRIGHT", 52, 26);
 				addOffset("singLEFT", -19, 4);
 				addOffset("singDOWN", 29, -55);
 
-				playAnim('idle');
+				playAnim('danceRight');
 				flipX = true;
 
 			case 'softgf3':
 				// tama is awesome
 				tex = Paths.getSparrowAtlas('characters/softgf3', 'shared');
 				frames = tex;
-				animation.addByPrefix('idle', 'Soft GF Idle 3', 24, false);
+				animation.addByIndices('danceLeft', 'Soft GF Idle 3', [0, 1, 2, 3, 4, 5, 6, 7], "", 24, false);
+				animation.addByIndices('danceRight', 'Soft GF Idle 3', [8, 9, 10, 11, 12, 13, 14, 15], "", 24, false);
 				animation.addByPrefix('singUP', 'pico Up note 3', 24, false);
 				animation.addByPrefix('singRIGHT', 'Soft GF Body RIGHT 3', 24, false);
 				animation.addByPrefix('singDOWN', 'Soft GF Body DOWN 3', 24, false);
 				animation.addByPrefix('singLEFT', 'Soft GF Body LEFT 3', 24, false);
 
-				addOffset('idle');
+				addOffset('danceLeft');
+				addOffset('danceRight');
 				addOffset("singUP", -10, 88);
 				addOffset("singRIGHT", 52, 26);
 				addOffset("singLEFT", -19, 4);
 				addOffset("singDOWN", 29, -55);
 
-				playAnim('idle');
+				playAnim('danceRight');
 				flipX = true;
 
 		}
@@ -939,6 +945,14 @@ class Character extends FlxSprite
 						else
 							playAnim('danceLeft');
 					}
+
+				case "softgf" | "softgf2" | "softgf3":
+						danced = !danced;
+	
+						if (danced)
+							playAnim('danceRight');
+						else
+							playAnim('danceLeft');
 				
 				case 'spooky':
 					danced = !danced;
