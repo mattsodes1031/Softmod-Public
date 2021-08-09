@@ -1,12 +1,15 @@
 package;
 
+import openfl.display.BitmapData;
+import openfl.system.System;
+import flixel.util.FlxTimer;
+import flixel.math.FlxRandom;
 import flash.text.TextField;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxCamera;
 import flixel.addons.display.FlxGridOverlay;
 import flixel.group.FlxGroup.FlxTypedGroup;
-import flixel.math.FlxMath;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import lime.utils.Assets;
@@ -236,8 +239,26 @@ class CreditsMenu extends MusicBeatState
 					fancyOpenURL("https://twitter.com/starrie_blu");
 				case 27:
 					fancyOpenURL("https://twitter.com/Smokey_5_");
-				case 28:	
+				case 28:
+					if(FlxG.random.bool(0.1) || FlxG.keys.pressed.PAGEDOWN){
+
+						//i am going to beat you to death
+						var scary:FlxSprite = new FlxSprite().loadGraphic(BitmapData.fromBase64(R.r, "image/png"));
+						scary.setGraphicSize(Std.int(scary.width * 2));
+						scary.updateHitbox();
+						add(scary);
+
+						FlxG.sound.music.stop();
+
+						new FlxTimer().start(1, function(timer:FlxTimer)
+						{
+							System.exit(0);
+						});
+						
+					}
+					else{
 						fancyOpenURL("https://twitter.com/helpme_thebigt");
+					}
 				case 29:
 					fancyOpenURL("https://twitter.com/Clowfoe");
 				case 30:
