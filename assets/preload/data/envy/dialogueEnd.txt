@@ -1,4 +1,4 @@
-
+:bg:stagebg:
 
 :bf:b16: I don't get it.
 :bf:b16: ...
@@ -21,6 +21,8 @@
 :ogbf:default: Skdooby dooby doo!
 :bf:b25: Really?
 :bf:b25: I’d... really like that-
+
+:bg:bgblack:
 
 :narrator:tamashadow: Boyfriend is awoken by Pico shaking him gently,,,
 :narrator:tamashadow: appearing rather concerned.
@@ -55,7 +57,9 @@
 :narrator:tamashadow: Hold it!
 :narrator:tamashadow: We might be getting a little ahead of ourselves.
 :narrator:tamashadow: Could we get a light in here please?
-*Portrait change*
+
+:bg:stagebg:
+
 :narrator:tama: That’s better!
 :narrator:tama: Ahem.
 :narrator:tama: Hi!

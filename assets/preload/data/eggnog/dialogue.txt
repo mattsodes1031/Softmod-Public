@@ -14,8 +14,8 @@
 :bfxmas:bx3: Come on Toughie, this is our first time out and about in a month. At least try to enjoy it-
 :narrator:default: THERE THEY ARE!
 :picoxmas:px4: ?!
-:bfxmas:bx4: ... 
-:bfxmas:bx4: Fuck.
+:bfxmas:bx3: ... 
+:bfxmas:bx3: Fuck.
 :picoxmas:px4: A crowd…?
 :bfxmas:bx5: ... Oh no...
 :bfxmas:bx5: What… day is it?

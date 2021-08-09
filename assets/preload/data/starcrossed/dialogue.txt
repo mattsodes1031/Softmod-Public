@@ -3,7 +3,6 @@
 :narrator:tamashadow: and the not so fortunate struggle to thrive day by day.
 
 :bg:alleybgfull:
-:effect:hidden:
 
 :effect:fadeIn:0.4
 :effect:enterStageLeft:0.8
