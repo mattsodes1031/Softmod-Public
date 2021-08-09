@@ -968,10 +968,7 @@ class Character extends FlxSprite
 					{
 						playAnim('sadSmile');
 					}					
-					else if (PlayState.getBeat() >= 264 && PlayState.getBeat() < 272 && PlayState.getStage() == 'mallEvil')
-					{
-						//playAnim('bigYell');
-					}
+					else if (PlayState.getBeat() >= 264 && PlayState.getBeat() < 272 && PlayState.getStage() == 'mallEvil'){}
 					else
 					{
 						playAnim('idle');

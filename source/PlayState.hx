@@ -985,63 +985,6 @@ class PlayState extends MusicBeatState
 		dad = new Character(100, 100, SONG.player2);
 
 		var camPos:FlxPoint = new FlxPoint(dad.getGraphicMidpoint().x, dad.getGraphicMidpoint().y);
-
-		switch (SONG.player2)
-		{
-			case 'gf':
-				dad.setPosition(gf.x, gf.y);
-				gf.visible = false;
-				if (isStoryMode)
-				{
-					camPos.x += 600;
-					tweenCamIn();
-				}
-				oppColor = 0xFF297456;
-
-			case "spooky":
-				dad.y += 200;
-				camPos.x += 500;
-				camPos.y += 100;
-			case "monster":
-				dad.y += 80;
-				gf.y += 10000;
-				camPos.x += 600;
-				camPos.y += 100;
-				oppColor = 0xFF282623;
-			case 'monster-christmas':
-				dad.y += 80;
-				gf.y += 10000;
-				camPos.x += 600;
-				camPos.y += 100;
-				oppColor = 0xFF282623;
-			case 'dad':
-				camPos.x += 200;
-				camPos.x += 100;
-			case 'pico':
-				camPos.x += 600;
-				dad.y += 300;
-			case 'parents-christmas':
-				dad.x -= 500;
-			case 'parents-christmas2':
-				dad.x -= 500;
-			case 'senpai':
-				dad.x += 150;
-				dad.y += 360;
-				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
-			case 'senpai-angry':
-				dad.x += 150;
-				dad.y += 360;
-				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
-			case 'spirit':
-				dad.x -= 150;
-				dad.y += 100;
-				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
-			case 'ogbf':
-				oppColor = 0xFF66FF33;
-				
-		}
-
-
 		
 		boyfriend = new Boyfriend(770, 450, SONG.player1);
 
@@ -1129,6 +1072,63 @@ class PlayState extends MusicBeatState
 				gf.y += 300;
 		}
 
+		switch (SONG.player2)
+		{
+			case 'gf':
+				dad.setPosition(gf.x, gf.y);
+				gf.visible = false;
+				if (isStoryMode)
+				{
+					camPos.x += 600;
+					tweenCamIn();
+				}
+				oppColor = 0xFF297456;
+
+			case "spooky":
+				dad.y += 200;
+				camPos.x += 500;
+				camPos.y += 100;
+			case "monster":
+				dad.y += 80;
+				gf.y += 10000;
+				camPos.x += 600;
+				camPos.y += 100;
+				oppColor = 0xFF282623;
+			case 'monster-christmas':
+				gf.y += 10000;
+				camPos.x += 600;
+				camPos.y += 100;
+				dad.y = boyfriend.y;
+				dad.y -= dad.height;
+				dad.y += boyfriend.height;
+				oppColor = 0xFF282623;
+			case 'dad':
+				camPos.x += 200;
+				camPos.x += 100;
+			case 'pico':
+				camPos.x += 600;
+				dad.y += 300;
+			case 'parents-christmas':
+				dad.x -= 500;
+			case 'parents-christmas2':
+				dad.x -= 500;
+			case 'senpai':
+				dad.x += 150;
+				dad.y += 360;
+				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
+			case 'senpai-angry':
+				dad.x += 150;
+				dad.y += 360;
+				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
+			case 'spirit':
+				dad.x -= 150;
+				dad.y += 100;
+				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
+			case 'ogbf':
+				oppColor = 0xFF66FF33;
+				
+		}
+
 		add(gf);
 
 		// Shitty layering but whatev it works LOL
@@ -1174,7 +1174,7 @@ class PlayState extends MusicBeatState
 
 		Conductor.songPosition = -5000;
 
-		var dreamscapeSongs = ["repressed", "genesis", "diplopia", "in fighting", "envy"];
+		var dreamscapeSongs = ["repressed", "genesis", "diplopia", "in-fighting", "envy"];
 
 		if(dreamscapeSongs.contains(SONG.song.toLowerCase())){
 
@@ -2503,27 +2503,13 @@ class PlayState extends MusicBeatState
 
 					switch (dad.curCharacter)
 					{
-						case 'mom':
+						case 'hot_mom_phase_1' | 'hot_mom_phase_2' | 'hot_mom_phase_3':
 							camFollow.y = dad.getMidpoint().y;
-						case 'senpai':
-							camFollow.y = dad.getMidpoint().y - 430;
-							camFollow.x = dad.getMidpoint().x - 100;
-						case 'senpai-angry':
-							camFollow.y = dad.getMidpoint().y - 430;
-							camFollow.x = dad.getMidpoint().x - 100;
-						case 'softgf':
-							camFollow.y = dad.getMidpoint().y + 50;
-							camFollow.x = dad.getMidpoint().x + 200;
-						case 'softgf2':
-							camFollow.y = dad.getMidpoint().y + 50;
-							camFollow.x = dad.getMidpoint().x + 200;
-						case 'softgf3':
+						case 'softgf' | 'softgf2' | 'softgf3':
 							camFollow.y = dad.getMidpoint().y + 50;
 							camFollow.x = dad.getMidpoint().x + 200;
 					}
 
-					if (dad.curCharacter == 'mom')
-						vocals.volume = 1;
 				}
 
 				if (PlayState.SONG.notes[Std.int(curStep / 16)].mustHitSection && camFollow.x != boyfriend.getMidpoint().x - 100 && autoCam)
@@ -2813,6 +2799,7 @@ class PlayState extends MusicBeatState
 						if(dad.curCharacter == "ogbf" && health > 0.04){
 							health -= 0.04;
 						}
+
 					}
 
 					if (daNote.mustPress && !daNote.modifiedByLua)
@@ -3545,33 +3532,13 @@ class PlayState extends MusicBeatState
 			switch (direction)
 			{
 				case 0:
-					if (PlayState.getBeat()  > 338 && PlayState.getStage() == 'mallEvil')
-					{
-						boyfriend.playAnim('sadSmile');
-					}					
-					else if (PlayState.getBeat()  > 261 && PlayState.getBeat() < 273 && PlayState.getStage() == 'mallEvil')
-					{
-						boyfriend.playAnim('bigYell');
-					}
-					else
-						boyfriend.playAnim('singLEFTmiss', true);
-
+					boyfriend.playAnim('singLEFTmiss', true);
 				case 1:
 					boyfriend.playAnim('singDOWNmiss', true);
 				case 2:
 					boyfriend.playAnim('singUPmiss', true);
 				case 3:
-						 if (PlayState.getBeat()  > 338 && PlayState.getStage() == 'mallEvil' )
-					{
-						boyfriend.playAnim('sadSmile');
-					}					
-					else if (PlayState.getBeat()  > 261 && PlayState.getBeat() < 273 && PlayState.getStage() == 'mallEvil' )
-					{
-						boyfriend.playAnim('bigYell');
-					}
-					else{
-						boyfriend.playAnim('singRIGHTmiss', true);
-					}
+					boyfriend.playAnim('singRIGHTmiss', true);
 			}
 
 			#if windows
@@ -4022,6 +3989,7 @@ class PlayState extends MusicBeatState
 				camFollow.y = boyfriend.getMidpoint().y + 20;
 				FlxTween.tween(camGame, {zoom: 1.3}, 0.3, {ease: FlxEase.quintOut});
 				FlxTween.tween(camHUD, {alpha: 0}, 0.3);
+				camGame.shake(0.005, (Conductor.stepCrochet * 32)/1000);
 
 		}
 
