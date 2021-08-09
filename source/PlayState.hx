@@ -2802,15 +2802,9 @@ class PlayState extends MusicBeatState
 						daNote.kill();
 						notes.remove(daNote, true);
 						daNote.destroy();
-						// we do a little trolling 
-						if(dad.curCharacter == "ogbf" && health > 0.04 && storyDifficulty == 2 ){
-							health -= 0.03;
-						}
-						if(dad.curCharacter == "ogbf" && health > 0.04 && storyDifficulty == 1 ){
-							health -= 0.02;
-						}
-						if(dad.curCharacter == "ogbf" && health > 0.04 && storyDifficulty == 0 ){
-							health -= 0.01;
+
+						if(dad.curCharacter == "ogbf" && health > 0.04){
+							health -= 0.04;
 						}
 					}
 

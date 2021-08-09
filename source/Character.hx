@@ -541,7 +541,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('sadSmile', 'BF idle dance copy', 24, false);
 
 
-				addOffset('bigYell', -5);
+				addOffset('bigYell', -10, -20);
 				addOffset('idle', -5);
 				addOffset("singUP", 0, 10);
 				addOffset("singRIGHT", -43, -7);
@@ -551,8 +551,7 @@ class Character extends FlxSprite
 				addOffset("singRIGHTmiss", -53, -8);
 				addOffset("singLEFTmiss", 20, -8);
 				addOffset("singDOWNmiss", 0, -53);
-				addOffset("bigYell");
-				addOffset("sadSmile");
+				addOffset("sadSmile", -5);
 				
 
 				playAnim('idle');
