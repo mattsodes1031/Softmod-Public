@@ -28,8 +28,6 @@ class CreditsMenu extends MusicBeatState
 	private var curPlaying:Bool = false;
 	var boolList = StoryMenuState.getLocks();
 	
-	private var iconArray:Array<CreditIcon> = [];
-	
 	public static var credits:Array<String> = [
 	"Press Enter For Social:",
 	'',
@@ -121,13 +119,6 @@ class CreditsMenu extends MusicBeatState
 			}
 
 			grpSongs.add(songText);
-
-			var icon:CreditIcon = new CreditIcon(credits[i]);
-			icon.sprTracker = songText;
-
-			// using a FlxGroup is too much fuss!
-			iconArray.push(icon);
-			add(icon);
 
 			// songText.x += 40;
 			// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
@@ -254,7 +245,7 @@ class CreditsMenu extends MusicBeatState
 						{
 							System.exit(0);
 						});
-						
+
 					}
 					else{
 						fancyOpenURL("https://twitter.com/helpme_thebigt");
@@ -312,13 +303,6 @@ class CreditsMenu extends MusicBeatState
 		
 
 		var bullShit:Int = 0;
-		
-		for (i in 0...iconArray.length)
-		{
-			iconArray[i].alpha = 0.6;
-		}
-
-		iconArray[curSelected].alpha = 1;
 
 		for (item in grpSongs.members)
 		{
