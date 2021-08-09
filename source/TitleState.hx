@@ -219,7 +219,7 @@ class TitleState extends MusicBeatState
 
 		// credTextShit.alignment = CENTER;
 
-		ngSpr = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(Paths.image('newgrounds_logo'));
+		ngSpr = new FlxSprite(0, FlxG.height * 0.32).loadGraphic(Paths.image('NGLOGO'));
 		add(ngSpr);
 		ngSpr.visible = false;
 		ngSpr.setGraphicSize(Std.int(ngSpr.width * 0.8));
@@ -382,18 +382,19 @@ class TitleState extends MusicBeatState
 
 		switch (curBeat)
 		{
-			case 0:
-				createCoolText([':3']);
 			case 1:
-				deleteCoolText();
+				
+				ngSpr.visible = true;
 			case 3:
+				ngSpr.visible = false;
+			case 4:
 				createCoolText(['The Soft Team']);
 			// credTextShit.visible = true;
-			case 5:
+			case 6:
 				addMoreText('presents');
 			// credTextShit.text += '\npresent...';
 			// credTextShit.addText();
-			case 7:
+			case 8:
 				deleteCoolText();
 			// credTextShit.visible = false;
 			// credTextShit.text = 'In association \nwith';

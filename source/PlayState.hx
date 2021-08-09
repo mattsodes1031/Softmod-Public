@@ -3970,6 +3970,12 @@ class PlayState extends MusicBeatState
 				boyfriend.playAnim('hey', true);
 				dad.playAnim('cheer', true);
 			}
+		if (curBeat > 6  && curBeat < 17 && SONG.song == "Diplopia"){
+			boyfriend.playAnim('hey', true);
+		}
+		if (curBeat > 19 && curBeat < 25 && SONG.song == "Diplopia"){
+			boyfriend.playAnim('hey', true);
+		}
 			
 		if(SONG.song.toLowerCase() == "spotlight" && curBeat >= 308){
 			autoCam = false;
