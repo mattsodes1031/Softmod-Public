@@ -302,6 +302,27 @@ class StoryMenuState extends MusicBeatState
 			FlxG.switchState(new MainMenuState());
 		}
 
+
+		#if debug
+
+		if(FlxG.keys.justPressed.DELETE){
+
+			softWeekUnlocked[curWeek] = false;
+			FlxG.save.data.softWeekUnlocked = softWeekUnlocked;
+			FlxG.save.flush();
+			FlxG.resetState();
+		}
+
+		if(FlxG.keys.justPressed.INSERT){
+
+			softWeekUnlocked[curWeek] = true;
+			FlxG.save.data.softWeekUnlocked = softWeekUnlocked;
+			FlxG.save.flush();
+			FlxG.resetState();
+		}
+
+		#end
+
 		super.update(elapsed);
 	}
 
@@ -312,7 +333,7 @@ class StoryMenuState extends MusicBeatState
 	function selectWeek()
 	{
 	
-		
+		if(softWeekUnlocked[curWeek]){
 			if (stopspamming == false)
 			{
 				FlxG.sound.play(Paths.sound('confirmMenu'));
@@ -345,6 +366,9 @@ class StoryMenuState extends MusicBeatState
 			{
 				LoadingState.loadAndSwitchState(new PlayState(), true);
 			});
+		}
+
+
 		
 	}
 
@@ -357,7 +381,7 @@ class StoryMenuState extends MusicBeatState
 		if (curDifficulty > 2)
 			curDifficulty = 0;
 
-		if(curWeek == 6)
+		if(curWeek == 6 && softWeekUnlocked[6])
 			curDifficulty = 2;
 
 		sprDifficulty.offset.x = 0;

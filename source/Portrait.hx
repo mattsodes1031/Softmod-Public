@@ -85,8 +85,8 @@ class Portrait extends FlxSprite
         refy = y + height;
 
         playFrame();
-        posTween = FlxTween.tween(this, {x: x}, 0.1);
-        alphaTween = FlxTween.tween(this, {alpha: alpha}, 0.1);
+        posTween = FlxTween.tween(this, {}, 0);
+        alphaTween = FlxTween.tween(this, {}, 0);
         //hide();
 
     }

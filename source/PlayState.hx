@@ -516,6 +516,8 @@ class PlayState extends MusicBeatState
 							skyBG.x += 260;
 					}
 
+					skyBGTween = FlxTween.tween(this, {}, 0);
+
 					var bgLimo:FlxSprite = new FlxSprite(-200, 480);
 					bgLimo.frames = Paths.getSparrowAtlas('limo/bgLimo','week4');
 					bgLimo.animation.addByPrefix('drive', "BG limo0", 24);
