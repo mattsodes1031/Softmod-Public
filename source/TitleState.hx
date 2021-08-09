@@ -136,11 +136,8 @@ class TitleState extends MusicBeatState
 				// FlxG.sound.list.add(music);
 				// music.play();
 			}
-
-		new FlxTimer().start(1, function(tmr:FlxTimer)
-		{
-			startIntro();
-		});
+			
+		startIntro();
 		#end
 	}
 
