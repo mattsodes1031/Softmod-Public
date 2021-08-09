@@ -199,6 +199,8 @@ class PlayState extends MusicBeatState
 	var dreamscape:FlxSprite;
 	var dreamscapeOuter:FlxSprite;
 
+	var vignette:FlxSprite;
+
 	var fc:Bool = true;
 
 	var bgGirls:BackgroundGirls;
@@ -1195,8 +1197,7 @@ class PlayState extends MusicBeatState
 				case "genesis":
 					dreamscape.color = 0xFFFF9A9A;
 					dreamscapeOuter.color = 0xFFFF9A9A;
-					dreamscape.alpha = 0;
-					dreamscapeOuter.alpha = 0;
+					camOverlay.alpha = 0;
 
 					
 
@@ -3999,8 +4000,7 @@ class PlayState extends MusicBeatState
 			}
 
 		if (curBeat == 64 && SONG.song == 'Genesis'){
-			FlxTween.tween(dreamscape, {alpha: 1}, (Conductor.stepCrochet * 8)/1000);
-			FlxTween.tween(dreamscapeOuter, {alpha: 1}, (Conductor.stepCrochet * 8)/1000);
+			FlxTween.tween(camOverlay, {alpha: 1}, (Conductor.stepCrochet * 8)/1000);
 		}
 		if (curBeat == 264 && SONG.song == 'Genesis')
 		{
@@ -4009,7 +4009,7 @@ class PlayState extends MusicBeatState
 				boyfriend.playAnim('bigYell', true);
 				vocals.volume = 1;
 				camFollow.x = boyfriend.getMidpoint().x;
-				camFollow.y = boyfriend.getMidpoint().y;
+				camFollow.y = boyfriend.getMidpoint().y + 20;
 				FlxTween.tween(camGame, {zoom: 1.3}, 0.3, {ease: FlxEase.quintOut});
 				FlxTween.tween(camHUD, {alpha: 0}, 0.3);
 
@@ -4026,10 +4026,8 @@ class PlayState extends MusicBeatState
 		if (curBeat == 344 && SONG.song == 'Genesis')
 		{
 				//boyfriend.playAnim('sadSmile', true);
-				FlxTween.tween(dreamscape, {alpha: 0}, 15, {onComplete: function(twn:FlxTween){
+				FlxTween.tween(camOverlay, {alpha: 0}, 15, {onComplete: function(twn:FlxTween){
 					dreamscape.destroy();
-				}});
-				FlxTween.tween(dreamscapeOuter, {alpha: 0}, 15, {onComplete: function(twn:FlxTween){
 					dreamscapeOuter.destroy();
 				}});
 				FlxTween.tween(dad, {alpha: 0}, 23, {ease: FlxEase.quintIn});
