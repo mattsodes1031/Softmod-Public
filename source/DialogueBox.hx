@@ -74,6 +74,7 @@ class DialogueBox extends FlxSpriteGroup
 
 
 	var canAdvance = false;
+	var skip:FlxSprite;
 	
 	
 
@@ -270,6 +271,12 @@ class DialogueBox extends FlxSpriteGroup
 		}
 	
 		box.screenCenter(X);
+
+
+		skip = new FlxSprite(627,440).loadGraphic(Paths.image('ShiftSkip'));
+		skip.setGraphicSize(Std.int(skip.width * .17));
+		skip.antialiasing = true;
+		add(skip);
 	
 
 		//handSelect = new FlxSprite(FlxG.width * 0.9, FlxG.height * 0.9).loadGraphic(Paths.image('hand_textbox', 'shared'));
@@ -284,12 +291,6 @@ class DialogueBox extends FlxSpriteGroup
 		dropText.font = 'DK Inky Fingers';
 		dropText.color = 0xFFD89494;
 		add(dropText);
-		skipText = new FlxText(5, 695, 640, "Press SPACE to skip the dialogue.\n", 40);
-		skipText.scrollFactor.set(0, 0);
-		skipText.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, FlxTextAlign.LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		skipText.borderSize = 2;
-		skipText.borderQuality = 1;
-		add(skipText);
 
 		swagDialogue = new FlxTypeText(240, 500, Std.int(FlxG.width * 0.6), "", 32);
 		swagDialogue.font = 'DK Inky Fingers';
@@ -339,7 +340,7 @@ class DialogueBox extends FlxSpriteGroup
 			dialogueStarted = true;
 		}
 
-		if(FlxG.keys.justPressed.SPACE && !isEnding){
+		if(FlxG.keys.justPressed.SHIFT && !isEnding){
 
 			isEnding = true;
 			endDialogue();
@@ -385,13 +386,13 @@ class DialogueBox extends FlxSpriteGroup
 
 		hideAll();
 		if (this.sound != null) this.sound.stop();
+		FlxTween.tween(skip,{alpha: 0}, 1.2, {ease: FlxEase.circOut});
 		FlxTween.tween(box, {alpha: 0}, 1.2, {ease: FlxEase.circOut});
 		FlxTween.tween(bgFade, {alpha: 0}, 1.2, {ease: FlxEase.circOut});
 		FlxTween.tween(cutsceneImage, {alpha: 0}, 1.2, {ease: FlxEase.circOut});
 		FlxTween.tween(swagDialogue, {alpha: 0}, 1.2, {ease: FlxEase.circOut});
 		FlxTween.tween(blackBG, {alpha: 0}, 1.2, {ease: FlxEase.circOut});
 		FlxTween.tween(dropText, {alpha: 0}, 1.2, {ease: FlxEase.circOut});
-		FlxTween.tween(skipText, {alpha: 0}, 1.2, {ease: FlxEase.circOut});
 		FlxG.sound.music.fadeOut(1.2, 0);
 
 
@@ -414,6 +415,7 @@ class DialogueBox extends FlxSpriteGroup
 		hideAll();
 
 		box.visible = true;
+		skip.visible = true;
 		box.flipX = true;
 		swagDialogue.visible = true;
 		dropText.visible = true;
@@ -464,6 +466,7 @@ class DialogueBox extends FlxSpriteGroup
 						swagDialogue.visible = false;
 						dropText.visible = false;
 						box.visible = false;
+						skip.visible = false;
 						setDialogue = true;
 						swagDialogue.resetText("");
 					default:

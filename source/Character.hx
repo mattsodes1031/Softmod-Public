@@ -890,11 +890,9 @@ class Character extends FlxSprite
 					if (!animation.curAnim.name.startsWith('hair'))
 					{
 						danced = !danced;
-						trace(PlayState.getSong());
 
 						if(PlayState.getBeat() >113 && PlayState.getBeat() < 117 && PlayState.getSong() == "no-cigar")
 						{
-							trace("hi");
 							playAnim('cheer');
 						}
 						else
