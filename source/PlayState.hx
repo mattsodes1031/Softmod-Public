@@ -127,6 +127,7 @@ class PlayState extends MusicBeatState
 	public static var cpuStrums:FlxTypedGroup<FlxSprite> = null;
 
 	private var camZooming:Bool = false;
+	private var autoCam:Bool = true;
 	private var curSong:String = "";
 
 	private var gfSpeed:Int = 1;
@@ -196,6 +197,7 @@ class PlayState extends MusicBeatState
 	var santa:FlxSprite;
 
 	var dreamscape:FlxSprite;
+	var dreamscapeOuter:FlxSprite;
 
 	var fc:Bool = true;
 
@@ -1173,20 +1175,30 @@ class PlayState extends MusicBeatState
 		var dreamscapeSongs = ["repressed", "genesis", "diplopia", "in fighting", "envy"];
 
 		if(dreamscapeSongs.contains(SONG.song.toLowerCase())){
+
+			dreamscapeOuter = new FlxSprite().loadGraphic(Paths.image('dreamscapeOuter', "shared"));
+			dreamscapeOuter.cameras = [camOverlay];
+			dreamscapeOuter.screenCenter();
+			add(dreamscapeOuter);
+
 			dreamscape = new FlxSprite().loadGraphic(Paths.image('dreamscapeAnim.ss', "shared"), true, 1280, 720);
 			dreamscape.animation.add("smoke", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 8, true);
 			dreamscape.animation.play("smoke");
 			dreamscape.cameras = [camOverlay];
+			dreamscape.screenCenter();
 			add(dreamscape);
 
 			switch(SONG.song.toLowerCase()){
 
 				case "repressed":
 					dreamscape.color = 0xFFFF9A9A;
+					dreamscapeOuter.color = 0xFFFF9A9A;
 
 				case "genesis":
 					dreamscape.color = 0xFFFF9A9A;
+					dreamscapeOuter.color = 0xFFFF9A9A;
 					dreamscape.alpha = 0;
+					dreamscapeOuter.alpha = 0;
 
 					
 
@@ -2469,7 +2481,7 @@ class PlayState extends MusicBeatState
 					luaModchart.setVar("mustHit",PlayState.SONG.notes[Std.int(curStep / 16)].mustHitSection);
 				#end
 
-				if (camFollow.x != dad.getMidpoint().x + 150 && !PlayState.SONG.notes[Std.int(curStep / 16)].mustHitSection)
+				if (camFollow.x != dad.getMidpoint().x + 150 && !PlayState.SONG.notes[Std.int(curStep / 16)].mustHitSection && autoCam)
 				{
 					var offsetX = 0;
 					var offsetY = 0;
@@ -2512,7 +2524,7 @@ class PlayState extends MusicBeatState
 						vocals.volume = 1;
 				}
 
-				if (PlayState.SONG.notes[Std.int(curStep / 16)].mustHitSection && camFollow.x != boyfriend.getMidpoint().x - 100)
+				if (PlayState.SONG.notes[Std.int(curStep / 16)].mustHitSection && camFollow.x != boyfriend.getMidpoint().x - 100 && autoCam)
 				{
 					var offsetX = 0;
 					var offsetY = 0;
@@ -3999,18 +4011,37 @@ class PlayState extends MusicBeatState
 
 		if (curBeat == 64 && SONG.song == 'Genesis'){
 			FlxTween.tween(dreamscape, {alpha: 1}, (Conductor.stepCrochet * 8)/1000);
+			FlxTween.tween(dreamscapeOuter, {alpha: 1}, (Conductor.stepCrochet * 8)/1000);
 		}
 		if (curBeat == 264 && SONG.song == 'Genesis')
 		{
+				camZooming = false;
+				autoCam = false;
 				boyfriend.playAnim('bigYell', true);
 				vocals.volume = 1;
+				camFollow.x = boyfriend.getMidpoint().x;
+				camFollow.y = boyfriend.getMidpoint().y;
+				FlxTween.tween(camGame, {zoom: 1.3}, 0.3, {ease: FlxEase.quintOut});
+				FlxTween.tween(camHUD, {alpha: 0}, 0.3);
 
 		}
+
+		if (curBeat == 271 && SONG.song == 'Genesis')
+		{
+				camZooming = true;
+				autoCam = true;
+				FlxTween.tween(camHUD, {alpha: 1}, 0.3);
+
+		}
+
 		if (curBeat == 344 && SONG.song == 'Genesis')
 		{
 				//boyfriend.playAnim('sadSmile', true);
-				/*FlxTween.tween(dreamscape, {alpha: 0}, 15, {onComplete: function(twn:FlxTween){
+				FlxTween.tween(dreamscape, {alpha: 0}, 15, {onComplete: function(twn:FlxTween){
 					dreamscape.destroy();
+				}});
+				FlxTween.tween(dreamscapeOuter, {alpha: 0}, 15, {onComplete: function(twn:FlxTween){
+					dreamscapeOuter.destroy();
 				}});
 				FlxTween.tween(dad, {alpha: 0}, 23, {ease: FlxEase.quintIn});
 				FlxTween.tween(iconP2, {alpha: 0}, 23, {ease: FlxEase.quintIn});
@@ -4018,7 +4049,7 @@ class PlayState extends MusicBeatState
 				cpuStrums.forEach(function(spr:FlxSprite)
 				{
 					FlxTween.tween(spr, {alpha: 0}, 23, {ease: FlxEase.quintIn});
-				});*/
+				});
 
 		}
 	
@@ -4133,5 +4164,7 @@ class PlayState extends MusicBeatState
 		}
 
 		return false;
+
+	}
 }
 
