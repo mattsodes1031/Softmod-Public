@@ -273,8 +273,8 @@ class DialogueBox extends FlxSpriteGroup
 		box.screenCenter(X);
 
 
-		skip = new FlxSprite(627,440).loadGraphic(Paths.image('ShiftSkip'));
-		skip.setGraphicSize(Std.int(skip.width * .17));
+		skip = new FlxSprite(625,315).loadGraphic(Paths.image('ShiftSkip'));
+		skip.setGraphicSize(Std.int(skip.width * .2));
 		skip.antialiasing = true;
 		add(skip);
 	
@@ -553,7 +553,9 @@ class DialogueBox extends FlxSpriteGroup
 				case "toRight":
 					effectToRight();
 				case "lightningStrike":
-					effectToRight();
+					effectlightningStrike();
+				case "beep":
+					effectbeep();
 				//case "shake":
 					//effectShake(Std.parseFloat(effectParamQue[i]));
 				default:
@@ -694,6 +696,9 @@ class DialogueBox extends FlxSpriteGroup
 
 	function effectlightningStrike(){
 		FlxG.sound.play(Paths.soundRandom('thunder_', 1, 2));
+	}
+	function effectbeep(){
+		FlxG.sound.play(Paths.soundRandom('Carbeep',1,1));
 	}
 
 
