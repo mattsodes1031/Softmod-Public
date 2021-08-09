@@ -1,5 +1,7 @@
 :bg:alleybgfull:
 
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :pico:p10: You did it! 
 :bf:b6: I...
 :bf:b3: yeah!
@@ -18,3 +20,4 @@
 :bf:b11: PICO-
 :pico:p6: Come on! 
 :pico:p6: I know a place we can hide!
+:effect:exitStageLeft:0.8

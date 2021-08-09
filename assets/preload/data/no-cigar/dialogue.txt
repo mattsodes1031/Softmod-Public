@@ -1,5 +1,7 @@
 :bg:alleybgfull:
 
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :dad:d7: Hm.
 :dad:d5: You know-
 :dad:d5: It’s been a real pain trying to find you these past couple weeks...

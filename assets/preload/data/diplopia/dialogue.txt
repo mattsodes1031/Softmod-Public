@@ -1,5 +1,7 @@
 :bg:stagebg:
 
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :narrator:tamashadow: After an emotional encounter with the Fairest couple,
 :narrator:tamashadow: Pico and BF seek shelter for the upcoming days. 
 :narrator:tamashadow: Thankfully, they are able to find such comfort and relax in the company of each other. 
@@ -7,9 +9,14 @@
 :narrator:tamashadow: Later that fateful night, BF decided to rest his head. Only this time, within the confines of his dream, 
 :narrator:tamashadow: he meets an oddly familiar face.
 
+:effect:fadeIn:0.4
 :bf:b17: H- Huh??
 :bf:b17: Where am I?
+
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :ogbf:default: Beep!
+
 :bf:b10: !!!
 :bf:b4: Who-
 :bf:b11: !!! 

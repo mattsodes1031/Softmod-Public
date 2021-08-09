@@ -116,7 +116,7 @@ class DialogueBox extends FlxSpriteGroup
 		add(cutsceneImage);	
 
 	
-	
+		FlxTween.tween(bgFade, {alpha: 0.7}, 1, {ease: FlxEase.circOut});
 
 		box = new FlxSprite(-20, 385);
 		
@@ -309,6 +309,9 @@ class DialogueBox extends FlxSpriteGroup
 
 	override function update(elapsed:Float)
 	{
+		if (cutsceneImage.alpha < 1)
+			cutsceneImage.alpha += 1 * elapsed;
+			
 		// HARD CODING CUZ IM STUPDI
 		if (PlayState.SONG.song.toLowerCase() == 'roses')
 			portraitLeft.visible = false;
@@ -482,9 +485,14 @@ class DialogueBox extends FlxSpriteGroup
 						cutsceneImage.visible = false;
 					default:
 						cutsceneImage.visible = true;
+						cutsceneImage.alpha = 0;
 						cutsceneImage.loadGraphic(Paths.image('bg/' + curAnim, 'dialogue'));
 				}
-			
+			case 'sound':
+				skipDialogue = true;
+				if(this.sound != null) this.sound.stop();
+				sound = new FlxSound().loadEmbedded(Sound.fromFile("assets/dialogue/sounds/" + curAnim + ".ogg"));
+				sound.play();
 				
 			default:
 				trace("default dialogue event");

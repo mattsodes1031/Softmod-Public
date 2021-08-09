@@ -1,3 +1,5 @@
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :narrator:tamashadow: In what felt like a blink of an eye, everyone disappeared.
 :narrator:tamashadow: BF was alone with only the sound of raindrops hitting the creaky roof above him…
 :narrator:tamashadow: Except for one other... thing.
@@ -8,10 +10,14 @@
 
 :bg:spookyhouse:
 
+:effect:fadeIn:0.4
 :bf:b19: Wha...?
 :bf:b12: No... 
 :bf:b23: Not you again...
+
+:effect:fadeIn:0.4
 :monster:default: ...
+
 :bf:b11: Why are you here...?
 :monster:default: ...
 :bf:b11: Why now...?

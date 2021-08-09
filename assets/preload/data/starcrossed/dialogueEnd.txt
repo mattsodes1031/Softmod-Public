@@ -1,7 +1,13 @@
 :bg:alleybgfull:
 
+:effect:fadeIn:0.4
+:effect:enterStageRight:0.8
 :bf:b26: ...
+
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :pico:p11: ...
+
 :bf:b2: How was that…?
 :pico:default: You did great!
 :pico:p10: I knew you could do it.
@@ -9,7 +15,10 @@
 :pico:default: Mhm! 
 :pico:p4: Though...
 :pico:p4: We should probably get a move on before-
- 
+:sound:footsteps:
 :pico:p7: ...?
 :bf:b10: !
+
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :shadows:dadshadow: There you are!

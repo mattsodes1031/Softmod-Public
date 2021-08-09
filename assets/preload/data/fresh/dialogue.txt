@@ -1,14 +1,23 @@
 :bg:alleybgfull:
 
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :narrator:tamashadow: A man stepped out of the shadows...
 :narrator:tamashadow: He goes by the name Father Fairest.
 :narrator:tamashadow: A retired rap battler whose name is as well known by the youth as it is by the generations before them.
 :narrator:tamashadow: His voice was his claim to fame but nowadays he lives very well off with his beautiful wife...
 :narrator:tamashadow: And up until a few weeks ago...
 :narrator:tamashadow: His talented son.
+
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :dad:default: Sport!
 :dad:default: We’ve been looking for you.
+
+:effect:fadeIn:0.4
+:effect:enterStageRight:0.8
 :bf:b6: ...
+
 :dad:d5: Hm. I see you’re running around with that street rat again.
 :pico:p4: ...nice to see you too.
 :bf:b11: I-I’m sorry, dad, I can explain-!

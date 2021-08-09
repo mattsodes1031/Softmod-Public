@@ -1,5 +1,7 @@
 :bg:limosunset:
 
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :mom:m5: ENOUGH OF THIS.
 :mom:m5: I have tried, and tried, and tried to make you see what a mistake you’re making.
 :mom:m9: Clearly, you’re too stupid to see that...

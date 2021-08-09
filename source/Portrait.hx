@@ -362,13 +362,16 @@ class Portrait extends FlxSprite
 				x = refx-45;
 				y = (refy - height)+15;
             case "angy2":
-                x = refx - 50;
+                x = refx - 150;
                 y = (refy - height);
              case "angy":
                 x = refx - 200;
                 y = (refy - height);
             case "b10":
                 y = (refy - height)+10;
+			case "b13":
+				x = refx;
+				y = (refy - height)+10;
             case "m7":
                 y = (refy - height)+15;           
 

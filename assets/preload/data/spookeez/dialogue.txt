@@ -1,17 +1,30 @@
 :bg:spookyhouse:
 
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :narrator:tamashadow: The moon had risen over the cityscape after the sun went to rest it’s head for the night.
 :narrator:tamashadow: Clouds joined in to keep it company, creating a stormy ruckus to keep it awake.
 :narrator:tamashadow: Our protagonists found themselves taking cover in a building which was long overdue for a visit... 
 :narrator:tamashadow: Or at least that’s what they thought.
 :narrator:tamashadow: It was near impossible to see three feet in front of them when there wasn’t a strike of lightning to brighten up the room,
 :narrator:tamashadow: leaving the two on edge.
+
+:effect:fadeIn:0.4
+:effect:enterStageRight:0.8
 :bf:b6: I don’t know about this place, Pico...
+
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :pico:p7: Well, you got a better place to hide?
+
 :bf:b6: ... no.
 :bf:b6: But an abandoned mansion? It’s scary, it’s unsettling...
 :bf:b19: It’s... it’s...
+
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :doubles:shadow: IT’S-A SPOOKY!
+
 :bf:b24: Yeah, exactly, you took the words right from my mouth, Pico!
 :pico:p9: ...  that wasn’t me.
 :bf:b4: H-Huh?! Then who...?

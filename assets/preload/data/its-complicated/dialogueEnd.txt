@@ -1,5 +1,6 @@
 :bg:trainstation:
 
+:effect:fadeIn:0.4
 :gf:g13: ...
 :gf:g13: This...
 :gf:g13: This wasn’t how it was meant to go...
@@ -18,6 +19,6 @@
 :bf:b23: We are still best friends.
 :bf:b23: We can still hug things out.
 :bf:b23: Right?
-
+:sound:carbeep:
 :pico:p7: Uh, Softie?
 :pico:p4: Not to interrupt or anything, but we’ve got a problem...

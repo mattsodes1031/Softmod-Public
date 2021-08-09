@@ -1,8 +1,12 @@
 :bg:christmasbgevil:
 
+:effect:fadeIn:0.4
 :bfxmas:default: ?!
 :bfxmas:bx12: PICO?!
+
+:effect:fadeIn:0.4
 :monsterxmas:default: ...
+
 :bfxmas:bx15: YOU!
 :monsterxmas:default: ...
 :bfxmas:bx9: SAY SOMETHING FOR ONCE DAMMIT!

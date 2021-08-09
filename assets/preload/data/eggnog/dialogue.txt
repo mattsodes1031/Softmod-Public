@@ -1,5 +1,7 @@
 :bg:christmasbg:
 
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :narrator:tamashadow: Despite being battered and bruised, Pico and BF find solace in one another’s company. 
 :narrator:tamashadow: While healing, a treacherous month flies by, which they spend tending to wounds.
 :narrator:tamashadow: Soon, the boys feel well and brave enough to face the streets once again.
@@ -7,8 +9,15 @@
 :narrator:tamashadow: A crowd of strangers whisper to one another in excitement, waiting beside a sign that reads: 
 :narrator:tamashadow: “Annual Holiday Fairest Meet and Greet!”
 :narrator:tamashadow: The two boys enjoy the winter season with smiles, distracted by one another’s company.
+
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :picoxmas:px4: I can't believe you're actually making me wear this...
+
+:effect:fadeIn:0.4
+:effect:enterStageRight:0.8
 :bfxmas:bx24: What? You look adorable!
+
 :picoxmas:px11: I know...
 :picoxmas:px11: That's the problem... 
 :bfxmas:bx3: Come on Toughie, this is our first time out and about in a month. At least try to enjoy it-
@@ -20,10 +29,17 @@
 :bfxmas:bx5: ... Oh no...
 :bfxmas:bx5: What… day is it?
 :picoxmas:px4: The 17th... why?
+
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :momxmas:mx1: OUR SON!
+
 :bfxmas:bx6: ... that’s why...
 
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :dadxmas:default: Just in time for the holidays!
+
 :momxmas:mx3: We were beginning to fear the worst...
 :bfxmas:bx6: ...
 :dadxmas:dx4: How about we celebrate, s p o r t?

@@ -1,6 +1,11 @@
 :bg:stagebg:
 
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :ogbf:default: Beep bop!
+
+:effect:fadeIn:0.4
+:effect:enterStageRight:0.8
 :bf:b21: Hey! You’re pretty good at this!
 :bf:b16: Really good at this.
 :bf:b16: ...
@@ -8,7 +13,11 @@
 :ogbf:default: bf noises
 :bf:b3: I see...
 :bf:b3: And, let me guess, you two are together?
+
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :oggf:default: Mhm.
+
 :ogbf:default: Bep!
 :bf:b21: Right!
 :bf:b21: Heh...

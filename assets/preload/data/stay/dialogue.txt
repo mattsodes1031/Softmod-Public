@@ -1,5 +1,7 @@
 :bg:trainstation:
 
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :gf:g2: Wow, you handled that first song like a champ!
 :gf:g7: You were always the better singer...
 :bf:b16: ...

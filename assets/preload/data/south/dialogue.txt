@@ -1,6 +1,11 @@
 :bg:spookyhouse:
 
+:effect:fadeIn:0.4
+:effect:enterStageRight:0.8
 :bf:default: Wow... you guys are... waaay tougher than I thought.
+
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :skidnpump:sn: That was fun!
 :skidnpump:pn: Let’s do another!
 :bf:b2: Oh...? You wanna keep going?

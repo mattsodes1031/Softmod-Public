@@ -1,5 +1,7 @@
 :bg:stagebg:
 
+:effect:fadeIn:0.4
+:effect:enterStageRight:0.8
 :bf:b16: I don't get it.
 :bf:b16: ...
 :bf:b16: I just don’t know why...
@@ -22,10 +24,12 @@
 :bf:b25: Really?
 :bf:b25: I’d... really like that-
 
-:bg:bgblack:
-
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :narrator:tamashadow: Boyfriend is awoken by Pico shaking him gently,,,
 :narrator:tamashadow: appearing rather concerned.
+
+:effect:fadeIn:0.4
 :pico:p4: BF...
 :pico:p6: BF! Wake up already.
 :pico:p6: I know damn well you aren’t a heavy sleeper.
@@ -52,6 +56,9 @@
 :bf:b3: Now that I think about it...
 :bf:b3: What was his name again...?
 :bf:b3: Sen-
+
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :narrator:tamashadow:
 :narrator:tamashadow: Woah woah woah!
 :narrator:tamashadow: Hold it!

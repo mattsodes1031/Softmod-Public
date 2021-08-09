@@ -1,9 +1,13 @@
+:effect:fadeIn:0.4
 :bf:b17: ...
 
 :bg:spookyhouse:
 
 :bf:b11: !
+
+:effect:fadeIn:0.4
 :pico:p5: Softie! Can you hear me?
+
 :bf:b19: Y-yeah...
 :pico:p8: BF, what happened? You were unresponsive...
 :bf:b6: It was him again...

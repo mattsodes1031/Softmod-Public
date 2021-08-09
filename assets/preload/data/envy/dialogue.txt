@@ -1,6 +1,11 @@
 :bg:stagebg:
 
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :ogbf:default: Ska bep!
+
+:effect:fadeIn:0.4
+:effect:enterStageRight:0.8
 :bf:b20: Alright, I get it!
 :bf:b20: You’re a singer, you get the girl!
 :bf:b20: Everything in your life is just so easy and you’re exactly who I should’ve turned out to be!

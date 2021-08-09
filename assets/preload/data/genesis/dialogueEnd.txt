@@ -1,6 +1,10 @@
+:effect:fadeIn:0.4
 :bfxmas:bx17: ...
 :bfxmas:bx19: ...?
 :bfxmas:bx7: !
+
+:effect:fadeIn:0.4
+:effect:enterStageLeft:0.8
 :picoxmas:worry: Are you okay, Baby Blue?
 
 :bg:huggies:
