@@ -4099,7 +4099,7 @@ class PlayState extends MusicBeatState
 
 				if (curBeat % 8 == 4 && FlxG.random.bool(30) && !trainMoving && trainCooldown > 8)
 				{
-					if(FlxG.save.data.distractions){
+					if(FlxG.save.data.distractions && !inCutscene){
 						trainCooldown = FlxG.random.int(-4, 0);
 						trainStart();
 					}

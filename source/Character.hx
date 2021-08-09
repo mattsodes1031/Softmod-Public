@@ -807,6 +807,7 @@ class Character extends FlxSprite
 				addOffset("singRIGHT", 52, 26);
 				addOffset("singLEFT", -19, 4);
 				addOffset("singDOWN", 29, -55);
+				addOffset("singDOWN", 29, -55);
 
 				playAnim('danceRight');
 				flipX = true;
