@@ -1043,6 +1043,8 @@ class PlayState extends MusicBeatState
 				dad.y += 220;
 				gf.y += 20;
 				boyfriend.y += 20;
+				oppColor = 0xFFea6b7b;	
+
 
 			case 'stage1':
 				dad.y += 380;
@@ -1090,6 +1092,7 @@ class PlayState extends MusicBeatState
 				dad.y += 200;
 				camPos.x += 500;
 				camPos.y += 100;
+				oppColor = 0xFFd59b80;
 			case "monster":
 				dad.y += 80;
 				gf.y += 10000;
