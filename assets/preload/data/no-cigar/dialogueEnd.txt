@@ -20,4 +20,3 @@
 :bf:b11: PICO-
 :pico:p6: Come on! 
 :pico:p6: I know a place we can hide!
-:effect:exitStageLeft:0.8

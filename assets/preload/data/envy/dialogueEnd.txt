@@ -26,8 +26,7 @@
 
 :effect:fadeIn:0.4
 :effect:enterStageLeft:0.8
-:narrator:tamashadow: Boyfriend is awoken by Pico shaking him gently,,,
-:narrator:tamashadow: appearing rather concerned.
+:narrator:tamashadow: Boyfriend is awoken by Pico shaking him gently, appearing rather concerned.
 
 :effect:fadeIn:0.4
 :pico:p4: BF...

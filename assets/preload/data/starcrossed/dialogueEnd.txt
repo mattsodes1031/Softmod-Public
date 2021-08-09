@@ -16,6 +16,8 @@
 :pico:p4: Though...
 :pico:p4: We should probably get a move on before-
 :sound:footsteps:
+:narrator:tamashadow: Footsteps could be heard at the entrance of the alleyway, interrupting their heartfelt conversation.
+
 :pico:p7: ...?
 :bf:b10: !
 

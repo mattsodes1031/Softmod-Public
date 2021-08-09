@@ -4,8 +4,6 @@
 
 :bg:alleybgfull:
 
-:effect:fadeIn:0.4
-:effect:enterStageLeft:0.8
 :narrator:tamashadow: Two boys who have been on the run for two weeks are spotted dashing into an alleyway as the sun begins to set over the skyline.
 :narrator:tamashadow: A high school dropout and notorious graffiti artist named Pico...
 :narrator:tamashadow: and BF, a blue haired boy on the somewhat shorter side with aspirations of becoming a painter.

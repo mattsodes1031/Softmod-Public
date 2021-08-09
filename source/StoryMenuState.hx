@@ -36,7 +36,7 @@ class StoryMenuState extends MusicBeatState
 	];
 	var curDifficulty:Int = 1;
 
-	public static var softWeekUnlocked:Array<Bool> = [true, true,true, true, true, true,true,true,true,true,true,true];
+	public static var softWeekUnlocked:Array<Bool> = [true, true, true, true, true, true, true, true];
 
 	public static var restartMusic = false;
 
