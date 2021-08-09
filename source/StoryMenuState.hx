@@ -31,8 +31,8 @@ class StoryMenuState extends MusicBeatState
 		['Spookeez', 'South',"Repressed"],
 		['Playdate','Stay', "Its-Complicated"],
 		['High', "MILF", 'Spotlight'],
-		['Hope', 'Eggnog', 'Genesis'],
-		['Envy', 'Diplopia', 'In-Fighting']
+		['Eggnog', 'Hope', 'Genesis'],
+		['Diplopia', 'In-Fighting', 'Envy']
 	];
 	var curDifficulty:Int = 1;
 
