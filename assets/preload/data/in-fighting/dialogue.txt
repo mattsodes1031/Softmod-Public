@@ -8,8 +8,8 @@
 :ogbf:default: bf noises
 :bf:b3: I see...
 :bf:b3: And, let me guess, you two are together?
-:oggf:default: ;)
-:ogbf:default: Bep!! :D
+:oggf:default: Mhm.
+:ogbf:default: Bep!
 :bf:b21: Right!
 :bf:b21: Heh...
 :bf:b21: You look so happy...
