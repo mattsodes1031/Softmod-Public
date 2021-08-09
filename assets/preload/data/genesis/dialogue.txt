@@ -2,7 +2,7 @@
 
 :effect:fadeIn:0.4
 :bfxmas:default: ?!
-:bfxmas:bx12: PICO?!
+:bfxmas:bx9: PICO?!
 
 :effect:fadeIn:0.4
 :monsterxmas:default: ...
