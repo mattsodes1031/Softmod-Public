@@ -3976,6 +3976,11 @@ class PlayState extends MusicBeatState
 		if (curBeat > 19 && curBeat < 25 && SONG.song == "Diplopia"){
 			boyfriend.playAnim('hey', true);
 		}
+		if(  curBeat >113 && curBeat < 117 && SONG.song == "no-cigar")
+		{
+							boyfriend.playAnim('hey');
+		}
+		
 			
 		if(SONG.song.toLowerCase() == "spotlight" && curBeat >= 308){
 			autoCam = false;
