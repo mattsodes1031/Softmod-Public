@@ -1,6 +1,6 @@
 
 :narrator:tamashadow: The city of stars...
-effect:beep:
+:effect:beep:
 :narrator:tamashadow: A place where the celebrities and rich live lavishly...
 :narrator:tamashadow: and the not so fortunate struggle to thrive day by day.
 

@@ -555,7 +555,7 @@ class DialogueBox extends FlxSpriteGroup
 				case "lightningStrike":
 					effectlightningStrike();
 				case "beep":
-				effectbeep();
+					effectbeep();
 				//case "shake":
 					//effectShake(Std.parseFloat(effectParamQue[i]));
 				default:
@@ -698,7 +698,7 @@ class DialogueBox extends FlxSpriteGroup
 		FlxG.sound.play(Paths.soundRandom('thunder_', 1, 2));
 	}
 	function effectbeep(){
-		FlxG.sound.play(Paths.soundRandom('Carbeep',1,2));
+		FlxG.sound.play(Paths.soundRandom('Carbeep',1,1));
 	}
 
 
