@@ -69,7 +69,7 @@ class Portrait extends FlxSprite
 			case "ogbf":
                 setGraphicSize(Std.int(width * .40));  
             case "oggf":
-                setGraphicSize(Std.int(width * .29)); 
+                setGraphicSize(Std.int(width * .33)); 
             case "shadows":
                 setGraphicSize(Std.int(width * .38));
 			case "doubles":
