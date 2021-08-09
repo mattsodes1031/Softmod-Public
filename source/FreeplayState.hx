@@ -83,7 +83,7 @@ class FreeplayState extends MusicBeatState
 					daList.push("Genesis:monster:1");
 				}
 			}
-			if (boolList[7] == true){
+			if (boolList[7] != true){
 				if(daList[16] != "Diplopia:ogbf:1"){
 					daList.push("Diplopia:ogbf:1");
 					daList.push("In-Fighting:ogbf:1");

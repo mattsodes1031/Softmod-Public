@@ -3970,7 +3970,7 @@ class PlayState extends MusicBeatState
 				boyfriend.playAnim('hey', true);
 				dad.playAnim('cheer', true);
 			}
-		if (curBeat > 6  && curBeat < 17 && SONG.song == "Diplopia"){
+		if (curBeat > 35  && curBeat < 40 && SONG.song == "Diplopia"){
 			boyfriend.playAnim('hey', true);
 		}
 		if (curBeat > 19 && curBeat < 25 && SONG.song == "Diplopia"){
@@ -3978,7 +3978,7 @@ class PlayState extends MusicBeatState
 		}
 		if(  curBeat >113 && curBeat < 117 && SONG.song == "no-cigar")
 		{
-							boyfriend.playAnim('hey');
+			boyfriend.playAnim('hey');
 		}
 		
 			
