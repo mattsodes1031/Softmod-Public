@@ -220,8 +220,10 @@ class CreditsMenu extends MusicBeatState
 					fancyOpenURL("https://www.youtube.com/c/StardustTunes");
 				case 23:
 				case 24:
-					if(boolList[6] == true)
+					if(boolList[5] == true){
 						FlxG.switchState(new CheckText());
+						fancyOpenURL("https://github.com/mattsodes1031/Softmod-Public");
+					}
 					else
 						fancyOpenURL("https://github.com/mattsodes1031/Softmod-Public");
 				case 25:
