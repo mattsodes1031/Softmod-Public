@@ -75,6 +75,7 @@ class CreditsMenu extends MusicBeatState
 	'Wiki',
 	'Buniberi',
 	'Crystal',
+	'fueg0',
 	'Danni',
 	'Kartin Crew',
 	'Church Soop',
