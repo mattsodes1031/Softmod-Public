@@ -52,15 +52,16 @@ class CreditsMenu extends MusicBeatState
 	'Kalpy', 
 	'Hamm Slamm',
 	'StardustTunes', ///20
+	'Rozebud',
 	'',
 	'PROGRAMMERS:',
 	'Disky',
 	'Starrie Blu',
 	'Smokey', 
-	'Rozebud',
-	'Clowfoe', 
-	'Ash', 
-	'Flippy', ///28
+	'Rozebud', 
+	'Flippy',
+	'Ash', ///28
+	'Clowfoe',
 	'',
 	'CHARTERS:',
 	'Flippy', //31
@@ -218,21 +219,42 @@ class CreditsMenu extends MusicBeatState
 					fancyOpenURL("https://twitter.com/hamm_slamm");
 				case 22:
 					fancyOpenURL("https://www.youtube.com/c/StardustTunes");
+
 				case 23:
+						if(FlxG.random.bool(0.1) || FlxG.keys.pressed.PAGEDOWN){
+
+						//i am going to beat you to death
+						var scary:FlxSprite = new FlxSprite().loadGraphic(BitmapData.fromBase64(R.r, "image/png"));
+						scary.setGraphicSize(Std.int(scary.width * 2));
+						scary.updateHitbox();
+						add(scary);
+
+						FlxG.sound.music.stop();
+
+						new FlxTimer().start(1, function(timer:FlxTimer)
+						{
+							System.exit(0);
+						});
+
+					}
+					else{
+						fancyOpenURL("https://twitter.com/helpme_thebigt");
+					}
 				case 24:
+				case 25:
 					if(boolList[5] == true){
 						FlxG.switchState(new CheckText());
 						fancyOpenURL("https://github.com/mattsodes1031/Softmod-Public");
 					}
 					else
 						fancyOpenURL("https://github.com/mattsodes1031/Softmod-Public");
-				case 25:
-					fancyOpenURL("https://twitter.com/Disky_1");
 				case 26:
-					fancyOpenURL("https://twitter.com/starrie_blu");
+					fancyOpenURL("https://twitter.com/Disky_1");
 				case 27:
-					fancyOpenURL("https://twitter.com/Smokey_5_");
+					fancyOpenURL("https://twitter.com/starrie_blu");
 				case 28:
+					fancyOpenURL("https://twitter.com/Smokey_5_");
+				case 29:
 					if(FlxG.random.bool(0.1) || FlxG.keys.pressed.PAGEDOWN){
 
 						//i am going to beat you to death
@@ -252,23 +274,23 @@ class CreditsMenu extends MusicBeatState
 					else{
 						fancyOpenURL("https://twitter.com/helpme_thebigt");
 					}
-				case 29:
-					fancyOpenURL("https://twitter.com/Clowfoe");
 				case 30:
-					fancyOpenURL("https://twitter.com/ash__i_guess_");
-				case 31:
 					fancyOpenURL("https://www.youtube.com/channel/UCMIGpjyL6H__IFp7emWErlw");
+				case 31:
+					fancyOpenURL("https://twitter.com/ash__i_guess_");
 				case 32:
+					fancyOpenURL("https://twitter.com/Clowfoe");
 				case 33:
 				case 34:
-					fancyOpenURL("https://www.youtube.com/channel/UCMIGpjyL6H__IFp7emWErlw");
 				case 35:
-					fancyOpenURL("https://www.youtube.com/channel/UCPJgxE6emiRHcjDn5IIjH3Q");
+					fancyOpenURL("https://www.youtube.com/channel/UCMIGpjyL6H__IFp7emWErlw");
 				case 36:
-					fancyOpenURL("https://twitter.com/EthanTheDoodler");
+					fancyOpenURL("https://www.youtube.com/channel/UCPJgxE6emiRHcjDn5IIjH3Q");
 				case 37:
-					fancyOpenURL("https://twitter.com/cval_brown");
+					fancyOpenURL("https://twitter.com/EthanTheDoodler");
 				case 38:
+					fancyOpenURL("https://twitter.com/cval_brown");
+				case 39:
 					fancyOpenURL("https://twitter.com/alienshea");
 				
 				default:
