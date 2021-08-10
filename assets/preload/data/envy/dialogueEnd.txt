@@ -24,6 +24,9 @@
 :bf:b25: Really?
 :bf:b25: I’d... really like that-
 
+:bg:bgblack:
+:effect:hidden:
+
 :effect:fadeIn:0.4
 :effect:enterStageLeft:0.8
 :narrator:tamashadow: Boyfriend is awoken by Pico shaking him gently, appearing rather concerned.
