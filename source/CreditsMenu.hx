@@ -73,6 +73,7 @@ class CreditsMenu extends MusicBeatState
 	'SPECIAL THANKS:',
 	'Kolsan',
 	'Wiki',
+	'Buniberi',
 	'Crystal',
 	'Danni',
 	'Kartin Crew',
@@ -207,7 +208,7 @@ class CreditsMenu extends MusicBeatState
 				case 14:
 					fancyOpenURL("https://twitter.com/LIYAZURE");
 				case 15:
-					fancyOpenURL("https://twitter.com/VanillaSwirlx");
+					fancyOpenURL("https://twitter.com/VanilaSwirlx");
 				case 16:
 				case 17:
 				case 18:
