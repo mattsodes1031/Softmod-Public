@@ -4,7 +4,7 @@
  
  Here are all the people who worked on this code 
  
- Disky(ttps://twitter.com/Disky_1)
+ Disky(https://twitter.com/Disky_1)
  Ren(https://twitter.com/starrie_blu)
  Rosebud(https://twitter.com/helpme_thebigt)
  Smokey(https://twitter.com/Smokey_5_)
