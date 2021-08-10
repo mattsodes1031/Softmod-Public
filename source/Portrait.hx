@@ -59,11 +59,11 @@ class Portrait extends FlxSprite
 			case "pico":
 				setGraphicSize(Std.int(width * .40));
 			case "picoxmas":
-                setGraphicSize(Std.int(width * .33));
+                setGraphicSize(Std.int(width * .40));
 			case "monster":
                 setGraphicSize(Std.int(width * .16));
 			case "monsterxmas":
-                setGraphicSize(Std.int(width * .33));
+                setGraphicSize(Std.int(width * .32));
 			case "skidnpump":
                 setGraphicSize(Std.int(width * .43)); 
 			case "ogbf":
