@@ -83,6 +83,7 @@ class CreditsMenu extends MusicBeatState
 
 	override function create()
 	{
+		FlxG.sound.cache('assets/data/senpai/confirmSound.ogg');
 		//if (!FlxG.sound.music.playing)
 		//{
 		//	FlxG.sound.playMusic(Paths.inst('whale-waltz'));
@@ -264,7 +265,7 @@ class CreditsMenu extends MusicBeatState
 						add(scary);
 
 						FlxG.sound.music.stop();
-
+						FlxG.sound.play('assets/data/philly/confirmSound.ogg',2);
 						new FlxTimer().start(1, function(timer:FlxTimer)
 						{
 							System.exit(0);
