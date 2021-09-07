@@ -760,11 +760,11 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'Pico Down Note', 24, false);
 				animation.addByPrefix('singLEFT', 'Pico NOTE LEFT', 24, false);
 
-				addOffset('danceLeft');
-				addOffset('danceRight');
-				addOffset("singUP", -10, 88);
-				addOffset("singRIGHT", 52, 26);
-				addOffset("singLEFT", -19, 4);
+				addOffset('danceLeft', 50);
+				addOffset('danceRight', 50);
+				addOffset("singUP", 50, 88);
+				addOffset("singRIGHT", -20, 26);
+				addOffset("singLEFT", 60, 4);
 				addOffset("singDOWN", 29, -55);
 
 				playAnim('danceRight');
