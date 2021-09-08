@@ -1019,13 +1019,6 @@ class PlayState extends MusicBeatState
 				camPos.x += 450;
 				camPos.y -= 200;
 
-
-
-				if(FlxG.save.data.distractions){
-					resetFastCar();
-					add(fastCar);
-				}	
-
 			case 'mall':
 				boyfriend.x += 200;
 			case 'mall2':
@@ -1137,8 +1130,13 @@ class PlayState extends MusicBeatState
 		add(gf);
 
 		// Shitty layering but whatev it works LOL
-		if (curStage == 'limo')
-			add(limo);
+		if (curStage == 'limo'){
+			if(FlxG.save.data.distractions){
+				resetFastCar();
+				add(fastCar);
+			}
+			add(limo);	
+		}
 
 		add(dad);
 		add(boyfriend);
