@@ -760,12 +760,12 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'Pico Down Note', 24, false);
 				animation.addByPrefix('singLEFT', 'Pico NOTE LEFT', 24, false);
 
-				addOffset('danceLeft', 200);
-				addOffset('danceRight', 200);
-				addOffset("singUP", 200, 88);
-				addOffset("singRIGHT", 130, 26);
-				addOffset("singLEFT", 210, 4);
-				addOffset("singDOWN", 179, -55);
+				addOffset('danceLeft', 50);
+				addOffset('danceRight', 50);
+				addOffset("singUP", 50, 88);
+				addOffset("singRIGHT", -20, 26);
+				addOffset("singLEFT", 60, 4);
+				addOffset("singDOWN", 29, -55);
 
 				playAnim('danceRight');
 				flipX = true;
@@ -781,12 +781,12 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'Soft GF Body DOWN 2', 24, false);
 				animation.addByPrefix('singLEFT', 'Soft GF Body LEFT 2', 24, false);
 
-				addOffset('danceLeft', 200);
-				addOffset('danceRight', 200);
-				addOffset("singUP", 200, 88);
-				addOffset("singRIGHT", 130, 26);
-				addOffset("singLEFT", 210, 4);
-				addOffset("singDOWN", 179, -55);
+				addOffset('danceLeft', 50);
+				addOffset('danceRight', 50);
+				addOffset("singUP", 50, 88);
+				addOffset("singRIGHT", -20, 26);
+				addOffset("singLEFT", 60, 4);
+				addOffset("singDOWN", 29, -55);
 
 				playAnim('danceRight');
 				flipX = true;
@@ -802,12 +802,12 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'Soft GF Body DOWN 3', 24, false);
 				animation.addByPrefix('singLEFT', 'Soft GF Body LEFT 3', 24, false);
 
-				addOffset('danceLeft', 200);
-				addOffset('danceRight', 200);
-				addOffset("singUP", 200, 88);
-				addOffset("singRIGHT", 130, 26);
-				addOffset("singLEFT", 210, 4);
-				addOffset("singDOWN", 179, -55);
+				addOffset('danceLeft', 50);
+				addOffset('danceRight', 50);
+				addOffset("singUP", 50, 88);
+				addOffset("singRIGHT", -20, 26);
+				addOffset("singLEFT", 60, 4);
+				addOffset("singDOWN", 29, -55);
 
 				playAnim('danceRight');
 				flipX = true;
