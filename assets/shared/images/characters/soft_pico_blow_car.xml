@@ -1,35 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="soft_pico_blow_car.png">
-	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="soft_pico hair blow CAR0000" x="0" y="0" width="870" height="393" frameX="0" frameY="-13" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0001" x="870" y="0" width="869" height="395" frameX="-1" frameY="-11" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0002" x="1739" y="0" width="869" height="402" frameX="-1" frameY="-4" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0003" x="2608" y="0" width="869" height="406" frameX="-1" frameY="0" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0004" x="0" y="406" width="869" height="406" frameX="-1" frameY="0" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0005" x="869" y="406" width="869" height="406" frameX="-1" frameY="0" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0006" x="1738" y="406" width="869" height="405" frameX="-1" frameY="-1" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0007" x="1738" y="406" width="869" height="405" frameX="-1" frameY="-1" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0008" x="869" y="406" width="869" height="406" frameX="-1" frameY="0" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0009" x="869" y="406" width="869" height="406" frameX="-1" frameY="0" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0010" x="1738" y="406" width="869" height="405" frameX="-1" frameY="-1" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0011" x="1738" y="406" width="869" height="405" frameX="-1" frameY="-1" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0012" x="2607" y="406" width="869" height="405" frameX="-1" frameY="-1" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0013" x="2607" y="406" width="869" height="405" frameX="-1" frameY="-1" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0014" x="869" y="406" width="869" height="406" frameX="-1" frameY="0" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0015" x="0" y="812" width="869" height="406" frameX="-1" frameY="0" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0016" x="869" y="812" width="869" height="405" frameX="-1" frameY="-1" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0017" x="1738" y="812" width="869" height="405" frameX="-1" frameY="-1" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0018" x="2607" y="812" width="869" height="406" frameX="-1" frameY="0" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0019" x="0" y="406" width="869" height="406" frameX="-1" frameY="0" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0020" x="1738" y="406" width="869" height="405" frameX="-1" frameY="-1" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0021" x="1738" y="406" width="869" height="405" frameX="-1" frameY="-1" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0022" x="869" y="406" width="869" height="406" frameX="-1" frameY="0" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0023" x="869" y="406" width="869" height="406" frameX="-1" frameY="0" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0024" x="1738" y="406" width="869" height="405" frameX="-1" frameY="-1" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0025" x="1738" y="406" width="869" height="405" frameX="-1" frameY="-1" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0026" x="869" y="406" width="869" height="406" frameX="-1" frameY="0" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0027" x="869" y="406" width="869" height="406" frameX="-1" frameY="0" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0028" x="1738" y="406" width="869" height="405" frameX="-1" frameY="-1" frameWidth="870" frameHeight="406"/>
-	<SubTexture name="soft_pico hair blow CAR0029" x="1738" y="406" width="869" height="405" frameX="-1" frameY="-1" frameWidth="870" frameHeight="406"/>
+	<SubTexture name="soft_pico hair blow CAR0000" x="0" y="0" width="864" height="386" frameX="-8" frameY="-21" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0001" x="864" y="0" width="872" height="391" frameX="0" frameY="-16" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0002" x="1736" y="0" width="872" height="398" frameX="0" frameY="-9" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0003" x="2608" y="0" width="864" height="390" frameX="-8" frameY="-17" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0004" x="0" y="398" width="864" height="397" frameX="-8" frameY="-10" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0005" x="864" y="398" width="864" height="400" frameX="-8" frameY="-7" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0006" x="1728" y="398" width="864" height="401" frameX="-8" frameY="-6" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0007" x="2592" y="398" width="864" height="401" frameX="-8" frameY="-6" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0008" x="0" y="799" width="864" height="407" frameX="-8" frameY="0" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0009" x="864" y="799" width="864" height="406" frameX="-8" frameY="-1" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0010" x="1728" y="799" width="864" height="406" frameX="-8" frameY="-1" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0011" x="2592" y="799" width="864" height="401" frameX="-8" frameY="-6" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0012" x="0" y="1206" width="864" height="406" frameX="-8" frameY="-1" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0013" x="1728" y="799" width="864" height="406" frameX="-8" frameY="-1" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0014" x="2592" y="799" width="864" height="401" frameX="-8" frameY="-6" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0015" x="864" y="1206" width="864" height="404" frameX="-8" frameY="-3" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0016" x="1728" y="1206" width="872" height="402" frameX="0" frameY="-5" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0017" x="2600" y="1206" width="872" height="397" frameX="0" frameY="-10" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0018" x="0" y="1612" width="864" height="403" frameX="-8" frameY="-4" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0019" x="864" y="1612" width="864" height="402" frameX="-8" frameY="-5" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0020" x="1728" y="1612" width="864" height="398" frameX="-8" frameY="-9" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0021" x="2592" y="1612" width="864" height="405" frameX="-8" frameY="-2" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0022" x="0" y="2017" width="864" height="401" frameX="-8" frameY="-6" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0023" x="864" y="2017" width="864" height="407" frameX="-8" frameY="0" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0024" x="1728" y="2017" width="864" height="407" frameX="-8" frameY="0" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0025" x="2592" y="2017" width="864" height="406" frameX="-8" frameY="-1" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0026" x="0" y="2424" width="864" height="406" frameX="-8" frameY="-1" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0027" x="864" y="2424" width="864" height="401" frameX="-8" frameY="-6" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0028" x="1728" y="2424" width="864" height="401" frameX="-8" frameY="-6" frameWidth="872" frameHeight="407"/>
+	<SubTexture name="soft_pico hair blow CAR0029" x="2592" y="2424" width="864" height="407" frameX="-8" frameY="0" frameWidth="872" frameHeight="407"/>
 </TextureAtlas>

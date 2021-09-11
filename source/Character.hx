@@ -56,10 +56,10 @@ class Character extends FlxSprite
 				addOffset('danceLeft', 0, -9);
 				addOffset('danceRight', 0, -9);
 
-				addOffset("singUP", 0, -4);
-				addOffset("singRIGHT", 0, -10);
-				addOffset("singLEFT", 0, -9);
-				addOffset("singDOWN", 0, -9);
+				addOffset("singUP", 0, 12);
+				addOffset("singRIGHT", 0, -3);
+				addOffset("singLEFT", 0, 1);
+				addOffset("singDOWN", 0, -13);
 				addOffset('hairBlow', 0, -9);
 				addOffset('hairFall', 0, -9);
 
@@ -711,14 +711,14 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT-alt', 'Parent Right Note Mom', 24, false);
 
 				addOffset('idle');
-				addOffset("singUP", -12, 64);
-				addOffset("singRIGHT", -15, -15);
-				addOffset("singLEFT", -3, 20);
+				addOffset("singUP", -18, 65);
+				addOffset("singRIGHT", -17, -15);
+				addOffset("singLEFT", -6, 21);
 				addOffset("singDOWN", -3, -36);
-				addOffset("singUP-alt", -10, 62);
-				addOffset("singRIGHT-alt", -1, -24);
-				addOffset("singLEFT-alt", -3, 18);
-				addOffset("singDOWN-alt", -4, -32);
+				addOffset("singUP-alt", -21, 63);
+				addOffset("singRIGHT-alt", -22, -12);
+				addOffset("singLEFT-alt", -6, 19);
+				addOffset("singDOWN-alt", 1, -33);
 
 				playAnim('idle');
 
@@ -760,12 +760,12 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'Pico Down Note', 24, false);
 				animation.addByPrefix('singLEFT', 'Pico NOTE LEFT', 24, false);
 
-				addOffset('danceLeft', 50);
-				addOffset('danceRight', 50);
-				addOffset("singUP", 50, 88);
-				addOffset("singRIGHT", -20, 26);
-				addOffset("singLEFT", 60, 4);
-				addOffset("singDOWN", 29, -55);
+				addOffset('danceLeft', 200);
+				addOffset('danceRight', 200);
+				addOffset("singUP", 200, 88);
+				addOffset("singRIGHT", 130, 26);
+				addOffset("singLEFT", 210, 4);
+				addOffset("singDOWN", 179, -55);
 
 				playAnim('danceRight');
 				flipX = true;
@@ -781,12 +781,12 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'Soft GF Body DOWN 2', 24, false);
 				animation.addByPrefix('singLEFT', 'Soft GF Body LEFT 2', 24, false);
 
-				addOffset('danceLeft');
-				addOffset('danceRight');
-				addOffset("singUP", -10, 88);
-				addOffset("singRIGHT", 52, 26);
-				addOffset("singLEFT", -19, 4);
-				addOffset("singDOWN", 29, -55);
+				addOffset('danceLeft', 200);
+				addOffset('danceRight', 200);
+				addOffset("singUP", 200, 88);
+				addOffset("singRIGHT", 130, 26);
+				addOffset("singLEFT", 210, 4);
+				addOffset("singDOWN", 179, -55);
 
 				playAnim('danceRight');
 				flipX = true;
@@ -802,13 +802,12 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'Soft GF Body DOWN 3', 24, false);
 				animation.addByPrefix('singLEFT', 'Soft GF Body LEFT 3', 24, false);
 
-				addOffset('danceLeft');
-				addOffset('danceRight');
-				addOffset("singUP", -10, 88);
-				addOffset("singRIGHT", 52, 26);
-				addOffset("singLEFT", -19, 4);
-				addOffset("singDOWN", 29, -55);
-				addOffset("singDOWN", 29, -55);
+				addOffset('danceLeft', 200);
+				addOffset('danceRight', 200);
+				addOffset("singUP", 200, 88);
+				addOffset("singRIGHT", 130, 26);
+				addOffset("singLEFT", 210, 4);
+				addOffset("singDOWN", 179, -55);
 
 				playAnim('danceRight');
 				flipX = true;
