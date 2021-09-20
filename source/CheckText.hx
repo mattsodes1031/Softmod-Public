@@ -24,8 +24,9 @@ import io.newgrounds.NG;
 import lime.app.Application;
 import openfl.Assets;
 
-
+#if windows
 import Discord.DiscordClient;
+#end
 
 #if cpp
 import sys.thread.Thread;
@@ -41,8 +42,9 @@ class CheckText extends MusicBeatState
 
     override  function create():Void
 	{
+        #if windows
         DiscordClient.changePresence("Inside The Credits Menu", null);
-
+        #end
 
         var pic:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('menuGB'));
 		pic.setGraphicSize(Std.int(pic.width * 1.0));

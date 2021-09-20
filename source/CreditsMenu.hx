@@ -15,7 +15,9 @@ import flixel.util.FlxColor;
 import lime.utils.Assets;
 import flixel.addons.transition.FlxTransitionableState;
 
+#if windows
 import Discord.DiscordClient;
+#end
 
 using StringTools;
 
@@ -92,7 +94,9 @@ class CreditsMenu extends MusicBeatState
 		//}
 		
 		// Updating Discord Rich Presence
+		#if windows
 		DiscordClient.changePresence("Inside The Credits Menu...", null);
+		#end
 
 		if(!FlxG.sound.music.playing){
 			FlxG.sound.playMusic(Paths.music("SoftConfig", "shared"));
